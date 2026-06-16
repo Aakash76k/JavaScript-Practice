@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    <script>
+
+        // Q1 1 se 10 tak numbers print karo.
+
+        for(let i = 1; i<=10; i++){
+            console.log(`${i}`);
+        }     
+
+        // Q2 10 se 1 tak reverse print karo.
+
+        for(let i =10; i>=1; i--){
+            console.log(`${i}`);
+        }
+
+        // Q3 1 se 20 tak sirf even numbers print karo.
+
+        let num = 20;
+        for(let i= 1; i<=num; i++){
+            if(i%2 == 0){
+                console.log(`${i} is Even number`);
+            }
+        }
+
+        // Q4 1 se 20 tak sirf odd numbers print karo.
+
+        let a =20;
+        for(let i = 1; i<=a; i++){
+            if(i%2 != 0){
+                console.log(`${i} is odd number`);
+            }
+        }
+
+        // Q5 1 se 10 tak numbers ka sum nikalo.
+
+        let sum = 0;
+
+        for(let i = 1; i<=10; i++){
+            sum += i ;
+         }
+         console.log(sum);
+
+        //Q6 1 se 100 tak jitne bhi even numbers hain unka total sum nikalo.
+
+        let sum1 = 0;
+         for(let i=1; i<=100; i++){
+            if(i%2==0){
+                sum1 += i;
+            }
+         }
+        console.log(sum1);
+
+
+         // Q7 1 se 10 tak table of 5 print karo.
+
+         let number = 5;
+         for(let i = 1; i<=10; i++){
+
+            console.log(`${number} x  ${i} = ${number*i} `);
+         }
+
+    </script>
+</body>
+</html>

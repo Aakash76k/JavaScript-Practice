@@ -1,39 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loops</title>
 </head>
+
 <body>
     <script>
 
+        // <!--For loops-->
+
         // Q1 1 se 10 tak numbers print karo.
 
-        for(let i = 1; i<=10; i++){
+        for (let i = 1; i <= 10; i++) {
             console.log(`${i}`);
-        }     
+        }
 
         // Q2 10 se 1 tak reverse print karo.
 
-        for(let i =10; i>=1; i--){
+        for (let i = 10; i >= 1; i--) {
             console.log(`${i}`);
         }
 
         // Q3 1 se 20 tak sirf even numbers print karo.
 
         let num = 20;
-        for(let i= 1; i<=num; i++){
-            if(i%2 == 0){
+        for (let i = 1; i <= num; i++) {
+            if (i % 2 == 0) {
                 console.log(`${i} is Even number`);
             }
         }
 
         // Q4 1 se 20 tak sirf odd numbers print karo.
 
-        let a =20;
-        for(let i = 1; i<=a; i++){
-            if(i%2 != 0){
+        let a = 20;
+        for (let i = 1; i <= a; i++) {
+            if (i % 2 != 0) {
                 console.log(`${i} is odd number`);
             }
         }
@@ -42,30 +46,136 @@
 
         let sum = 0;
 
-        for(let i = 1; i<=10; i++){
-            sum += i ;
-         }
-         console.log(sum);
+        for (let i = 1; i <= 10; i++) {
+            sum += i;
+        }
+        console.log(sum);
 
         //Q6 1 se 100 tak jitne bhi even numbers hain unka total sum nikalo.
 
         let sum1 = 0;
-         for(let i=1; i<=100; i++){
-            if(i%2==0){
+        for (let i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
                 sum1 += i;
             }
-         }
+        }
         console.log(sum1);
 
 
-         // Q7 1 se 10 tak table of 5 print karo.
+        // Q7 1 se 10 tak table of 5 print karo.
 
-         let number = 5;
-         for(let i = 1; i<=10; i++){
+        let number = 5;
+        for (let i = 1; i <= 10; i++) {
 
-            console.log(`${number} x  ${i} = ${number*i} `);
-         }
+            console.log(`${number} x  ${i} = ${number * i} `);
+        }
+
+        // Q8 Star pattern 
+
+        for (let i = 1; i <= 5; i++) {
+            let star = "";
+            for (let j = 1; j <= i; j++) {
+                star += "*";
+            }
+            console.log(star);
+        }
+
+        // Q9 Star Pattern 2 
+
+        for (let i = 5; i >= 1; i--) {
+            let star = ""
+            for (let j = 1; j <= i; j++) {
+                star += "*";
+            }
+            console.log(star);
+        }
+
+        // Q10 Star patter 3
+
+        for (let i = 1; i <= 5; i++) {
+            let star = "  "
+            for (let j = 1; j <= 5 - i; j++) {
+                star += " "
+            }
+            for (let k = 1; k <= i; k++) {
+                star += "*"
+            }
+            console.log(star);
+        }
+
+        //11 Star pattern increasing or decreasing  4
+
+        for (let i = 1; i <= 5; i++) {
+            let star = "";
+            for (let j = 1; j <= i; j++) {
+                star += "*";
+            }
+            console.log(star);
+        }
+
+        for (let i = 4; i >= 1; i--) {
+            let star = "";
+
+            for (let j = 1; j <= i; j++) {
+                star += "*";
+            }
+
+            console.log(star);
+        }
+
+
+        // While loop : while me initialization aur increment alag likhte hain:
+
+        // example 
+
+        let i = 1;
+
+        while (i <= 5) {
+            console.log(i);
+            i++;
+        }
+
+       //  Example 1: 1 se 10 tak print
+
+       let j =1;
+       while(j<=10){
+        console.log(j);
+        j++;
+       }
+
+       // Example 2: 10 se 1 tak reverse
+
+       let k = 10;
+       while(k>=1){
+        console.log(k);
+        k--;
+       }
+
+       // Example 3: Even numbers
+
+       let m = 1;
+       while(m<=20){
+        if(m%2 == 0){
+            console.log(`${m} is Even number`);
+        }
+        m++;
+       }
+
+       // Q4: While loop se 1 se 10 ka sum nikalo
+
+       let add = 0;
+       let n = 1;
+       while( n<=10){
+        add += n;
+        n++;
+       }
+       console.log(add);
+
+
+
+
 
     </script>
 </body>
+
 </html>

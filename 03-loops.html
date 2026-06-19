@@ -135,42 +135,100 @@
             i++;
         }
 
-       //  Example 1: 1 se 10 tak print
+        //  Example 1: 1 se 10 tak print
 
-       let j =1;
-       while(j<=10){
-        console.log(j);
-        j++;
-       }
-
-       // Example 2: 10 se 1 tak reverse
-
-       let k = 10;
-       while(k>=1){
-        console.log(k);
-        k--;
-       }
-
-       // Example 3: Even numbers
-
-       let m = 1;
-       while(m<=20){
-        if(m%2 == 0){
-            console.log(`${m} is Even number`);
+        let j = 1;
+        while (j <= 10) {
+            console.log(j);
+            j++;
         }
-        m++;
-       }
 
-       // Q4: While loop se 1 se 10 ka sum nikalo
+        // Example 2: 10 se 1 tak reverse
 
-       let add = 0;
-       let n = 1;
-       while( n<=10){
-        add += n;
-        n++;
-       }
-       console.log(add);
+        let k = 10;
+        while (k >= 1) {
+            console.log(k);
+            k--;
+        }
 
+        // Example 3: Even numbers
+
+        let m = 1;
+        while (m <= 20) {
+            if (m % 2 == 0) {
+                console.log(`${m} is Even number`);
+            }
+            m++;
+        }
+
+        // Q4: While loop se 1 se 10 ka sum nikalo
+
+        let add = 0;
+        let n = 1;
+        while (n <= 10) {
+            add += n;
+            n++;
+        }
+        console.log(add);
+
+        // Do-While : isme phele loop chalta h  , fir condition check hoti h
+
+        // example 1
+
+        let q = 1;
+
+        do {
+            console.log(q);
+            i++;
+        } while (q <= 5);
+
+        //  Q1 1 se 10 tak numbers print karo.
+
+        let i = 1;
+
+        do{
+            console.log(i);
+            i++;
+        }while(i<=10);
+
+        // Q2 → 10 se 1 tak reverse
+
+        let i1 = 10;
+        do{
+            console.log(i1);
+            i1--;
+        }while(i1>=1);
+
+        // Q3 → 1 se 20 tak even numbers
+
+        let i2 = 1;
+
+        do{
+            if(i2%2 ==0 ){
+                console.log(`${i2} is a Even Number`);
+            }
+            i2++;
+        }while(i2<= 20);
+
+        // Q4 → 1 se 10 tak sum
+
+        let i3=1;
+        let sum =0;
+        do{
+            console.log(sum);
+            sum += i3;
+            i3++;
+        }while(i3<=10);
+
+        // or
+        let i4=1;
+        let sum1 =0;
+        do{
+           
+            sum1 += i4;
+            i4++;
+        }while(i4<=10);
+         console.log(sum1);
 
 
 

@@ -43,12 +43,82 @@
         fruits2.pop();
         console.log(fruits2);
 
-        //print all colors using loops
+        // Q7 print all colors using loops
 
         let colors1 =["red","blue","green","yellow","orange"]
         for(let i =0; i<colors1.length; i++){
             console.log(colors1[i]);
         }
+
+        // Q8 Add all number 
+
+        let number1 = [10,20,30,40,50]
+        let sum = 0;
+        for(let i=0; i<number1.length; i++){
+            sum = sum + number1[i];
+        }
+        console.log(sum);
+        
+
+        // Q9 find largest number
+
+        let number2 =[10,20,30,40,50]
+        let max = number2[0];
+
+        for(let i=0; i<number2.length; i++){
+            if(number2[i]>max){
+                max = number2[i]
+            }
+        }
+        console.log(max);
+       
+
+        // Q10 find smallest number
+
+        let n = [10,20,30,40,50]
+        let min = n[0];
+        for(let i=0; i<n.length; i++){
+            if(min>n[i]){
+                min=n[i]
+            }
+        }
+        console.log(min);
+
+        //Q11 find max and min
+
+        let a = [5,8,2,9,1]
+        let mi=a[0];
+        let ma=a[0];
+
+        for(let i =0; i<a.length; i++){
+            if(a[i]>ma){
+                ma = a[i]
+            }else if(mi>a[i]){
+                mi = a[i]
+            }
+        }
+        console.log(mi);
+        console.log(ma);
+
+        //Q11 find average 
+
+        let ar = [15,25,35,45]
+        let sum1 = 0;
+        
+
+        for(let i=0; i<ar.length; i++){
+            sum1 += ar[i]
+            
+        }
+        let average = sum1/ar.length;
+        console.log(sum1);
+        console.log(average);
+
+
+
+
+
+
 
     </script>
 </body>

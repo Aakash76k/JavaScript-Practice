@@ -1,99 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array</title>
 </head>
+
 <body>
     <script>
 
         // Q1 print array using index 
 
-        let colors =["Red", "Green", "Yellow"]
+        let colors = ["Red", "Green", "Yellow"]
         console.log(colors[0]);
         console.log(colors[1]);
         console.log(colors[2]);
 
         // Q2 print last number
 
-        let number = [10, 20,30,40,50]
+        let number = [10, 20, 30, 40, 50]
         console.log(number[4]);
 
         // Q3 Print array length 
 
-        let cities = ["delhi", "mumbai","pune","jaipur"]
+        let cities = ["delhi", "mumbai", "pune", "jaipur"]
         console.log(cities.length);
 
         // Q4 Array ko update karo Banana ko Orange se replace karo aur poora array print karo
 
-        let fruits = ["Apple", "Banana","Mango"]
+        let fruits = ["Apple", "Banana", "Mango"]
         fruits[1] = "orange"
         console.log(fruits);
 
         // Q5 Add element mango
 
-        let fruits1 =["Apple","Banana"]
+        let fruits1 = ["Apple", "Banana"]
         fruits1.push("mango");
         console.log(fruits1);
 
         // Q6 Remove last element
 
-        let fruits2=["Apple","Mango","Banana "]
+        let fruits2 = ["Apple", "Mango", "Banana "]
         fruits2.pop();
         console.log(fruits2);
 
         // Q7 print all colors using loops
 
-        let colors1 =["red","blue","green","yellow","orange"]
-        for(let i =0; i<colors1.length; i++){
+        let colors1 = ["red", "blue", "green", "yellow", "orange"]
+        for (let i = 0; i < colors1.length; i++) {
             console.log(colors1[i]);
         }
 
         // Q8 Add all number 
 
-        let number1 = [10,20,30,40,50]
+        let number1 = [10, 20, 30, 40, 50]
         let sum = 0;
-        for(let i=0; i<number1.length; i++){
+        for (let i = 0; i < number1.length; i++) {
             sum = sum + number1[i];
         }
         console.log(sum);
-        
+
 
         // Q9 find largest number
 
-        let number2 =[10,20,30,40,50]
+        let number2 = [10, 20, 30, 40, 50]
         let max = number2[0];
 
-        for(let i=0; i<number2.length; i++){
-            if(number2[i]>max){
+        for (let i = 0; i < number2.length; i++) {
+            if (number2[i] > max) {
                 max = number2[i]
             }
         }
         console.log(max);
-       
+
 
         // Q10 find smallest number
 
-        let n = [10,20,30,40,50]
+        let n = [10, 20, 30, 40, 50]
         let min = n[0];
-        for(let i=0; i<n.length; i++){
-            if(min>n[i]){
-                min=n[i]
+        for (let i = 0; i < n.length; i++) {
+            if (min > n[i]) {
+                min = n[i]
             }
         }
         console.log(min);
 
         //Q11 find max and min
 
-        let a = [5,8,2,9,1]
-        let mi=a[0];
-        let ma=a[0];
+        let a = [5, 8, 2, 9, 1]
+        let mi = a[0];
+        let ma = a[0];
 
-        for(let i =0; i<a.length; i++){
-            if(a[i]>ma){
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] > ma) {
                 ma = a[i]
-            }else if(mi>a[i]){
+            } else if (mi > a[i]) {
                 mi = a[i]
             }
         }
@@ -102,24 +104,24 @@
 
         //Q11 find average 
 
-        let ar = [15,25,35,45]
+        let ar = [15, 25, 35, 45]
         let sum1 = 0;
-        
 
-        for(let i=0; i<ar.length; i++){
+
+        for (let i = 0; i < ar.length; i++) {
             sum1 += ar[i]
-            
+
         }
-        let average = sum1/ar.length;
+        let average = sum1 / ar.length;
         console.log(sum1);
         console.log(average);
 
         // Q12 Find largest number from 30
 
-        let arr = [10,20,30,40,50]
+        let arr = [10, 20, 30, 40, 50]
         let count = 0;
-        for(let i =0; i<arr.length; i++){
-            if(arr[i]>30){
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > 30) {
                 count++;
             }
         }
@@ -127,10 +129,10 @@
 
         //Q13 count even number 
 
-        let b = [10,25,30,45,50,15]
+        let b = [10, 25, 30, 45, 50, 15]
         let c = 0;
-        for(let i =0; i<b.length; i++){
-            if(b[i]%2 == 0){
+        for (let i = 0; i < b.length; i++) {
+            if (b[i] % 2 == 0) {
                 c++;
             }
         }
@@ -138,27 +140,82 @@
 
         // Q14 find sum of even numbers
 
-        let d = [10,25,30,45,50,15]
-        let sum2 =0;
-        for(let i =0; i<d.length; i++){
-            if(d[i]%2 == 0){
+        let d = [10, 25, 30, 45, 50, 15]
+        let sum2 = 0;
+        for (let i = 0; i < d.length; i++) {
+            if (d[i] % 2 == 0) {
                 sum2 += d[i];
-            } 
+            }
         }
         console.log(sum2);
 
         // Q15 find sum of odd number 
 
-        let e = [10,25,30,45,50,15]
-        sum3 =0;
+        let e = [10, 25, 30, 45, 50, 15]
+        sum3 = 0;
 
-        for(let i=0; i<e.length; i++){
-            if(e[i]%2 !== 0){
+        for (let i = 0; i < e.length; i++) {
+            if (e[i] % 2 !== 0) {
                 sum3 += e[i]
             }
         }
         console.log(sum3);
-        
+
+        // Q16 Question 1: Array ko reverse print karo
+
+        let array = [10, 25, 30, 45, 50, 15]
+        for (let i = array.length - 1; i >= 0; i--) {
+            console.log(array[i]);
+        }
+
+        // Q16: Array me ek number search karo
+
+        let a1 = [10, 25, 30, 45, 50, 15]
+        let find = 45;
+        for (let i = 0; i <= a1.length; i++) {
+            if (a1[i] == find) {
+                console.log("number found");
+            }
+        }
+
+        //  Q17: Array me duplicate values count karo
+
+        let a2 = [10, 20, 10, 30, 20, 10];
+
+        for (let i = 0; i < a2.length; i++) {
+
+            let isDuplicate = false;
+
+            // Check if current value already appeared before
+            for (let k = 0; k < i; k++) {
+                if (a2[i] === a2[k]) {
+                    isDuplicate = true;
+                    break;
+                }
+            }
+
+            if (isDuplicate) {
+                continue;
+            }
+
+            let count = 0;
+
+            // Count occurrences
+            for (let j = 0; j < a2.length; j++) {
+                if (a2[i] === a2[j]) {
+                    count++;
+                }
+            }
+
+            console.log(a2[i] + " => " + count);
+        }
+
+
+
+
+
+
+
 
 
 
@@ -169,4 +226,5 @@
 
     </script>
 </body>
+
 </html>

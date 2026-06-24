@@ -211,6 +211,55 @@
         }
 
 
+        // 1. Array ko Ascending Order me sort karo (without sort())
+
+        let a3 = [30,10,50,20]
+        for(let i=0; i<a3.length; i++){
+            for(let j = i+1; j<a3.length; j++){
+                if(a3[i]>a3[j]){
+                    let swap = a3[i];
+                    a3[i] = a3[j];
+                    a3[j] = swap;
+                }
+            }
+            
+        }
+        console.log(a3);
+
+        // 2. Array ko Descending Order me sort karo
+
+        let a4 = [30,10,50,20]
+        for(let i=0; i<a4.length; i++){
+            for(let j=0; j<=i; j++){
+                if(a4[i]>a4[j]){
+                    let s = a4[i];
+                    a4[i] = a4[j];
+                    a4[j] = s  
+                }
+            }
+        }
+        console.log(a4);
+
+        //3 Two arrays ko merge karo (without concat())
+
+        let x = [1,2,3]
+        let y = [4,5,6]
+        
+    //    let merge = [...x,...y]
+      let merge = x.concat(y)
+       console.log(merge);
+
+       //4 Array me unique elements print karo
+       let r = [10,20,10,30,20]
+
+
+
+
+        
+
+        
+        
+        
 
 
 

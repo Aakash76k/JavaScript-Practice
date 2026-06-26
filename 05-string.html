@@ -1,18 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>String Questions</title>
 </head>
+
 <body>
     <script>
 
         //  String:- Jo bhi text ya characters double quotes " " ya single quotes ' ' ke andar likhe hote hain, usse String kehte hain.
         //  String immutable hoti hai (directly change nahi hoti)
 
-        
+        //Q1. String ke saare characters print karo
+
+        let str = "Aakash";
+        for (let i = 0; i < str.length; i++) {
+            console.log(str[i]);
+        }
+
+        //Q2. String ki length count karo
+
+        let str1 = "Aakash";
+        console.log(str.length);
+
+        // Q3. String reverse karo
+
+        let str2 = "Aakash";
+        let rev = "";
+        for(let  i=str2.length-1; i>=0; i--){
+            rev += str2[i]
+        }
+        console.log(rev);
+
 
     </script>
 </body>
+
 </html>

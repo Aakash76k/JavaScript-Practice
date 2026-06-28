@@ -37,11 +37,22 @@
         // Q4. Vowels count karo
 
         let str3 = "Aakash";
-        for(let i=0; i<=str3.length; i++){
-            if(str3[i] == atr3[a] && str[i] == str[A] ){
-                console.log(str3);
+        let count = 0;
+        str3 = str3.toUpperCase();
+        for(let i=0; i<str3.length; str3++){
+            if(
+                str3[i] == "A" ||
+                str3[i] == "E" ||
+                str3[i] == "I" ||
+                str3[i] == "O" ||
+                str3[i] == "U" 
+
+            ){
+                count++;
             }
         }
+                    console.log(count);
+
 
 
     </script>

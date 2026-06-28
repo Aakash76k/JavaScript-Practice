@@ -39,20 +39,51 @@
         let str3 = "Aakash";
         let count = 0;
         str3 = str3.toUpperCase()
-        
+
         for (let i = 0; i < str3.length; i++) {
             if (
                 str3[i] == "A" ||
                 str3[i] == "E" ||
                 str3[i] == "I" ||
                 str3[i] == "O" ||
-                str3[i] == "U"  
+                str3[i] == "U"
 
             ) {
                 count++;
             }
         }
         console.log(count);
+
+        //Q5. Consonants count karo
+
+        let str4 = "Aakash";
+        let count1 = 0;
+        str4 = str4.toUpperCase();
+
+        for (let i = 0; i < str4.length; i++) {
+            if (
+                str4[i] != "A" &&
+                str4[i] != "E" &&
+                str4[i] != "I" &&
+                str4[i] != "O" &&
+                str4[i] != "U"
+            )
+            {
+                count1++;
+            }
+        }
+        console.log(count1);
+
+        //Q6. Uppercase letters count karo
+
+        let str5 = "AaKaSh";
+        let count2 = 0;
+        for(let i=0; i<str5.length; i++){
+            if(str5[i] >= "A" && str5[i] <= "Z"){
+                count2++;
+            }
+        }
+        console.log(count2);
 
 
 

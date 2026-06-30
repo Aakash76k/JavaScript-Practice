@@ -99,6 +99,31 @@
            
         //Q8. Duplicate characters count karo
 
+        let str7 = "aakash";
+        
+        
+        for(let i =0; i< str7.length; i++){
+            let isDuplicate = false;
+            for(let j =0; j<i; j++){
+                if(str7[i] == str7[j]){
+                    isDuplicate = true;
+                    break;
+                }
+            }
+            if(isDuplicate){
+                isDuplicate = false;
+            }
+
+            let count3 = 0;
+            for(let k =0; k<str7.length; k++){
+                if(str7[i] == str7[k]){
+                    count3++;
+                }
+            }
+            console.log(str7[i] + " : " + count3);
+        }
+        
+
 
     </script>
 </body>

@@ -23,7 +23,7 @@
         //Q2. String ki length count karo
 
         let str1 = "Aakash";
-        console.log(str.length);
+        console.log(str1.length);
 
         // Q3. String reverse karo
 
@@ -122,7 +122,44 @@
             }
             console.log(str7[i] + " : " + count3);
         }
-        
+
+        // Q9. Unique characters print karo
+
+        let str8 ="aakash";
+        let unique = "";
+        for(let i=0; i<str8.length; i++){
+            let isDuplicate = false;
+            for(let j=0; j<i; j++){
+                if(str8[i] == str8[j]){
+                    isDuplicate = true;
+                    break;
+                }
+                
+            }
+            if(!isDuplicate){
+                unique += str8[i];
+            }
+        }
+        console.log(unique);
+
+        //Q10. First non-repeating character
+
+        let str9 = "aakash";
+        let firstNonRepeating = "";
+        for(let i=0; i<str9.length; i++){
+            let isDuplicate = false;
+            for(let j=0; j<str9.length; j++){
+                if(i != j && str9[i] == str9[j]){
+                    isDuplicate = true;
+                    break;
+                }
+            }
+            if(!isDuplicate){
+                firstNonRepeating = str9[i];
+                break;
+            }
+        }
+        console.log(firstNonRepeating);
 
 
     </script>

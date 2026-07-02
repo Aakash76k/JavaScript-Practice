@@ -8,3 +8,9 @@ This repository contains my JavaScript learning journey and practice questions.
 - Data Types
 - Operators
 - Conditions
+- loops
+- Array
+- String
+- Functions
+
+

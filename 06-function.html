@@ -1,64 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Function</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        // Function code ka ek block hota hai jo kisi specific kaam ke liye banaya jata hai. Jab zarurat ho tab usse call karte hain.
+              // Function code ka ek block hota hai jo kisi specific kaam ke liye banaya jata hai. Jab zarurat ho tab usse call karte hain.
 
-        // 1- Function declaration and function call
-        // Q1. Simple Function
+              // 1- Function declaration and function call
+              // Q1. Simple Function
 
-        function hello(){
-            console.log("Hello Javascript")
-        }
+              function hello(){
+                  console.log("Hello Javascript")
+              }
 
-        hello();
+              hello();
 
-        // Q2. Function ko 3 baar call karo
+              // Q2. Function ko 3 baar call karo
 
-        function a(){
-            console.log("Hello")
-        }
-        a();
-        a();
-        a();
+              function a(){
+                  console.log("Hello")
+              }
+              a();
+              a();
+              a();
 
-        //Q3. Function se 1 se 10 tak numbers print karo
+              //Q3. Function se 1 se 10 tak numbers print karo
 
-        function b(){
-            for(let i=1; i<=10; i++){
-                console.log(i)
-            }
-        }
-        b();
+              function b(){
+                  for(let i=1; i<=10; i++){
+                      console.log(i)
+                  }
+              }
+              b();
 
-        // Q4. Function se 10 se 1 reverse print karo
+              // Q4. Function se 10 se 1 reverse print karo
 
-        function c(){
-            for(let j=10; j>=1; j--){
-                console.log(j)
-            }
-        }
-        c();
+              function c(){
+                  for(let j=10; j>=1; j--){
+                      console.log(j)
+                  }
+              }
+              c();
 
-        //Q5. Function se 1–10 ka sum print karo
+              //Q5. Function se 1–10 ka sum print karo
 
-       
-        function d(){
-            let sum = 0;
-            for(let i=1; i<=10; i++){
-                sum += i;
-            }
-            console.log(sum)
-        }
 
-        d();
-        
+              function d(){
+                  let sum = 0;
+                  for(let i=1; i<=10; i++){
+                      sum += i;
+                  }
+                  console.log(sum)
+              }
+              d();
+
+              // Function banate waqt  → Parameter
+              // Function call karte waqt → Argument
+
+              // Q1 Ek function banao.
+
+              function e(name){
+                console.log("hello " + name);
+              }
+              e("pawan");
+              
+
+              // Q2 function banao. square of 5
+
+              function square(num){
+                console.log(num * num);
+              }
+              square(5);
 
     </script>
-</body>
+  </body>
 </html>

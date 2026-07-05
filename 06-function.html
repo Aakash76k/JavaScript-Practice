@@ -110,14 +110,61 @@
 
               // Return kya karta hai? return function ka result wapas bhejta hai.
 
-              // Q1 
+              // Q1 square of number 
 
               function squ(num){
                 return num * num;
 
               }
               let ans = squ(5);
-              console.log(ans)
+              console.log(ans);
+
+              // cube of number 
+
+              function cube(num){
+                return num*num*num;
+              }
+
+              let answer = cube(5);
+              console.log(answer);
+
+              // Q3 Return largest number
+
+              function large(a,b){
+                 
+                if(a>b){
+                  return a;
+                }else {
+                  return b;
+                }
+              }
+
+              console.log(large(20,10));
+              console.log(large(50,100));
+
+              //Q4 Even/Odd
+
+              function evenodd(num){
+                if(num%2 == 0){
+                  return "Even";
+                }else {
+                  return "Odd";
+                }
+              }
+              console.log(evenodd(10));
+              console.log(evenodd(5));
+
+              //Q5 Reverse String
+
+              function reverse(str){
+                let rev = "";
+                for(let i = str.length - 1; i>=0; i--){
+                  
+                   rev += str[i] ;
+                }
+                return rev;
+              }
+              console.log(reverse("Aakash"));
 
 
 

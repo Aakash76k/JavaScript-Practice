@@ -7,176 +7,231 @@
   </head>
   <body>
     <script>
-              // Function code ka ek block hota hai jo kisi specific kaam ke liye banaya jata hai. Jab zarurat ho tab usse call karte hain.
+      // Function code ka ek block hota hai jo kisi specific kaam ke liye banaya jata hai. Jab zarurat ho tab usse call karte hain.
 
-              // 1- Function declaration and function call
-              // Q1. Simple Function
+      // 1- Function declaration and function call
+      // Q1. Simple Function
 
-              function hello(){
-                  console.log("Hello Javascript")
-              }
+      function hello() {
+        console.log("Hello Javascript");
+      }
 
-              hello();
+      hello();
 
-              // Q2. Function ko 3 baar call karo
+      // Q2. Function ko 3 baar call karo
 
-              function a(){
-                  console.log("Hello")
-              }
-              a();
-              a();
-              a();
+      function a() {
+        console.log("Hello");
+      }
+      a();
+      a();
+      a();
 
-              //Q3. Function se 1 se 10 tak numbers print karo
+      //Q3. Function se 1 se 10 tak numbers print karo
 
-              function b(){
-                  for(let i=1; i<=10; i++){
-                      console.log(i)
-                  }
-              }
-              b();
+      function b() {
+        for (let i = 1; i <= 10; i++) {
+          console.log(i);
+        }
+      }
+      b();
 
-              // Q4. Function se 10 se 1 reverse print karo
+      // Q4. Function se 10 se 1 reverse print karo
 
-              function c(){
-                  for(let j=10; j>=1; j--){
-                      console.log(j)
-                  }
-              }
-              c();
+      function c() {
+        for (let j = 10; j >= 1; j--) {
+          console.log(j);
+        }
+      }
+      c();
 
-              //Q5. Function se 1–10 ka sum print karo
+      //Q5. Function se 1–10 ka sum print karo
 
+      function d() {
+        let sum = 0;
+        for (let i = 1; i <= 10; i++) {
+          sum += i;
+        }
+        console.log(sum);
+      }
+      d();
 
-              function d(){
-                  let sum = 0;
-                  for(let i=1; i<=10; i++){
-                      sum += i;
-                  }
-                  console.log(sum)
-              }
-              d();
+      // Function banate waqt  → Parameter
+      // Function call karte waqt → Argument
 
-              // Function banate waqt  → Parameter
-              // Function call karte waqt → Argument
+      // Q1 Ek function banao.
 
-              // Q1 Ek function banao.
+      function e(name) {
+        console.log("hello " + name);
+      }
+      e("pawan");
 
-              function e(name){
-                console.log("hello " + name);
-              }
-              e("pawan");
-              
+      // Q2 function banao. square of 5
 
-              // Q2 function banao. square of 5
+      function square(num) {
+        console.log(num * num);
+      }
+      square(5);
 
-              function square(num){
-                console.log(num * num);
-              }
-              square(5);
+      // Q3 2 numbers ka sum.
 
+      function add(a, b) {
+        console.log(a + b);
+      }
+      add(10, 20);
+      add(50, 100);
 
-              // Q3 2 numbers ka sum.
-              
-              function add(a,b){
-                console.log(a+b);
-              }
-              add(10,20);
-              add(50,100);
+      // Q4 Even/Odd
 
-              // Q4 Even/Odd
+      function evenOdd(num) {
+        if (num % 2 == 0) {
+          console.log("even");
+        } else {
+          console.log("odd");
+        }
+      }
+      evenOdd(10);
+      evenOdd(7);
 
-              function evenOdd(num){
-                if(num%2 == 0){
-                    console.log("even");
-                }else {
-                    console.log("odd")
-                }
-              }
-              evenOdd(10);
-              evenOdd(7);
+      // Q5 Largest Number
 
-              // Q5 Largest Number
+      function largest(a, b) {
+        if (a > b) {
+          console.log(a);
+        } else if (b > a) {
+          console.log(b);
+        }
+      }
+      largest(20, 10);
+      largest(15, 40);
 
-              function largest(a,b){
-                if(a>b ){
-                    console.log(a)
-                }else if(b>a){
-                    console.log(b)
-                }
-              }
-              largest(20,10);
-              largest(15,40);
+      // Return kya karta hai? return function ka result wapas bhejta hai.
 
-              // Return kya karta hai? return function ka result wapas bhejta hai.
+      // Q1 square of number
 
-              // Q1 square of number 
+      function squ(num) {
+        return num * num;
+      }
+      let ans = squ(5);
+      console.log(ans);
 
-              function squ(num){
-                return num * num;
+      // cube of number
 
-              }
-              let ans = squ(5);
-              console.log(ans);
+      function cube(num) {
+        return num * num * num;
+      }
 
-              // cube of number 
+      let answer = cube(5);
+      console.log(answer);
 
-              function cube(num){
-                return num*num*num;
-              }
+      // Q3 Return largest number
 
-              let answer = cube(5);
-              console.log(answer);
+      function large(a, b) {
+        if (a > b) {
+          return a;
+        } else {
+          return b;
+        }
+      }
 
-              // Q3 Return largest number
+      console.log(large(20, 10));
+      console.log(large(50, 100));
 
-              function large(a,b){
-                 
-                if(a>b){
-                  return a;
-                }else {
-                  return b;
-                }
-              }
+      //Q4 Even/Odd
 
-              console.log(large(20,10));
-              console.log(large(50,100));
+      function evenodd(num) {
+        if (num % 2 == 0) {
+          return "Even";
+        } else {
+          return "Odd";
+        }
+      }
+      console.log(evenodd(10));
+      console.log(evenodd(5));
 
-              //Q4 Even/Odd
+      //Q5 Reverse String
 
-              function evenodd(num){
-                if(num%2 == 0){
-                  return "Even";
-                }else {
-                  return "Odd";
-                }
-              }
-              console.log(evenodd(10));
-              console.log(evenodd(5));
+      function reverse(str) {
+        let rev = "";
+        for (let i = str.length - 1; i >= 0; i--) {
+          rev += str[i];
+        }
+        return rev;
+      }
+      console.log(reverse("Aakash"));
 
-              //Q5 Reverse String
+      // Function Expression:- Yahan function ko ek variable me store karte hain.
 
-              function reverse(str){
-                let rev = "";
-                for(let i = str.length - 1; i>=0; i--){
-                  
-                   rev += str[i] ;
-                }
-                return rev;
-              }
-              console.log(reverse("Aakash"));
+      const add1 = function (a, b) {
+        return a + b;
+      };
+      console.log(add1(10, 20));
 
-              // Function Expression:- Yahan function ko ek variable me store karte hain.
+      // Q1. Smallest Number
 
-              const add1 = function(a,b){
-                return a+b;
-              };
-              console.log(add1(10,20));
+      const smallest = function (a, b) {
+        if (a < b) {
+          return a;
+        } else if (b < a) {
+          return b;
+        }
+      };
+      console.log(smallest(20, 10));
+      console.log(smallest(5, 15));
 
+      // Q2. Positive / Negative / Zero
 
+      const checknumber = function (num) {
+        if (num == 0) {
+          return "Zero";
+        } else if (num > 0) {
+          return "Positive";
+        } else if (num < 0) {
+          return "Negative";
+        }
+      };
 
+      console.log(checknumber(10));
+      console.log(checknumber(-5));
+      console.log(checknumber(0));
 
+      // Q3. Factorial
 
+      const factorial = function (num) {
+        let fact = 1;
+        for (let i = 1; i <= num; i++) {
+          fact *= i;
+        }
+        return fact;
+      };
+      console.log(factorial(5));
+
+      // Q4. Count Characters
+
+      const countcharacter = function (str) {
+        let count = 0;
+        for (let i = 0; i < str.length; i++) {
+          count++;
+        }
+        return count;
+      };
+      console.log(countcharacter("Aakash"));
+
+      // Q5. First Character
+
+      const firstCharacter = function (str) {
+        return str[0];
+      };
+      console.log(firstCharacter("JavaScript"));
+
+      // Q6. Last Character
+
+       const lastCharacter = function (str) {
+        return str[str.length-1];
+      };
+      console.log(lastCharacter("JavaScript"));
+
+      
 
     </script>
   </body>

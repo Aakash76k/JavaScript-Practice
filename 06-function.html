@@ -226,12 +226,37 @@
 
       // Q6. Last Character
 
-       const lastCharacter = function (str) {
-        return str[str.length-1];
+      const lastCharacter = function (str) {
+        return str[str.length - 1];
       };
       console.log(lastCharacter("JavaScript"));
 
-      
+      // Q7. Count Spaces
+
+      const countSpaces = function (str) {
+        let count = 0;
+        for (let i = 0; i < str.length; i++) {
+          if (str[i] == " ") {
+            count++;
+          }
+        }
+        return count;
+      };
+      console.log(countSpaces("I Love JavaScript"));
+
+      // Q8. Count Digits
+
+      const countDigits = function (str) {
+        let count=0;
+        for(let i=0; i<str.length; i++){
+          if(str[i] >= "0" && str[i] <="9"){
+            count++;
+          }
+        }
+        return count;
+      }
+      console.log(countDigits("abc12345"));
+
 
     </script>
   </body>

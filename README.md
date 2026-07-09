@@ -12,5 +12,11 @@ This repository contains my JavaScript learning journey and practice questions.
 - Array
 - String
 - Functions
+    ✔ Declaration
+    ✔ Parameters
+    ✔ Arguments
+    ✔ Return
+    ✔ Function Expression
+    ✔ Arrow Function
 
 

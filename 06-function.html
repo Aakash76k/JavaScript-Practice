@@ -247,17 +247,70 @@
       // Q8. Count Digits
 
       const countDigits = function (str) {
-        let count=0;
-        for(let i=0; i<str.length; i++){
-          if(str[i] >= "0" && str[i] <="9"){
+        let count = 0;
+        for (let i = 0; i < str.length; i++) {
+          if (str[i] >= "0" && str[i] <= "9") {
             count++;
           }
         }
         return count;
-      }
+      };
       console.log(countDigits("abc12345"));
 
+      // Arrow Function
 
+      //Practice Questions Q1
+
+      const greet = (name) => {
+        return "hello " + name;
+      };
+      console.log(greet("Aakash"));
+
+      // Q2
+
+      const add2 = (a, b) => {
+        return a + b;
+      };
+      console.log(add2(10, 20));
+
+      //Q3
+
+      const evenOdd1 = (num) => {
+        if (num % 2 == 0) {
+          return "Even";
+        } else {
+          return "Odd";
+        }
+      };
+
+      console.log(evenOdd1(10));
+      console.log(evenOdd1(7));
+
+      // Q4
+
+      const reverse1 = (str) => {
+        let rev = "";
+        for (let i = str.length - 1; i >= 0; i--) {
+          rev += str[i];
+        }
+        return rev;
+      };
+
+      console.log(reverse1("JavaScript"));
+
+      //Q5
+
+      const factorial1 = (num) => {
+        let fact = 1;
+        for(let i=1; i<=num; i++){
+          fact *= i;
+        }
+        return fact;
+      };
+
+      console.log(factorial1(5));
+
+      
     </script>
   </body>
 </html>

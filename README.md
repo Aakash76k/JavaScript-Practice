@@ -18,6 +18,6 @@ This repository contains my JavaScript learning journey and practice questions.
     ✔ Return
     ✔ Function Expression
     ✔ Arrow Function
--Objects
+- Objects
 
 

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+    <script>
+      // Object :- Object ek container hota hai jo related information ko "key : value" pair me store karta hai.
+      // Jaise:
+
+      //   let mobile = {
+      //       brand: "Samsung",
+      //       model: "S25",
+      //       price: 80000
+      //   };
+
+      //   Yahan
+
+      //   brand → Samsung
+
+      //   model → S25
+
+      //   price → 80000
+
+      // Examples:-
+
+      //  Q1. Student Object banao
+
+      let student = {
+        name: "Aakash",
+        age: 23,
+        course: "Btech",
+      };
+
+      // Q2. Object ki values print karo
+
+      console.log(student.name);
+      console.log(student.age);
+      console.log(student.course);
+
+      // Q3. Age update karo
+
+      let student1 = {
+        name: "pawan",
+        age: 22,
+        course: "bca",
+      };
+
+      student1.age = 23;
+      console.log(student1);
+
+      // Q4. New Property add karo
+
+      let student2 = {
+        name: "shivam",
+        age: 22,
+        course: "mtech",
+      };
+      student2.city = "Delhi";
+      console.log(student2);
+
+      // Q5. Property delete karo
+
+      let student3 = {
+        name: "shivam",
+        age: 22,
+        course: "mtech",
+        city: "Delhi",
+      };
+      delete student3.course;
+      console.log(student3);
+
+      //Q6. Car Object
+
+      let car = {
+        brand: "BMW",
+        model: "X5",
+        price: 9000000,
+        color: "Black",
+      };
+      console.log(car.brand);
+      console.log(car.model);
+      console.log(car.price);
+      console.log(car.color);
+
+      // Q7. Mobile Object
+
+      let mobile = {
+        brand: "Apple",
+        model: "iPhone 16",
+        storage: "256GB",
+        price: 120000,
+      };
+      console.log(mobile.brand);
+      console.log(mobile.price);
+    </script>
+  </body>
+</html>

@@ -95,6 +95,56 @@
       };
       console.log(mobile.brand);
       console.log(mobile.price);
+
+      // Loops in objects
+
+      // Q8 Property Count
+
+      let student4 = {
+        name: "pawan",
+        age: 24,
+        city: "Delhi",
+        course: "BCA",
+      };
+      let count1 = 0;
+      for (let key in student4) {
+        count1++;
+      }
+      console.log(count1);
+
+      // Q9 Print Keys
+
+      let student5 = {
+        name: "Aakash",
+        age: 22,
+        city: "Delhi",
+      };
+
+      for(let key in student5){
+        console.log(key)
+      }
+
+      // Q10 Print Values
+
+       for(let key in student5){
+        console.log(student5[key])
+      }
+
+      // Q11 Print Keys and Values
+
+      let student6 = {
+        name: "Aakash",
+        age: 22,
+        city: "Delhi",
+      };
+
+      for(let key in student6){
+        console.log( key + " : " + student6[key] );
+      }
+
+      // 
+
+
     </script>
   </body>
 </html>

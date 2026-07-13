@@ -120,14 +120,14 @@
         city: "Delhi",
       };
 
-      for(let key in student5){
-        console.log(key)
+      for (let key in student5) {
+        console.log(key);
       }
 
       // Q10 Print Values
 
-       for(let key in student5){
-        console.log(student5[key])
+      for (let key in student5) {
+        console.log(student5[key]);
       }
 
       // Q11 Print Keys and Values
@@ -138,12 +138,64 @@
         city: "Delhi",
       };
 
-      for(let key in student6){
-        console.log( key + " : " + student6[key] );
+      for (let key in student6) {
+        console.log(key + " : " + student6[key]);
       }
 
-      // 
+      //
 
+      // Array of Objects
+
+      // Q1
+
+      let students = [
+        {
+          name: "Aakash",
+          age: 22,
+        },
+        {
+          name: "Pawan",
+          age: 24,
+        },
+      ];
+
+      console.log(students[0].name);
+      console.log(students[1].name);
+
+      // Q2
+
+      console.log(students[0].age);
+      console.log(students[1].age);
+
+      // Q3
+
+      for (let key in students) {
+        console.log(students[key].name + "-" + students[key].age);
+      }
+
+      // Q4
+
+      for (let i = 0; i < students.length; i++) {
+        console.log(students[i].name);
+      }
+
+      // Q5
+
+   let students1 = [
+        {
+          name: "Aakash",
+          age: 22,
+          city: "Delhi"
+        },
+        {
+          name: "Pawan",
+          age: 24,
+          city: "Mumbai"
+        },
+      ]; 
+       for (let key in students1) {
+        console.log(students1[key].name + "-" + students1[key].age + "-" + students1[key].city);
+      }     
 
     </script>
   </body>

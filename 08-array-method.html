@@ -1,70 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Array-method</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-    // push ➜ Last me add, pop ➜ Last se remove, unshift ➜ First me add, shift ➜ First se remove 
-    
-    // Q1 add 40 
+      // push ➜ Last me add, pop ➜ Last se remove, unshift ➜ First me add, shift ➜ First se remove.
 
-    let a = [10,20,30]
-    a.push(40);
-    console.log(a)
+      // Q1 add 40
 
-    // Q2 Remove last element
+      let a = [10, 20, 30];
+      a.push(40);
+      console.log(a);
 
-    let a1 =[10,20,30]
-    a1.pop();
-    console.log(a1);
+      // Q2 Remove last element
 
-    // Q3 add 10 in start
+      let a1 = [10, 20, 30];
+      a1.pop();
+      console.log(a1);
 
-    let add = [20,30]
-    add.unshift(10);
-    console.log(add);
+      // Q3 add 10 in start
 
-    // Q4 Remove first element
+      let add = [20, 30];
+      add.unshift(10);
+      console.log(add);
 
-    let remove = [10,20,30]
-    remove.shift();
-    console.log(remove);
+      // Q4 Remove first element
 
-    // Q5 
+      let remove = [10, 20, 30];
+      remove.shift();
+      console.log(remove);
 
-    let a2 = [20,30]
-    a2.unshift(10);
-    a2.push(40);
-    console.log(a2);
+      // Q5
 
-    // Slice and splice :- slice - Copy karta hai, Original safe rehta hai. || splice -> 👇Cut karta hai , Original change ho jata hai.
+      let a2 = [20, 30];
+      a2.unshift(10);
+      a2.push(40);
+      console.log(a2);
 
-    // Q1 
+      // Slice and splice :- slice - Copy karta hai, Original safe rehta hai. || splice -> 👇Cut karta hai , Original change ho jata hai., , arr.splice(start, deleteCount, newElement);
 
-    let arr = [10,20,30,40,50];
-    let ans = arr.slice(1,4);
-    console.log(ans);
+      // Q1
 
-    // Q2 
+      let arr = [10, 20, 30, 40, 50];
+      let ans = arr.slice(1, 4);
+      console.log(ans);
 
-    arr.splice(1,2);
-    console.log(arr);
+      // Q2
 
-    // Q3
+      arr.splice(1, 2);
+      console.log(arr);
 
-    let ans2 = arr.slice(1,3);
-    console.log(ans2);
+      // Q3
 
-    // Q4
+      let ans2 = arr.slice(1, 3);
+      console.log(ans2);
 
-    let arr2 = [10,20,30,40,50]
+      // Q4 Delete
 
-    arr2.splice(3,1);
-    console.log(arr2);
+      let arr2 = [10, 20, 30, 40, 50];
 
+      arr2.splice(3, 1);
+      console.log(arr2);
+
+      // Insert
+      let arr3 = [10, 20, 30, 40, 50];
+
+      arr3.splice(2, 0, 99);
+      console.log(arr3);
+
+      // Replace
+      let arr4 = [10, 20, 30, 40];
+
+      arr4.splice(1, 1, 50);
+      console.log(arr4);
+
+      // indexOf(), includes(), join(), concat()
+
+      // Q1 indexof()
+
+      let arr5 = [10, 20, 30, 40];
+      console.log(arr5.indexOf(30));
+
+      //Q2
+
+      let arr6 = [10, 20, 30, 40];
+      console.log(arr6.indexOf(50));
+
+      //Q3 Includesof()
+
+      let arr7 = [10, 20, 30, 40];
+      console.log(arr7.includes(20));
+
+      // Q4
+
+      let arr8 = [10, 20, 30, 40];
+      console.log(arr8.includes(100));
+
+      // Q5 Join()
+
+      let arr9 = ["HTML", "CSS", "JS"];
+      console.log(arr9.join("-"));
+
+      // Q6 Concat
+
+      let arr11 = [10, 20];
+      let arr22 = [30, 40];
+      console.log(arr11.concat(arr22));
     </script>
-</body>
+  </body>
 </html>

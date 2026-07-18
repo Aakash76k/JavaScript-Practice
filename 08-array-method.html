@@ -120,59 +120,91 @@
 
       console.log(ans112);
 
-      // Q1 
+      // Q1
 
-      let ar1 = [1,2,3,4];
-      let an1 = ar1.map((item) =>{
+      let ar1 = [1, 2, 3, 4];
+      let an1 = ar1.map((item) => {
         return item * 2;
       });
       console.log(an1);
 
       //Q2
 
-      let ar2 = [10,20,30];
-      let an2 = ar2.map((item) =>{
+      let ar2 = [10, 20, 30];
+      let an2 = ar2.map((item) => {
         return item + 5;
-      })
+      });
       console.log(an2);
 
       // Q3
 
-      let names = ["Aakash","Pawan","Shivam"];
-      
+      let names = ["Aakash", "Pawan", "Shivam"];
+
       let an3 = names.map((item) => {
-        return "Hello " + item ;
+        return "Hello " + item;
       });
-      console.log( an3);
+      console.log(an3);
 
       //Q4
 
-      let ar4 = [10,20,30,40];
-      let an4 = ar4.map((item)=>{
-        return item *10;
-      })
+      let ar4 = [10, 20, 30, 40];
+      let an4 = ar4.map((item) => {
+        return item * 10;
+      });
       console.log(an4);
 
       //Q5
 
-      let name = ["Aakash","Pawan","Shivam"];
-      let an5 = name.map((item)=>{
+      let name = ["Aakash", "Pawan", "Shivam"];
+      let an5 = name.map((item) => {
         return item.toUpperCase();
       });
       console.log(an5);
 
       //Q6
 
-      let ar6 = [1,2,3,4,5];
-      let an6 = ar6.map((item) =>{
+      let ar6 = [1, 2, 3, 4, 5];
+      let an6 = ar6.map((item) => {
         return item.toString();
       });
       console.log(an6);
 
-      
+      // filter:- Sirf condition wale elements return karta hai,	Array chhota ya same ho sakta hai
 
+      let a11 = [10, 20, 30, 40, 50];
 
-      // filter
+      let a22 = a11.filter((item) => {
+        return item > 25;
+      });
+
+      console.log(a22);
+
+      // Q1 
+
+      let a12 = [10,20,30,40,50];
+      let a13 = a12.filter((item)=>{
+        return item>30;
+      });
+      console.log(a13);
+
+      // Q2
+
+      let a14 = [1,2,3,4,5,6];
+      let a15 = a14.filter((item)=>{
+        if(item%2 == 0){
+          return item;
+        }
+      });
+      console.log(a15);
+
+      // Q3
+
+      let n = ["Aakash","Ram","Pawan","Om"];
+      let n1 = n.filter((item) =>{
+        return item.length>4
+      });
+      console.log(n1);
+
     </script>
   </body>
 </html>

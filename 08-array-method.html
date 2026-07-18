@@ -179,19 +179,19 @@
 
       console.log(a22);
 
-      // Q1 
+      // Q1
 
-      let a12 = [10,20,30,40,50];
-      let a13 = a12.filter((item)=>{
-        return item>30;
+      let a12 = [10, 20, 30, 40, 50];
+      let a13 = a12.filter((item) => {
+        return item > 30;
       });
       console.log(a13);
 
       // Q2
 
-      let a14 = [1,2,3,4,5,6];
-      let a15 = a14.filter((item)=>{
-        if(item%2 == 0){
+      let a14 = [1, 2, 3, 4, 5, 6];
+      let a15 = a14.filter((item) => {
+        if (item % 2 == 0) {
           return item;
         }
       });
@@ -199,12 +199,27 @@
 
       // Q3
 
-      let n = ["Aakash","Ram","Pawan","Om"];
-      let n1 = n.filter((item) =>{
-        return item.length>4
+      let n = ["Aakash", "Ram", "Pawan", "Om"];
+      let n1 = n.filter((item) => {
+        return item.length > 4;
       });
       console.log(n1);
 
+      // Reduce:- Saare elements ko mila kar ek hi value return karta hai.
+
+      // syntax:- arr.reduce((accumulator, item) => {    return ...}, initialValue);
+
+      let a111 = [10, 20, 30];
+
+      let an111 = a111.reduce((acc, item) => {
+        return acc + item;
+      }, 0);
+
+      console.log(an111);
+
+      // Q1
+
+      
     </script>
   </body>
 </html>

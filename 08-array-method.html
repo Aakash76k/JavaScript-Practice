@@ -110,7 +110,7 @@
       let arr22 = [30, 40];
       console.log(arr11.concat(arr22));
 
-      // map : api se aya hua data screen pr dikhane k kaam krta h
+      // map : api se aya hua data screen pr dikhane k kaam krta h || Simple language me:- Array ke har element par ek kaam karta hai aur ek naya array return karta hai
 
       let arr111 = [10, 20, 30];
 
@@ -119,6 +119,58 @@
       });
 
       console.log(ans112);
+
+      // Q1 
+
+      let ar1 = [1,2,3,4];
+      let an1 = ar1.map((item) =>{
+        return item * 2;
+      });
+      console.log(an1);
+
+      //Q2
+
+      let ar2 = [10,20,30];
+      let an2 = ar2.map((item) =>{
+        return item + 5;
+      })
+      console.log(an2);
+
+      // Q3
+
+      let names = ["Aakash","Pawan","Shivam"];
+      
+      let an3 = names.map((item) => {
+        return "Hello " + item ;
+      });
+      console.log( an3);
+
+      //Q4
+
+      let ar4 = [10,20,30,40];
+      let an4 = ar4.map((item)=>{
+        return item *10;
+      })
+      console.log(an4);
+
+      //Q5
+
+      let name = ["Aakash","Pawan","Shivam"];
+      let an5 = name.map((item)=>{
+        return item.toUpperCase();
+      });
+      console.log(an5);
+
+      //Q6
+
+      let ar6 = [1,2,3,4,5];
+      let an6 = ar6.map((item) =>{
+        return item.toString();
+      });
+      console.log(an6);
+
+      
+
 
       // filter
     </script>

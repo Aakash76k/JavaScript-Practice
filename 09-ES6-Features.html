@@ -27,8 +27,9 @@
         name1: "Aakash",
         age: 24,
       };
+      let {name1} = student1;
 
-      console.log(name);
+      console.log(name1);
 
       //Q2. Name aur Age print karo
 
@@ -45,12 +46,8 @@
       //Q3. Array Destructuring
 
       let ar = [10,20,30];
-      let x ={
-        a : ar[0],
-        b: ar[1],
-        c: ar[2],
-      };
-      let {a, b , c} = x;
+      
+      let [a, b , c] = ar;
       console.log(a);
       console.log(b);
       console.log(c);
@@ -58,12 +55,8 @@
       //Q4. First aur Second Fruit
 
       let fruits = ["Apple","Mango","Banana"];
-      let n ={
-        u : fruits[0],
-        v: fruits[1],
-        w: fruits[2],
-      }
-      let {u , v,w} = n;
+     
+      let [u , v,w] = fruits;
       console.log(u);
       console.log(v);
       console.log(w);
@@ -71,14 +64,8 @@
       // Q5. Skip Value
 
       let numbers = [10,20,30,40];
-      let  m = {
-        a1: numbers[0],
-        b1: numbers[1],
-        c1: numbers[2],
-        d1: numbers[3],
-      };
-
-      let {a1, c1} = m;
+      
+      let [a1, , c1] = numbers;
       console.log(a1);
       console.log(c1);
 

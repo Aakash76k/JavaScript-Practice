@@ -27,49 +27,85 @@
         name1: "Aakash",
         age: 24,
       };
-      let {name1} = student1;
+      let { name1 } = student1;
 
       console.log(name1);
 
       //Q2. Name aur Age print karo
 
       let s = {
-        name2 : "Aakash",
-        age2 : 23,
-        city : "faridabad",
+        name2: "Aakash",
+        age2: 23,
+        city: "faridabad",
       };
 
-      let {name2 , age2} = s;
+      let { name2, age2 } = s;
       console.log(name2);
       console.log(age2);
 
       //Q3. Array Destructuring
 
-      let ar = [10,20,30];
-      
-      let [a, b , c] = ar;
+      let ar = [10, 20, 30];
+
+      let [a, b, c] = ar;
       console.log(a);
       console.log(b);
       console.log(c);
 
       //Q4. First aur Second Fruit
 
-      let fruits = ["Apple","Mango","Banana"];
-     
-      let [u , v,w] = fruits;
+      let fruits = ["Apple", "Mango", "Banana"];
+
+      let [u, v, w] = fruits;
       console.log(u);
       console.log(v);
       console.log(w);
 
       // Q5. Skip Value
 
-      let numbers = [10,20,30,40];
-      
+      let numbers = [10, 20, 30, 40];
+
       let [a1, , c1] = numbers;
       console.log(a1);
       console.log(c1);
 
+      // spread operator (...) :- Ek array ya object ko "phaila" dena (spread kar dena).
 
+      // Q1 Copy Array
+      let arr1 = [10, 20, 30];
+      let arr2 = [...arr1];
+      console.log(arr2);
+
+      // Q2 Add New Elements
+
+      let arr3 = [10, 20, 30];
+      let arr4 = [...arr3, 40, 50];
+      console.log(arr4);
+
+      //Q3 Start me Add
+
+      let arr5 = [30, 40];
+      let arr6 = [10, 20, ...arr5];
+      console.log(arr6);
+
+      // Q4 Merge Two Arrays
+
+      let arr7 = [10, 20];
+      let arr8 = [30, 40];
+      let arr9 = [...arr7, ...arr8];
+      console.log(arr9);
+
+      // Q5 Object Copy
+
+      let student2 = {
+        name: "Aakash",
+        age: 24,
+      };
+
+      let student3 ={
+        ...student2,
+      };
+      console.log(student3);
 
 
     </script>

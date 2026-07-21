@@ -102,12 +102,49 @@
         age: 24,
       };
 
-      let student3 ={
+      let student3 = {
         ...student2,
       };
       console.log(student3);
 
+      // Rest Operator :- collect krta h .(...Rest Operator)
 
+      //Q1
+
+      function show(...number) {
+        return number;
+      }
+      console.log(show(10, 20, 30));
+
+      //Q2 Function banao jo jitne bhi numbers mile unka sum return kare.
+
+      function sum(...number) {
+        let total = 0;
+        for (let i = 0; i < number.length; i++) {
+          total += number[i];
+        }
+        return total;
+      }
+      console.log(sum(10, 20, 30));
+
+      // Q3
+
+      function demo(a, b, ...rest) {
+        console.log(a);
+        console.log(b);
+        console.log(rest);
+      }
+      demo(10, 20, 30, 40, 50);
+
+      // Q4 Function banao jo saare names print kare.
+
+      function names1(...rest) {
+        for (let i = 0; i < rest.length; i++) {
+          console.log(rest[i]);
+        }
+      }
+
+      names1("Aakash", "Shivam", "Mayank");
     </script>
   </body>
 </html>

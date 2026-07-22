@@ -166,21 +166,51 @@
 
       //Q2 Multiply
 
-      function multiply(a,b = 2) {
-        return a *b;
+      function multiply(a, b = 2) {
+        return a * b;
       }
-      console.log(multiply(10,5));
+      console.log(multiply(10, 5));
       console.log(multiply(10));
 
-      //Q3 Power 
+      //Q3 Power
 
-      function power(num =3){
+      function power(num = 3) {
         return num * num;
-      };
+      }
       console.log(power(5));
       console.log(power());
 
+      //Optional Chaining (?.)
 
+      //Q1
+
+      let user = {
+        name: "Aakash",
+      };
+      console.log(user.address?.city);
+
+      //Q2
+
+      let student5 = {
+        name: "Pawan",
+        marks: {
+          DM: 65,
+        },
+      };
+      console.log(student5.marks?.DM);
+
+      // Q3
+
+      let car = {
+        brand: "BMW",
+      };
+      console.log(car.model?.mod);
+
+      //?? (Nullish Coalescing)
+
+      let name3 = null;
+
+      console.log(name3 ?? "Guest");
     </script>
   </body>
 </html>

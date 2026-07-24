@@ -27,6 +27,29 @@
         .catch((err)=>{
             console.log(err);
         });
+
+        // Q2 Promise banao and Reject karo
+
+        let promise1 = new Promise((resolve, reject)=>{
+            let a = false;
+            if(a){
+                resolve("something")
+            }else{
+                reject("something went wrong")
+            }
+        });
+
+        promise1 
+        .then((data)=>{
+            console.log(data);
+        })
+        .catch((err)=>{
+            console.log(err);
+        });
+
+        //Q3 id pass 
+
+        
     </script>
 </body>
 </html>

@@ -6,6 +6,27 @@
     <title>promise</title>
 </head>
 <body>
-    
+    <script>
+        // Promise :- 🟡 Pending → Order ban raha hai., 🟢 Fulfilled → Order mil gaya. ,🔴 Rejected → Order cancel ho gaya.
+
+        // Q1 Promise banao. and Resolve karo
+
+        let promise = new Promise((resolve,reject)=>{
+            let success = true;
+            if(success){
+                resolve(" Hello promise")
+            }else{
+                reject("no promise")
+            }
+        });
+
+        promise 
+        .then((data) =>{
+            console.log(data);
+        })
+        .catch((err)=>{
+            console.log(err);
+        });
+    </script>
 </body>
 </html>

@@ -66,7 +66,24 @@
             console.log(err);
         });
 
-        
+        // Q4 age eligible or not 
+
+        let promise3 = new Promise((resolve,reject)=>{
+            let age = 20;
+            if(age>=18){
+                resolve("Eligible")
+            }else{
+                reject("Not Eligible")
+            }
+        });
+
+        promise3 
+        .then((data)=>{
+            console.log(data);
+        })
+        .catch((err)=>{
+            console.log(err);
+        });
 
 
     </script>

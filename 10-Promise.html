@@ -85,6 +85,26 @@
             console.log(err);
         });
 
+        // Q5 Login 
+
+        let promise4 = new Promise((resolve,reject) =>{
+            let username = "Aakash";
+            let password = "1234";
+            if(username === "Aakash" && password === "1234"){
+                resolve("Login success")
+            }else{
+                reject("Invalid Credentials")
+            }
+        });
+
+        promise4
+        .then((data)=>{
+            console.log(data);
+        })
+        .catch((err) =>{
+            console.log(err);
+        })
+
 
     </script>
 </body>

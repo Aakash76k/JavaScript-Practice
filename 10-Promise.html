@@ -1,111 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>promise</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        // Promise :- 🟡 Pending → Order ban raha hai., 🟢 Fulfilled → Order mil gaya. ,🔴 Rejected → Order cancel ho gaya.
+      // Promise :- 🟡 Pending → Order ban raha hai., 🟢 Fulfilled → Order mil gaya. ,🔴 Rejected → Order cancel ho gaya.
 
-        // Q1 Promise banao. and Resolve karo
+      // Q1 Promise banao. and Resolve karo
 
-        let promise = new Promise((resolve,reject)=>{
-            let success = true;
-            if(success){
-                resolve(" Hello promise")
-            }else{
-                reject("no promise")
-            }
-        });
+      let promise = new Promise((resolve, reject) => {
+        let success = true;
+        if (success) {
+          resolve(" Hello promise");
+        } else {
+          reject("no promise");
+        }
+      });
 
-        promise 
-        .then((data) =>{
-            console.log(data);
+      promise
+        .then((data) => {
+          console.log(data);
         })
-        .catch((err)=>{
-            console.log(err);
+        .catch((err) => {
+          console.log(err);
         });
 
-        // Q2 Promise banao and Reject karo
+      // Q2 Promise banao and Reject karo
 
-        let promise1 = new Promise((resolve, reject)=>{
-            let a = false;
-            if(a){
-                resolve("something")
-            }else{
-                reject("something went wrong")
-            }
-        });
+      let promise1 = new Promise((resolve, reject) => {
+        let a = false;
+        if (a) {
+          resolve("something");
+        } else {
+          reject("something went wrong");
+        }
+      });
 
-        promise1 
-        .then((data)=>{
-            console.log(data);
+      promise1
+        .then((data) => {
+          console.log(data);
         })
-        .catch((err)=>{
-            console.log(err);
+        .catch((err) => {
+          console.log(err);
         });
 
-        //Q3 id pass 
+      //Q3 id pass
 
-        let promise2 = new Promise((resolve, reject)=>{
-            let isPassed = true;
-            if(isPassed){
-                resolve("Pass")
-            }else{
-                reject("fail")
-            }
-        });
+      let promise2 = new Promise((resolve, reject) => {
+        let isPassed = true;
+        if (isPassed) {
+          resolve("Pass");
+        } else {
+          reject("fail");
+        }
+      });
 
-        promise2 
-        .then((data)=>{
-            console.log(data);
+      promise2
+        .then((data) => {
+          console.log(data);
         })
-        .catch((err)=>{
-            console.log(err);
+        .catch((err) => {
+          console.log(err);
         });
 
-        // Q4 age eligible or not 
+      // Q4 age eligible or not
 
-        let promise3 = new Promise((resolve,reject)=>{
-            let age = 20;
-            if(age>=18){
-                resolve("Eligible")
-            }else{
-                reject("Not Eligible")
-            }
-        });
+      let promise3 = new Promise((resolve, reject) => {
+        let age = 20;
+        if (age >= 18) {
+          resolve("Eligible");
+        } else {
+          reject("Not Eligible");
+        }
+      });
 
-        promise3 
-        .then((data)=>{
-            console.log(data);
+      promise3
+        .then((data) => {
+          console.log(data);
         })
-        .catch((err)=>{
-            console.log(err);
+        .catch((err) => {
+          console.log(err);
         });
 
-        // Q5 Login 
+      // Q5 Login
 
-        let promise4 = new Promise((resolve,reject) =>{
-            let username = "Aakash";
-            let password = "1234";
-            if(username === "Aakash" && password === "1234"){
-                resolve("Login success")
-            }else{
-                reject("Invalid Credentials")
-            }
+      let promise4 = new Promise((resolve, reject) => {
+        let username = "Aakash";
+        let password = "1234";
+        if (username === "Aakash" && password === "1234") {
+          resolve("Login success");
+        } else {
+          reject("Invalid Credentials");
+        }
+      });
+
+      promise4
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((err) => {
+          console.log(err);
         });
 
-        promise4
-        .then((data)=>{
-            console.log(data);
-        })
-        .catch((err) =>{
-            console.log(err);
-        })
+      // Finally()
 
+      let promise5 = new Promise((resolve, reject) => {
+        resolve("Success");
+      });
 
+      promise5
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((err) => {
+          console.log(err);
+        })
+        .finally(() => {
+          console.log("Promise Completed");
+        });
     </script>
-</body>
+  </body>
 </html>

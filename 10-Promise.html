@@ -7,6 +7,7 @@
   </head>
   <body>
     <script>
+      // synchronus 
       // Promise :- 🟡 Pending → Order ban raha hai., 🟢 Fulfilled → Order mil gaya. ,🔴 Rejected → Order cancel ho gaya.
 
       // Q1 Promise banao. and Resolve karo
@@ -142,6 +143,25 @@
         .finally(()=>{
           console.log("Thank You")
         })
+
+          // Asynchronus :- Timeout
+
+          let promise7 = new Promise((resolve,reject) =>{
+            setTimeout(()=>{
+              resolve("Data Loaded")
+            },2000)
+          })
+
+          promise7
+          .then((data)=>{
+            console.log(data);
+          });
+
+          // Q1 name print
+
+
+
+
     </script>
   </body>
 </html>

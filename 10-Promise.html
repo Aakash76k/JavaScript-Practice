@@ -121,6 +121,27 @@
         .finally(() => {
           console.log("Promise Completed");
         });
+
+        // Q1 Payment 
+
+        let promise6 = new Promise((resolve,reject) =>{
+          let payment = true;
+          if(payment){
+            resolve("payment successfull")
+          }else{
+            reject("payment failed")
+          }
+        });
+        promise6
+        .then((data)=>{
+          console.log(data);
+        })
+        .catch((err)=>{
+          console.log(err);
+        })
+        .finally(()=>{
+          console.log("Thank You")
+        })
     </script>
   </body>
 </html>

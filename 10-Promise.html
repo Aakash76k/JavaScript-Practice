@@ -7,7 +7,7 @@
   </head>
   <body>
     <script>
-      // synchronus 
+      // synchronus
       // Promise :- 🟡 Pending → Order ban raha hai., 🟢 Fulfilled → Order mil gaya. ,🔴 Rejected → Order cancel ho gaya.
 
       // Q1 Promise banao. and Resolve karo
@@ -123,45 +123,79 @@
           console.log("Promise Completed");
         });
 
-        // Q1 Payment 
+      // Q1 Payment
 
-        let promise6 = new Promise((resolve,reject) =>{
-          let payment = true;
-          if(payment){
-            resolve("payment successfull")
-          }else{
-            reject("payment failed")
-          }
-        });
-        promise6
-        .then((data)=>{
+      let promise6 = new Promise((resolve, reject) => {
+        let payment = true;
+        if (payment) {
+          resolve("payment successfull");
+        } else {
+          reject("payment failed");
+        }
+      });
+      promise6
+        .then((data) => {
           console.log(data);
         })
-        .catch((err)=>{
+        .catch((err) => {
           console.log(err);
         })
-        .finally(()=>{
-          console.log("Thank You")
+        .finally(() => {
+          console.log("Thank You");
+        });
+
+      // Asynchronus :- Timeout
+
+      let promise7 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Data Loaded");
+        }, 2000);
+      });
+
+      promise7.then((data) => {
+        console.log(data);
+      });
+
+      // Q1 name print using resolve
+
+      let promise8 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Welcome Aakash");
+        }, 3000);
+      });
+
+      promise8.then((data) => {
+        console.log(data);
+      });
+
+      // Q2 print using Reject
+
+      let promise9 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          reject("Server Error");
+        }, 3000);
+      });
+
+      promise9
+        .then((data) => {
+          console.log(data);
         })
+        .catch((err) => {
+          console.log(err);
+        });
 
-          // Asynchronus :- Timeout
+      // Async= Is function me Promise use hoga. and Await = Promise complete hone ka wait karo, phir aage badho.
 
-          let promise7 = new Promise((resolve,reject) =>{
-            setTimeout(()=>{
-              resolve("Data Loaded")
-            },2000)
-          })
+      let promise11 = new Promise((resolve) => {
+        resolve("Hello Async");
+      });
 
-          promise7
-          .then((data)=>{
-            console.log(data);
-          });
-
-          // Q1 name print
-
-
-
-
+      async function greet() {
+        let data = await promise11;
+        console.log(data);
+      }
+      greet();
+      
     </script>
   </body>
 </html>

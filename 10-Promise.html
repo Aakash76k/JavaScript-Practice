@@ -199,20 +199,55 @@
       //Q2
 
       let promise12 = new Promise((resolve) => {
-setTimeout(() => {
-    resolve("Data Loaded");
-}, 2000);
-});
+        setTimeout(() => {
+          resolve("Data Loaded");
+        }, 2000);
+      });
 
-async function show(){
+      async function show() {
+        let data = await promise12;
 
-    let data = await promise12;
+        console.log(data);
+      }
 
-    console.log(data);
+      show();
 
-}
+      // Try and Catch
 
-show();
+      let promise14 = new Promise((resolve, reject) => {
+        reject("Network Error");
+      });
+
+      async function how() {
+        try {
+          let data = await promise14;
+
+          console.log(data);
+        } catch (err) {
+          console.log(err);
+        }
+      }
+
+      how();
+
+      // Q1
+
+      let promise15 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          reject("Server Error");
+        }, 2000);
+      });
+
+      async function hello() {
+        try{
+          let a = await promise15;
+          console.log(a);
+        } catch(err){
+          console.log(err);
+        }
+      }
+      hello();
+
 
     </script>
   </body>

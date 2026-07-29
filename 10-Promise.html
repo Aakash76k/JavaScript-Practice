@@ -195,7 +195,25 @@
         console.log(data);
       }
       greet();
-      
+
+      //Q2
+
+      let promise12 = new Promise((resolve) => {
+setTimeout(() => {
+    resolve("Data Loaded");
+}, 2000);
+});
+
+async function show(){
+
+    let data = await promise12;
+
+    console.log(data);
+
+}
+
+show();
+
     </script>
   </body>
 </html>

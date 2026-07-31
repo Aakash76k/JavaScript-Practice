@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise-Advance</title>
+</head>
+<body>
+
+    <script>
+        // Promise chaining
+
+
+       // Q1
+        let promise = new Promise((resolve,reject)=>{
+            resolve(5);
+        })
+        promise
+        .then((num)=>{
+            return num + 5;
+        })
+        .then((num)=>{
+            return num * 2;
+        })
+        .then((num)=>{
+            console.log(num);
+        })
+
+        //Q2
+
+        let promise2 = new Promise((resolve,reject)=>{
+            resolve("Hello ");
+        })
+        promise2
+        .then((data)=>{
+            return data + "Aakash";
+        })
+        .then((data)=>{
+            return data + "🚀";
+        })
+        .then((data)=>{
+            console.log(data);
+        })
+
+        //Q3
+
+         let promise3 = new Promise((resolve,reject)=>{
+            resolve(100);
+        })
+        promise3
+        .then((num)=>{
+            return num - 20;
+        })
+        .then((num)=>{
+            return num / 2;
+        })
+        .then((num)=>{
+            console.log(num);
+        })
+
+    </script>
+    
+</body>
+</html>

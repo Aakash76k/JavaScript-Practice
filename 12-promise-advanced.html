@@ -140,6 +140,32 @@
       Promise.race([p7, p8, p9]).then((data) => {
         console.log(data);
       });
+
+     
+      // Promise.allSetteled():- sab promises ka result dega, chahe success ho ya fail.
+
+      //Q1
+
+      let p13 = Promise.resolve("HTML");
+let p14 = Promise.reject("API Error");
+let p15 = Promise.resolve("JavaScript");
+
+Promise.allSettled([p13, p14, p15])
+  .then((data) => {
+    console.log(data);
+  });
+
+  //Q2 
+
+  let p16 = Promise.resolve(10);
+let p17 = Promise.reject("Error");
+let p18 = Promise.resolve(30);
+
+Promise.allSettled([p16,p17,p18])
+.then((data)=>{
+    console.log(data);
+});
+
     </script>
   </body>
 </html>

@@ -141,31 +141,39 @@
         console.log(data);
       });
 
-     
       // Promise.allSetteled():- sab promises ka result dega, chahe success ho ya fail.
 
       //Q1
 
       let p13 = Promise.resolve("HTML");
-let p14 = Promise.reject("API Error");
-let p15 = Promise.resolve("JavaScript");
+      let p14 = Promise.reject("API Error");
+      let p15 = Promise.resolve("JavaScript");
 
-Promise.allSettled([p13, p14, p15])
-  .then((data) => {
-    console.log(data);
-  });
+      Promise.allSettled([p13, p14, p15]).then((data) => {
+        console.log(data);
+      });
 
-  //Q2 
+      //Q2
 
-  let p16 = Promise.resolve(10);
-let p17 = Promise.reject("Error");
-let p18 = Promise.resolve(30);
+      let p16 = Promise.resolve(10);
+      let p17 = Promise.reject("Error");
+      let p18 = Promise.resolve(30);
 
-Promise.allSettled([p16,p17,p18])
-.then((data)=>{
-    console.log(data);
-});
+      Promise.allSettled([p16, p17, p18]).then((data) => {
+        console.log(data);
+      });
 
+      // Promise.any():- Jo pehla successful (resolve) Promise milega, wahi return karega. and Agar pehla reject ho gaya to usko ignore karega.
+
+      // Q1
+
+      let p31 = Promise.reject("Network Error");
+      let p32 = Promise.resolve("React");
+      let p35 = Promise.resolve("Node");
+
+      Promise.any([p31, p32, p35]).then((data) => {
+        console.log(data);
+      });
     </script>
   </body>
 </html>

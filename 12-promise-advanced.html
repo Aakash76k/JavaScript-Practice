@@ -1,77 +1,145 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Promise-Advance</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <script>
-        // Promise chaining:- Ek Promise complete hone ke baad uski value lekar doosra Promise/.then() chalana hi Promise Chaining hai.
+      // Promise chaining:- Ek Promise complete hone ke baad uski value lekar doosra Promise/.then() chalana hi Promise Chaining hai.
 
-
-       // Q1
-        let promise = new Promise((resolve,reject)=>{
-            resolve(5);
+      // Q1
+      let promise = new Promise((resolve, reject) => {
+        resolve(5);
+      });
+      promise
+        .then((num) => {
+          return num + 5;
         })
-        promise
-        .then((num)=>{
-            return num + 5;
+        .then((num) => {
+          return num * 2;
         })
-        .then((num)=>{
-            return num * 2;
-        })
-        .then((num)=>{
-            console.log(num);
-        })
-
-        //Q2
-
-        let promise2 = new Promise((resolve,reject)=>{
-            resolve("Hello ");
-        })
-        promise2
-        .then((data)=>{
-            return data + "Aakash";
-        })
-        .then((data)=>{
-            return data + "🚀";
-        })
-        .then((data)=>{
-            console.log(data);
-        })
-
-        //Q3
-
-         let promise3 = new Promise((resolve,reject)=>{
-            resolve(100);
-        })
-        promise3
-        .then((num)=>{
-            return num - 20;
-        })
-        .then((num)=>{
-            return num / 2;
-        })
-        .then((num)=>{
-            console.log(num);
-        })
-
-        // Promise all():- all request in one time and do return array
-
-        // Q1 
-
-        let p1 = Promise.resolve("HTML");
-        let p2 = Promise.resolve("CSS");
-        let p3 = Promise.resolve("JavaScript");
-
-        Promise.all([p1,p2,p3])
-        .then((data)=>{
-            console.log(data);
+        .then((num) => {
+          console.log(num);
         });
 
+      //Q2
+
+      let promise2 = new Promise((resolve, reject) => {
+        resolve("Hello ");
+      });
+      promise2
+        .then((data) => {
+          return data + "Aakash";
+        })
+        .then((data) => {
+          return data + "🚀";
+        })
+        .then((data) => {
+          console.log(data);
+        });
+
+      //Q3
+
+      let promise3 = new Promise((resolve, reject) => {
+        resolve(100);
+      });
+      promise3
+        .then((num) => {
+          return num - 20;
+        })
+        .then((num) => {
+          return num / 2;
+        })
+        .then((num) => {
+          console.log(num);
+        });
+
+      // Promise all():- all request in one time and do return array
+
+      // Q1
+
+      let p1 = Promise.resolve("HTML");
+      let p2 = Promise.resolve("CSS");
+      let p3 = Promise.resolve("JavaScript");
+
+      Promise.all([p1, p2, p3]).then((data) => {
+        console.log(data);
+      });
+
+      //Q2
+
+      let p11 = Promise.resolve(10);
+      let p22 = Promise.resolve(20);
+      let p33 = Promise.resolve(30);
+
+      Promise.all([p11, p22, p33]).then((data) => {
+        console.log(data);
+      });
+
+      //Q3 one promise reject
+
+      let p111 = Promise.resolve("HTML");
+      let p222 = Promise.reject("Network Error");
+      let p333 = Promise.resolve("JavaScript");
+
+      Promise.all([p111, p222, p333])
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+
+      // Q4
+
+      let p12 = Promise.resolve("React");
+      let p23 = Promise.reject("API Failed");
+      let p34 = Promise.resolve("Node");
+      Promise.all([p12, p23, p34])
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+
+      // Promise Race :- Jo phele aya vo print hoga baki reject ho jayenge
+
+      let p4 = new Promise((resolve) => {
+        setTimeout(() => resolve("HTML"), 5000);
+      });
+
+      let p5 = new Promise((reject) => {
+        setTimeout(() => reject("Network Error"), 1000);
+      });
+
+      Promise.race([p4, p5])
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+
+      // Q5
+
+      let p7 = new Promise((resolve) => {
+        setTimeout(() => resolve("HTML"), 3000);
+      });
+
+      let p8 = new Promise((resolve) => {
+        setTimeout(() => resolve("CSS"), 1000);
+      });
+
+      let p9 = new Promise((resolve) => {
+        setTimeout(() => resolve("JavaScript"), 2000);
+      });
+
+      Promise.race([p7, p8, p9]).then((data) => {
+        console.log(data);
+      });
     </script>
-    
-</body>
+  </body>
 </html>

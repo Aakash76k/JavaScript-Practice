@@ -8,17 +8,33 @@
   <body>
     <script>
       // Fetch Api :- use data from api and Fetch API ka use server ya API se data lane (GET) ya bhejne (POST, PUT, DELETE) ke liye hota hai.
-      async function getUsers() {
-        let response = await fetch(
-          "https://jsonplaceholder.typicode.com/users",
-        );
-        let data = await response.json();
-        console.log(data);
-      }
-      getUsers();
+
+      // async function getUsers() {
+      //   let response = await fetch(
+      //     "https://jsonplaceholder.typicode.com/users",
+      //   );
+      //   let data = await response.json();
+      //   console.log(data);
+      // }
+      // getUsers();
 
       // Q1
 
+      // async function getUsers() {
+      //   let response = await fetch(
+      //     "https://jsonplaceholder.typicode.com/users",
+      //   );
+
+      //   let data = await response.json();
+
+      //   console.log(data[0].name);
+      //   console.log(data[0].email);
+      //   console.log(data[0].address.city);
+      // }
+      // getUsers();
+
+      //Q2
+
       async function getUsers() {
         let response = await fetch(
           "https://jsonplaceholder.typicode.com/users",
@@ -26,11 +42,13 @@
 
         let data = await response.json();
 
-        console.log(data[0].name);
-        console.log(data[0].email);
-        console.log(data[0].address.city);
+        for (let i = 0; i < data.length; i++) {
+          console.log("Name :", data[i].name);
+          console.log("Email:", data[i].email);
+          console.log("City :", data[i].address.city);
+          console.log("---------------------");
+        }
       }
-
       getUsers();
     </script>
   </body>

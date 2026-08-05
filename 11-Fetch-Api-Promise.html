@@ -89,7 +89,7 @@
 
       // getUsers();
 
-      // Response Status Check :- change user from users and check output  
+      // Response Status Check :- change user from users and check output
 
       // async function getUsers(){
       //   try{
@@ -112,24 +112,54 @@
 
       // POST Start :- Give Data
 
-      async function addUser(){
-        let response = await fetch("https://jsonplaceholder.typicode.com/users",
+      // async function addUser(){
+      //   let response = await fetch("https://jsonplaceholder.typicode.com/users",
+      //     {
+      //       method: "POST",
+      //       headers: {
+      //         "Content-Type" : "application/json"
+      //       },
+      //       body: JSON.stringify({
+      //         name: "Rahul",
+      //         email: "rahul@gmail.com",
+      //         age: 24,
+      //       }),
+      //     }
+      //   );
+      //   let data = await response.json();
+      //   console.log(data);
+      // }
+      // addUser();
+
+      // POST End
+
+      // PUT Start :- Update Existing Data 
+      // ID 1 wale user ko update karna hai.
+
+      async function updateUser() {
+        let response = await fetch(
+          "https://jsonplaceholder.typicode.com/users/5",
           {
-            method: "POST",
+            method: "PUT",
+
             headers: {
-              "Content-Type" : "application/json"
+              "Content-Type": "application/json",
             },
+
             body: JSON.stringify({
-              name: "Rahul",
-              email: "rahul@gmail.com",
+              name: "Aakash",
+              email: "aakash@gmail.com",
+              age: 25,
             }),
-          }
+          },
         );
+
         let data = await response.json();
+
         console.log(data);
       }
-      addUser();
 
+      updateUser();
 
 
     </script>

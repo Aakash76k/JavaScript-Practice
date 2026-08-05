@@ -53,21 +53,59 @@
 
       //Q3
 
-      async function getUsers() {
-        let response = await fetch(
-          "https://jsonplaceholder.typicode.com/users",
-        );
+      // async function getUsers() {
+      //   let response = await fetch(
+      //     "https://jsonplaceholder.typicode.com/users",
+      //   );
 
-        let data = await response.json();
+      //   let data = await response.json();
 
-        data.forEach((user) => {
-          console.log("Name :", user.name);
-          console.log("Email:", user.email);
-          console.log("City :", user.address.city);
-          console.log("---------------------");
-        });
+      //   data.forEach((user) => {
+      //     console.log("Name :", user.name);
+      //     console.log("Email:", user.email);
+      //     console.log("City :", user.address.city);
+      //     console.log("---------------------");
+      //   });
+      // }
+      // getUsers();
+
+      // Error Handling
+
+      // async function getUsers() {
+      //   try {
+      //     let response = await fetch(
+      //       "https://jsonplaceholder.typicode.com/users",
+      //     );
+
+      //     let data = await response.json();
+
+      //     console.log(data);
+      //   } catch (err) {
+      //     console.log("Error:", err);
+      //   }
+      // }
+
+      // getUsers();
+
+      // Response Status Check 
+
+      async function getUsers(){
+        try{
+          let response = await fetch("https://jsonplaceholder.typicode.com/users");
+          if(!response.ok){
+            throw new Error ("API Error");
+          }
+
+          let data = await response.json();
+          console.log(data);
+        }
+        catch(err){
+          console.log(err.message);
+        }
+
       }
       getUsers();
+
     </script>
   </body>
 </html>

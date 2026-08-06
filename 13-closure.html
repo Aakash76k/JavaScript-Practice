@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure</title>
+  </head>
+  <body>
+    <script>
+      // Closure :- Closure tab banta hai jab inner function, outer function ke variables ko outer function ke execute ho jaane ke baad bhi access kar sakta hai.
+
+      function outer() {
+        let name = "Aakash";
+
+        function inner() {
+          console.log(name);
+        }
+
+        return inner;
+      }
+
+      let result = outer();
+
+      result();
+    </script>
+  </body>
+</html>

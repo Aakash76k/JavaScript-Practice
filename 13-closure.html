@@ -22,6 +22,68 @@
       let result = outer();
 
       result();
+
+      // Q1
+
+      function outer() {
+        let city = "Delhi";
+        function inner() {
+          console.log(city);
+        }
+        return inner;
+      }
+      let Res = outer();
+      Res();
+
+      // Q2
+
+      function school() {
+        let student = "Aakash";
+
+        function classroom() {
+          console.log(student);
+        }
+
+        return classroom;
+      }
+
+      let demo = school();
+
+      demo();
+
+      //Q3 count variable memory me save rehta hai.
+
+      function counter() {
+        let count = 0;
+
+        function increment() {
+          count++;
+          console.log(count);
+        }
+
+        return increment;
+      }
+
+      let add = counter();
+
+      add();
+      add();
+      add();
+
+      //Q4 
+
+      function score(){
+        let points = 100;
+        function increase(){
+            points += 10;
+            console.log(points);
+        }
+        return increase;
+      }
+      let game = score();
+      game();
+      game();
+      game();
     </script>
   </body>
 </html>

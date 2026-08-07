@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+</head>
+<body>
+    <script>
+
+        // Hoisting =JavaScript declarations ko execution se pehle memory me register kar leti hai. || Declaration upar chali jaati hai, value nahi.
+
+        // var 
+        // Q1 
+
+        console.log(a);
+        var a = 10;
+        console.log(a);
+
+        // Q2
+
+        var b;  // Hoisted
+        console.log(b);  // undefined
+        b=10;
+        console.log(b); // 10
+
+        // let 
+
+        //Q1 
+
+        console.log(c); // Reference Error
+        let c =10; 
+
+        //Q2
+
+        
+
+
+    </script>
+</body>
+</html>

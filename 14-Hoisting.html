@@ -1,41 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hoisting</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
+      // Hoisting =JavaScript declarations ko execution se pehle memory me register kar leti hai. || Declaration upar chali jaati hai, value nahi.
+      // Temporal Dead Zone (TDZ).
+      // var
+      // Q1
 
-        // Hoisting =JavaScript declarations ko execution se pehle memory me register kar leti hai. || Declaration upar chali jaati hai, value nahi.
+      console.log(a);
+      var a = 10;
+      console.log(a);
 
-        // var 
-        // Q1 
+      // Q2
 
-        console.log(a);
-        var a = 10;
-        console.log(a);
+      var b; // Hoisted
+      console.log(b); // undefined
+      b = 10;
+      console.log(b); // 10
 
-        // Q2
+      // let
 
-        var b;  // Hoisted
-        console.log(b);  // undefined
-        b=10;
-        console.log(b); // 10
+      //Q1
 
-        // let 
+      // console.log(c); // Reference Error
+      // let c =10;
 
-        //Q1 
+      //Q2
 
-        console.log(c); // Reference Error
-        let c =10; 
+      let d = 20;
+      console.log(d);
 
-        //Q2
+      // const
 
-        
+      //Q1
 
+      //   console.log(e);
+      //   const e = 30; // Reference Error
 
+      // Function Hoisting
+
+      // Q1 Function Declaration
+
+      sayHello();
+
+      function sayHello() {
+        console.log("Hello Aakash");
+      }
+      //Q2 Function Expression
+
+      sayHi();
+
+      var sayHi = function () {
+        console.log("Hi"); // TypeError
+      };
     </script>
-</body>
+  </body>
 </html>

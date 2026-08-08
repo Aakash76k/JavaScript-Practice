@@ -129,7 +129,7 @@
 
       outer();
 
-      // Q2
+      // Q2 Variable lookup
 
       var q = 10;
 
@@ -146,6 +146,60 @@
       }
 
       outer();
+
+      // Q4 Variable lookup
+
+      //   var a1 = 10;
+
+      //   function outer1() {
+      //     var b1 = 20;
+
+      //     function inner1() {
+      //       var c1 = 30;
+      //     }
+
+      //     console.log(c1); // Reference Error
+      //   }
+
+      //   outer1();
+
+      // Lexical Environment:- Lexical Environment ek aisa environment hai jisme JavaScript ko pata hota hai ki variables/functions kahan available hain aur unke outer scope se connection kya hai.
+
+      // Q1
+
+      var a2 = 10;
+
+      function outer2() {
+        var b2 = 20;
+
+        function inner2() {
+          var c2 = 30;
+
+          console.log(a2);
+          console.log(b2);
+          console.log(c2);
+        }
+
+        inner2();
+      }
+
+      outer2();
+
+      // Q2
+
+      function outer() {
+        let name = "Aakash";
+
+        function inner() {
+          console.log(name);
+        }
+
+        return inner;
+      }
+
+      let result = outer();
+
+      result();
     </script>
   </body>
 </html>

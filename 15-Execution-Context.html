@@ -7,12 +7,36 @@
   </head>
   <body>
     <script>
+      // 1. Execution context :- Execution Context ek environment hai jahan JavaScript code ko prepare aur execute karti hai.
+      //    Global Execution Context
+      // 2. Memory Creation Phase = JavaScript pehle variables/functions ko identify karke execution ke liye environment prepare karti hai.
+      // 3. Code Execution Phase = memory phase k baad
+
+      // Q1 Code Execution Phase
       let a = 10;
       let b = 20;
 
       let sum = a + b;
 
       console.log(sum);
+
+      // Q2 Memory Creation Phase
+      var c = 10;
+      console.log(c); // undefined
+
+      //Global code ke liye → Global Execution Context
+      // Function call ke liye → Function Execution Context
+
+      // Q3 global exexution
+
+      var m = 10;
+
+      function greet() {
+        var message = "Hello";
+        console.log(message);
+      }
+
+      greet();
     </script>
   </body>
 </html>

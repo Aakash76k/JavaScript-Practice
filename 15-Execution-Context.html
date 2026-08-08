@@ -9,8 +9,11 @@
     <script>
       // 1. Execution context :- Execution Context ek environment hai jahan JavaScript code ko prepare aur execute karti hai.
       //    Global Execution Context
-      // 2. Memory Creation Phase = JavaScript pehle variables/functions ko identify karke execution ke liye environment prepare karti hai.
-      // 3. Code Execution Phase = memory phase k baad
+      // a. Memory Creation Phase = JavaScript pehle variables/functions ko identify karke execution ke liye environment prepare karti hai.
+      // b. Code Execution Phase = memory phase k baad
+      //  Function Execution context
+
+      // a. Call stack - Actually Function Execution Context jab function call hota hai, woh Call Stack me push hota hai.
 
       // Q1 Code Execution Phase
       let a = 10;
@@ -46,9 +49,44 @@
         var x = 20; // execution 2 - function
       }
 
-      test(); 
+      test();
 
+      // Call Stack :- Last In, First Out and Call Stack sirf functions ki list nahi hai.Ye Execution Contexts ko manage karta hai.
 
+      function first() {
+        console.log("first");
+      }
+      function second() {
+        first();
+      }
+      second();
+
+      //Q2
+
+      function one() {
+        console.log("one");
+      }
+      function two() {
+        one();
+        console.log("two");
+      }
+      function three() {
+        two();
+        console.log("three");
+      }
+      three();
+
+      // Q3
+
+      var z = 10;
+
+      function test() {
+        var w = 20;
+        console.log(z);
+        console.log(w);
+      }
+
+      test();
     </script>
   </body>
 </html>

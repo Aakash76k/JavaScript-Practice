@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exicution-Context</title>
+    <title>Execution-Context</title>
   </head>
   <body>
     <script>
@@ -61,7 +61,7 @@
       }
       second();
 
-      //Q2
+      //Q2 nested function execution
 
       function one() {
         console.log("one");
@@ -87,6 +87,65 @@
       }
 
       test();
+
+      // Q4 Outer scope se variable access
+
+      var r = 10;
+
+      function tes() {
+        var t = 20;
+
+        function inner() {
+          var y = 30;
+          console.log(r);
+          console.log(t);
+          console.log(y);
+        }
+
+        inner();
+      }
+
+      tes();
+
+      // Scope Chain :- JavaScript jab kisi variable ko current scope me nahi paati, to outer scope me search karti hai. Phir usse bhi bahar... jab tak Global Scope tak nahi pahunchti.and Scope Chain sirf bahar ki taraf jaati hai.
+
+      //Q1
+
+      var p = "Global";
+
+      function outer() {
+        var l = "Outer";
+
+        function inner() {
+          var v = "Inner";
+
+          console.log(v);
+          console.log(l);
+          console.log(p);
+        }
+
+        inner();
+      }
+
+      outer();
+
+      // Q2
+
+      var q = 10;
+
+      function outer() {
+        var e = 20;
+
+        function inner() {
+          var r = 30;
+
+          console.log(e);
+        }
+
+        inner();
+      }
+
+      outer();
     </script>
   </body>
 </html>

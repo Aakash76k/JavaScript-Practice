@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This</title>
+</head>
+<body>
+    <script>
+
+        //Q1 :- Normal object method ko object.method() ke through call karne par this us object ko refer karta hai.
+
+        let user ={
+            name: "Rahul",
+            showname: function () {
+                console.log(this.name);
+            }
+        };
+        user.showname();
+
+        // Q2 this ka value mostly is baat se decide hota hai ki function ko CALL kaise kiya gaya hai, function banaya kahan gaya tha isse nahi.
+
+        let user1 ={
+            name: "Pawan",
+            showName: function(){
+                console.log(this.name);
+            }
+        };
+
+        user1.showName(); // Pawan
+
+        let test = user1.showName;
+        test();  // undefiend
+
+
+
+
+    </script>
+</body>
+</html>

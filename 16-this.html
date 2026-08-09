@@ -92,6 +92,112 @@
       };
 
       use.show();
+
+      // Q8 Constructor
+      // new => Naya object banata hai
+      function User(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+
+      let User1 = new User("pawan", 23);
+      console.log(User1.name);
+      console.log(User1.age);
+
+      // Q9 Call()
+      // call() aur apply() function ko turant execute kar dete hain.
+      //Arguments => Individual
+
+      function show() {
+        console.log(this.name);
+      }
+
+      let person1 = {
+        name: "Aakash",
+      };
+
+      let person2 = {
+        name: "Rohit",
+      };
+
+      show.call(person2);
+
+      // Q10 Apply();
+      //Arguments=>Array
+      function add(a, b) {
+        console.log(this.name, a + b);
+      }
+
+      let user3 = {
+        name: "Aakash",
+      };
+
+      add.call(user3, 10, 20);
+
+      // Q11 bind(); => Ek naya function return karta hai jisme this fix ho jata hai.
+      //Arguments=>Individual / preset
+
+      function show() {
+        console.log(this.name);
+      }
+
+      let user4 = {
+        name: "Aakash",
+      };
+
+      let newFunction = show.bind(user4);
+
+      newFunction();
+
+      //Q12 Bind
+
+      function show() {
+        console.log(this.name);
+      }
+
+      let user5 = {
+        name: "Aakash",
+      };
+
+      let test1 = show.bind(user5);
+
+      console.log("Start");
+
+      test1();
+
+      console.log("End");
+
+      // Q13 this inside Es6 class
+
+      //   class User7 {
+      //     constructor(name) {
+      //       this.name = name;
+      //     }
+
+      //     showName() {
+      //       console.log(this.name);
+      //     }
+      //   }
+
+      //   let user6 = new User7("Aakash");
+
+      //   user6.showName(); // Aakash
+
+      // Q14
+
+      class Use {
+        constructor(name) {
+          this.name = name;
+        }
+
+        show() {
+          console.log(this.name);
+        }
+      }
+
+      let user7 = new Use("Aakash");
+
+      user7.show();
     </script>
   </body>
 </html>

@@ -1,40 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>This</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
+      // object method using this
 
-        //Q1 :- Normal object method ko object.method() ke through call karne par this us object ko refer karta hai.
+      //Q1 :- Normal object method ko object.method() ke through call karne par this us object ko refer karta hai.
 
-        let user ={
-            name: "Rahul",
-            showname: function () {
-                console.log(this.name);
-            }
-        };
-        user.showname();
+      let user = {
+        name: "Rahul",
+        showname: function () {
+          console.log(this.name);
+        },
+      };
+      user.showname();
 
-        // Q2 this ka value mostly is baat se decide hota hai ki function ko CALL kaise kiya gaya hai, function banaya kahan gaya tha isse nahi.
+      // Q2 this ka value mostly is baat se decide hota hai ki function ko CALL kaise kiya gaya hai, function banaya kahan gaya tha isse nahi.
 
-        let user1 ={
-            name: "Pawan",
-            showName: function(){
-                console.log(this.name);
-            }
-        };
+      let user1 = {
+        name: "Pawan",
+        showName: function () {
+          console.log(this.name);
+        },
+      };
 
-        user1.showName(); // Pawan
+      user1.showName(); // Pawan
 
-        let test = user1.showName;
-        test();  // undefiend
+      let test = user1.showName;
+      test(); // undefiend
 
+      // Q3 Normal :- Normal function → this call-site se decide hota hai.
+      //  Normal function + non-strict → window
+      // Normal function + strict mode → undefined
 
+      function show() {
+        console.log(this);
+      }
+      show(); //window
 
+      // Q4 use strict
+      // Normal function + strict mode → undefined
 
+      ("use strict");
+      function who() {
+        console.log(this); // this-> undefined
+      }
+      who();
+
+      //Q5 Arrow function :- Arrow function ka apna this nahi hota.
+      // Ye apne outer lexical environment ka this leta hai.
+      // Arrow function → this lexical/outer scope se aata hai.
+
+      let u = {
+        n: "Shivam",
+        sh: () => {
+          console.log(this.n);
+        },
+      };
+
+      u.sh(); // undefined
+
+      // Q6 Nested function
+
+      let us = {
+        na: "chaman",
+        sho: function () {
+          function inner() {
+            console.log(this.na);
+          }
+          inner();
+        },
+      };
+      us.sho();
+
+      //Q7 nested using arrow function
+
+      let use = {
+        name: "Aakash",
+
+        show: function () {
+          const inner = () => {
+            console.log(this.name);
+          };
+
+          inner();
+        },
+      };
+
+      use.show();
     </script>
-</body>
+  </body>
 </html>

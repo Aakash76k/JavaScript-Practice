@@ -21,7 +21,7 @@
       let u1 = {
         n: "rahul",
       };
-      console.log(Object.getPrototypeOf(u1)); 
+      console.log(Object.getPrototypeOf(u1));
 
       //Q3 compare Equal operater
 
@@ -30,6 +30,42 @@
       };
 
       console.log(Object.getPrototypeOf(u2) === Object.prototype); //true
+
+      //Q4 hasowenproperty()
+
+      let u3 = {
+        name: "Aakash",
+      };
+
+      console.log(u3.hasOwnProperty("name"));
+
+      //Q4 Object.create()
+
+      let person = {
+        greet: function () {
+          console.log("hello");
+        },
+      };
+      let u4 = Object.create(person);
+      u4.name = "pawan";
+      u4.greet();
+
+      // Q5 custom prototype
+
+      let userMethods = {
+        greet() {
+          console.log("Hello " + this.name);
+        },
+      };
+
+      let user1 = Object.create(userMethods);
+      let user2 = Object.create(userMethods);
+
+      user1.name = "Aakash";
+      user2.name = "Rahul";
+
+      user1.greet();
+      user2.greet();
     </script>
   </body>
 </html>

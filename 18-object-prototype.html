@@ -1,15 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>object-prototype</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        // Object-Prototype :- Prototype JavaScript ka ek object hota hai jisse koi object properties aur methods inherit kar sakta hai.
+      // Object-Prototype :- Prototype JavaScript ka ek object hota hai jisse koi object properties aur methods inherit kar sakta hai.
 
-        
+      //Q1
+      let user = {
+        name: "Aakash",
+      };
+
+      console.log(user.toString());
+
+      // Q2
+
+      let u1 ={
+        n : "rahul",
+      };
+      console.log(Object.getPrototypeOf(u1));  // console.log(Object.getPrototypeOf(u1) === Object.prototype);
     </script>
-</body>
+  </body>
 </html>

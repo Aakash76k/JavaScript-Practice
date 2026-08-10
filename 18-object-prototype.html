@@ -16,12 +16,20 @@
 
       console.log(user.toString());
 
-      // Q2
+      // Q2 use getPrototypeOf()
 
-      let u1 ={
-        n : "rahul",
+      let u1 = {
+        n: "rahul",
       };
-      console.log(Object.getPrototypeOf(u1));  // console.log(Object.getPrototypeOf(u1) === Object.prototype);
+      console.log(Object.getPrototypeOf(u1)); 
+
+      //Q3 compare Equal operater
+
+      let u2 = {
+        name: "Aakash",
+      };
+
+      console.log(Object.getPrototypeOf(u2) === Object.prototype); //true
     </script>
   </body>
 </html>

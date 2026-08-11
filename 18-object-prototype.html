@@ -69,33 +69,65 @@
 
       //Q6 constructor + .prototype
 
-      // constructor function 
+      // constructor function
 
-      function u8(name,age){
-          this.name = name;
-          this.age = age;
+      function u8(name, age) {
+        this.name = name;
+        this.age = age;
       }
-      let u5 = new u8("Aakash",23);
-      let u7 = new u8("Shivam",25);
+      let u5 = new u8("Aakash", 23);
+      let u7 = new u8("Shivam", 25);
 
       console.log(u5.name);
       console.log(u7.name);
 
       // . prototype
 
-      function u9(name,age){
+      function u9(name, age) {
         this.name = name;
         this.age = age;
       }
-      u9.prototype.greet = function(){
+      u9.prototype.greet = function () {
         console.log("Hello " + this.name);
       };
 
-      let u11 = new u9("rahul" ,25);
-      let u22 = new u9("kunal",23);
+      let u11 = new u9("rahul", 25);
+      let u22 = new u9("kunal", 23);
 
       u11.greet();
       u22.greet();
+
+      // Intanceof()
+
+      //Q
+
+      function u13(name) {
+        this.name = name;
+      }
+      let use1 = new u13("Pankaj");
+      console.log(use1 instanceof u13); // true
+
+      //Q user , array , object
+
+      function User(name) {
+        this.name = name;
+      }
+
+      let usr = new User("Aakash");
+
+      console.log(usr instanceof User); // true
+      console.log(usr instanceof Object); //true
+      console.log(usr instanceof Array); //false
+
+      //Q getPrototypeof()
+
+      function User1(name) {
+        this.name = name;
+      }
+
+      let uer = new User1("Aakash");
+
+      console.log(Object.getPrototypeOf(uer) === User1.prototype);
     </script>
   </body>
 </html>

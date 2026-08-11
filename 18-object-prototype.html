@@ -66,6 +66,36 @@
 
       user1.greet();
       user2.greet();
+
+      //Q6 constructor + .prototype
+
+      // constructor function 
+
+      function u8(name,age){
+          this.name = name;
+          this.age = age;
+      }
+      let u5 = new u8("Aakash",23);
+      let u7 = new u8("Shivam",25);
+
+      console.log(u5.name);
+      console.log(u7.name);
+
+      // . prototype
+
+      function u9(name,age){
+        this.name = name;
+        this.age = age;
+      }
+      u9.prototype.greet = function(){
+        console.log("Hello " + this.name);
+      };
+
+      let u11 = new u9("rahul" ,25);
+      let u22 = new u9("kunal",23);
+
+      u11.greet();
+      u22.greet();
     </script>
   </body>
 </html>

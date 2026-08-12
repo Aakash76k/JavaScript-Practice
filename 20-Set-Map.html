@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set-Map</title>
+</head>
+<body>
+    <script>
+        // Set :- Set JavaScript ka built-in collection object hai jo unique values store karta hai.
+
+        //Q set
+
+        let num = new Set();
+        num.add(10);
+        num.add(20);
+        num.add(20);
+        num.add(30);
+        console.log(num);
+
+        // has():- check karta hai ki Set ke andar koi particular value present hai ya nahi.
+
+        //Q set using has()
+
+        let num1 = new Set([10,20,30]);
+        console.log(num1.has(20)); // true
+        console.log(num1.has(50)); //false
+
+        // delete() Set ke andar se ek specific value remove karta hai.
+
+        let num2 = new Set([10,20,30]);
+        num2.delete(20);
+        console.log(num2.size);
+
+        //clear() Set ki saari values remove kar deta hai.
+
+        //Q set using Clear()
+
+        let num3 = new Set([10,20,30]);
+        num3.clear();
+
+        console.log(num3);
+        console.log(num3.size);
+
+        // convert from set in array
+
+        let num4 = new Set([10,20,30]);
+        let arr = [...num4];
+        console.log(arr);
+
+
+
+    </script>
+</body>
+</html>

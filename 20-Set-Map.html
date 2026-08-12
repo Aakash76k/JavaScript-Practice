@@ -1,55 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Set-Map</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        // Set :- Set JavaScript ka built-in collection object hai jo unique values store karta hai.
+      // Set :- Set JavaScript ka built-in collection object hai jo unique values store karta hai.
 
-        //Q set
+      //Q set
 
-        let num = new Set();
-        num.add(10);
-        num.add(20);
-        num.add(20);
-        num.add(30);
-        console.log(num);
+      let num = new Set();
+      num.add(10);
+      num.add(20);
+      num.add(20);
+      num.add(30);
+      console.log(num);
 
-        // has():- check karta hai ki Set ke andar koi particular value present hai ya nahi.
+      // has():- check karta hai ki Set ke andar koi particular value present hai ya nahi.
 
-        //Q set using has()
+      //Q set using has()
 
-        let num1 = new Set([10,20,30]);
-        console.log(num1.has(20)); // true
-        console.log(num1.has(50)); //false
+      let num1 = new Set([10, 20, 30]);
+      console.log(num1.has(20)); // true
+      console.log(num1.has(50)); //false
 
-        // delete() Set ke andar se ek specific value remove karta hai.
+      // delete() Set ke andar se ek specific value remove karta hai.
 
-        let num2 = new Set([10,20,30]);
-        num2.delete(20);
-        console.log(num2.size);
+      let num2 = new Set([10, 20, 30]);
+      num2.delete(20);
+      console.log(num2.size);
 
-        //clear() Set ki saari values remove kar deta hai.
+      //clear() Set ki saari values remove kar deta hai.
 
-        //Q set using Clear()
+      //Q set using Clear()
 
-        let num3 = new Set([10,20,30]);
-        num3.clear();
+      let num3 = new Set([10, 20, 30]);
+      num3.clear();
 
-        console.log(num3);
-        console.log(num3.size);
+      console.log(num3);
+      console.log(num3.size);
 
-        // convert from set in array
+      // convert from set in array
 
-        let num4 = new Set([10,20,30]);
-        let arr = [...num4];
-        console.log(arr);
+      let num4 = new Set([10, 20, 30]);
+      let arr = [...num4];
+      console.log(arr);
 
+      //Map JavaScript ka built-in collection object hai jo data ko key-value pairs ke form me store karta hai.
 
+      //Q1
 
+      let user = new Map();
+      user.set("name", "ram");
+      user.set("age", 24);
+
+      // console.log(user);
+      console.log(user.get("name"));
+
+      //Q2 duplicate key
+
+      let data = new Map();
+      data.set("age", 24);
+      data.set("age", 30);
+      console.log(data.get("age"));
+
+      //Q3 Map using has()
+
+      let data1 = new Map();
+
+      data1.set("name", "Aakash");
+      data1.set("age", 24);
+
+      console.log(data1.has("name")); // true
+      console.log(data1.has("city")); // false
+
+      //Q4 Map using delete()
+
+      let data2 = new Map();
+
+      data2.set("name", "Aakash");
+      data2.set("age", 24);
+
+      console.log(data2.delete("age"));
+      console.log(data2.size);
+
+      //Q5 Map using clear()
+
+      let data3 = new Map();
+
+      data3.set("name", "Aakash");
+      data3.set("age", 24);
+      data3.set("city", "Delhi");
+
+      data3.clear();
+
+      console.log(data3.size);
+
+      //Q6 kisi bhi type ki key
+
+      let user2 = {
+        name: "Aakash",
+      };
+
+      let data4 = new Map();
+
+      data4.set(user2, "User Data");
+
+      console.log(data4.get(user2));
+
+      //Q
+
+      let obj = {
+        id: 1,
+      };
+
+      let map = new Map();
+
+      map.set(obj, "Hello");
+
+      console.log(map.get(obj));
     </script>
-</body>
+  </body>
 </html>

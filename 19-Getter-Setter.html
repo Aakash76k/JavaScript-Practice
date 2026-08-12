@@ -1,41 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Getter-Setter</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        // getter:- Getter ek special method hota hai jo object ki property ko read/access karne ke liye use hota hai.
-        //Getter internally function hai, lekin bahar se property ki tarah access hota hai.
+      // getter:- Getter ek special method hota hai jo object ki property ko read/access karne ke liye use hota hai.
+      //Getter internally function hai, lekin bahar se property ki tarah access hota hai.
 
-       //Q1 
-       
-       let u ={
+      //Q1
+
+      let u = {
         name: "ram",
 
-        get username(){
-            return this.name;
-        }
-       };
-       console.log(u.username);
+        get username() {
+          return this.name;
+        },
+      };
+      console.log(u.username);
 
-       // Setter:- Setter ek special method hota hai jo property ki value ko set/update karne ke liye use hota hai.
+      // Setter:- Setter ek special method hota hai jo property ki value ko set/update karne ke liye use hota hai.
 
-       //Q1 
+      //Q1
 
-       let u2 ={
+      let u2 = {
         name: "Shayam",
 
-        set use(value){
-            this.name = value;
-        }
-       };
+        set use(value) {
+          this.name = value;
+        },
+      };
 
-       u2.use = "naman";
-       console.log(u2.name);
-        
+      u2.use = "naman";
+      console.log(u2.name);
+
+      // Q2 getter + setter
+
+      let user = {
+        name: "pankaj",
+
+        get username() {
+          return this.name; // read
+        },
+
+        set username(value) {
+          this.name = value; // update
+        },
+      };
+
+      console.log(user.username); // get
+
+      user.username = "affan";
+      console.log(user.username); // set
+
+      //Q3 Validation
+
+      let user1 = {
+        _age: 0,
+
+        get age() {
+          return this._age;
+        },
+
+        set age(value) {
+          if (value >= 18) {
+            this._age = value;
+          } else {
+            console.log("age must be 18 or above");
+          }
+        },
+      };
+
+      //    user1.age = 25;
+
+      user1.age = 15;
+      console.log(user1.age);
+
+      //Q4 validation + getter + setter
+
+      let us = {
+        _ag: 0,
+
+        get a() {
+          return this._ag;
+        },
+
+        set a(value) {
+          if (typeof value !== "number") {
+            console.log("Age must be a number");
+            return;
+          }
+
+          if (value < 18) {
+            console.log("age must be 18 or above");
+            return;
+          }
+          this._ag = value;
+        },
+      };
+
+      us.a = 25;
+      console.log(us.a);
+
+      //Q
+
+      let user5 = {
+        _age: 20,
+
+        get age() {
+          return this._age;
+        },
+
+        set age(value) {
+          if (value >= 18) {
+            this._age = value;
+          }
+        },
+      };
+
+      user5.age = 15;
+
+      console.log(user5.age);
     </script>
-</body>
+  </body>
 </html>

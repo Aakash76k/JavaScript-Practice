@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter-Setter</title>
+</head>
+<body>
+    <script>
+        // getter:- Getter ek special method hota hai jo object ki property ko read/access karne ke liye use hota hai.
+        //Getter internally function hai, lekin bahar se property ki tarah access hota hai.
+
+       //Q1 
+       
+       let u ={
+        name: "ram",
+
+        get username(){
+            return this.name;
+        }
+       };
+       console.log(u.username);
+
+       // Setter:- Setter ek special method hota hai jo property ki value ko set/update karne ke liye use hota hai.
+
+       //Q1 
+
+       let u2 ={
+        name: "Shayam",
+
+        set use(value){
+            this.name = value;
+        }
+       };
+
+       u2.use = "naman";
+       console.log(u2.name);
+        
+    </script>
+</body>
+</html>

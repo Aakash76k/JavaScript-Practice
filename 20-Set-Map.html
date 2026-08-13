@@ -121,6 +121,50 @@
       map.set(obj, "Hello");
 
       console.log(map.get(obj));
+
+      // Map iteration
+
+      // key :- all key return of map
+
+      let data5 = new Map();
+
+      data5.set("name", "Aakash");
+      data5.set("age", 24);
+      data5.set("city", "Delhi");
+
+      console.log(data5.keys());
+
+      //Q1 key
+
+      let dat = new Map();
+
+      dat.set("name", "Aakash");
+      dat.set("age", 24);
+      // for of..
+      for (let key of dat.keys()) {
+        console.log(key);
+      }
+
+      // Q2 Values
+
+      let dta = new Map();
+
+      dta.set("name", "Aakash");
+      dta.set("age", 24);
+
+      for (let value of dta.values()) {
+        console.log(value);
+      }
+
+      // entries():- Map ki key aur value dono return karta hai.
+      // entries:- key + value return
+      let d = new Map();
+      d.set("name","Aakash");
+      d.set("age",23);
+
+      for(let [key,value] of d.entries()){
+        console.log(key, value)
+      }
     </script>
   </body>
 </html>

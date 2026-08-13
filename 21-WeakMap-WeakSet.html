@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeakMap-Weak-Set</title>
+  </head>
+  <body>
+    <script>
+      //WeakMap:- keys only object
+      //WeakMap ek collection hai jo key-value pairs store karta hai, lekin iski keys sirf objects ho sakti hain.
+
+      //Q1
+
+      let weakMap = new WeakMap();
+
+      let user = {
+        name: "Aakash",
+      };
+
+      weakMap.set(user, "Developer");
+
+      console.log(weakMap.get(user));
+
+      // WeakMap ki keys weakly held hoti h
+      // Agar kisi object ko kahin aur reference nahi kiya ja raha, to garbage collector us object ko remove kar sakta hai—even agar woh WeakMap me key ke roop me tha.
+
+      // Weakmap use method:- set,get,has,delete
+
+      //has()
+
+      let weakMap1 = new WeakMap();
+
+      let user1 = {
+        name: "Aakash",
+      };
+
+      weakMap1.set(user1, "Developer");
+
+      console.log(weakMap1.has(user1));
+
+      //delete
+
+      let weakMap2 = new WeakMap();
+
+      let user2 = {
+        name: "Aakash",
+      };
+
+      weakMap2.set(user2, "Developer");
+
+      weakMap2.delete(user2);
+
+      console.log(weakMap2.has(user));
+
+      // WeakSet:- WeakSet ek collection hai jo sirf objects ko store karta hai aur duplicate object references ko repeat nahi karta.
+      //Q1 object only
+
+      let weakSet3 = new WeakSet();
+
+      let user13 = {
+        name: "Aakash",
+      };
+
+      let user23 = {
+        name: "Rahul",
+      };
+
+      weakSet3.add(user13);
+      weakSet3.add(user23);
+
+      console.log(weakSet3.has(user13)); // true
+
+      //Q2 object add,object present, object remove
+
+      let weakSet4 = new WeakSet();
+
+      let user4 = {
+        name: "Aakash",
+      };
+
+      weakSet4.add(user4);
+
+      console.log(weakSet4.has(user4));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date-Time</title>
+  </head>
+  <body>
+    <script>
+      //Date:- JavaScript me Date object ka use date aur time ko create, read, modify aur format karne ke liye hota hai.
+      // current date or time
+
+      let now = new Date();
+      console.log(now);
+      console.log(typeof now);
+
+      // only current date use toDatestring
+
+      let n = new Date();
+      console.log(n.toDateString());
+
+      // only time use toTimeString
+
+      let a = new Date();
+      console.log(a.toTimeString());
+
+      // year, month , date , day, hours, min, sec
+
+      let date = new Date();
+      console.log(date.getFullYear()); // year
+      console.log(date.getMonth()); // month
+      console.log(date.getDate()); // day of month
+      console.log(date.getDay()); // day of week
+      console.log(date.getHours()); // hour
+      console.log(date.getMinutes()); // minutes
+      console.log(date.getSeconds()); // seconds
+
+      let date1 = new Date("2026-08-13");
+      console.log(date1.getMonth() + 1);
+    </script>
+  </body>
+</html>

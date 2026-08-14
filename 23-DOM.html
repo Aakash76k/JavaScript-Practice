@@ -1,43 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dom</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <h1 id="title">Hello</h1>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae minima vel esse eum dolor optio consequuntur excepturi nostrum ipsam dicta nisi at provident blanditiis quibusdam cumque velit sed, tempora autem.
-        <h1 class="text">Html</h1>
-        <h1 class="text">CSS</h1>
-        <h1 class="text">JS</h1>
+    <h1 id="title">Hii</h1>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae minima vel
+      esse eum dolor optio consequuntur excepturi nostrum ipsam dicta nisi at
+      provident blanditiis quibusdam cumque velit sed, tempora autem.
     </p>
+    <p class="text">Html</p>
+    <p class="text">CSS</p>
+    <p class="text">JS</p>
     <script>
-        // DOM = Document Object Model :-Browser jab HTML page load karta hai, to HTML document ko ek object/tree structure me convert karta hai. JavaScript isi DOM ke through HTML elements ko access aur change kar sakti hai.
-        
-        //console.log(document)
-        console.log(document.body);
-        console.log(document.body.innerText)
+      // DOM = Document Object Model :-Browser jab HTML page load karta hai, to HTML document ko ek object/tree structure me convert karta hai. JavaScript isi DOM ke through HTML elements ko access aur change kar sakti hai.
 
-        // Element Selectors
+      //console.log(document)
+      console.log(document.body);
+      console.log(document.body.innerText);
 
-        // 1 getElementById():- single element
+      // Element Selectors
 
-        let heading = document.getElementById("title");
-        console.log(heading);
+      // 1 getElementById():- single element
 
-        // getElementByClassName():- multiple element/ HTMl Collection
+      let heading = document.getElementById("title");
+      console.log(heading);
 
-        let elements = document.getElementsByClassName("text");
-        console.log(elements)
-        console.log(elements.length);
+      // getElementByClassName():- multiple element/ HTMl Collection
 
+      let elements = document.getElementsByClassName("text");
+      console.log(elements);
+      console.log(elements.length);
 
+      // querySelector():- First match
 
+      let heading1 = document.querySelector("#title");
+      let paragraph = document.querySelector(".text");
+      console.log(paragraph.innerText);
+      console.log(heading1.innerText);
 
+      // querySelectorAll():- all matches
 
+      let result = document.querySelectorAll(".text");
+      console.log(result)
 
+      // using loop in queryselectorAll();
+
+      result.forEach((item)=>{
+        console.log(item.innerText);
+      })
     </script>
-</body>
+  </body>
 </html>

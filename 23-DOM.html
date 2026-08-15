@@ -157,9 +157,21 @@
       // classList.add();- class add karta hai.
 
       let b = document.getElementById("b");
-      b.classList.add("active")
+      //b.classList.add("active")
 
-      // classList.remove();- 
+      // classList.remove();- class remove
+
+      b.classList.remove("active");
+
+      // classList.toggle():- 1st add and 2nd remove
+
+      b.classList.toggle("active");
+      b.classList.toggle("active");
+      console.log(b.classList);
+
+      // contains() :-  Ye check karta hai ki class present hai ya nahi:
+
+      b.classList.contains("active");
 
     </script>
   </body>

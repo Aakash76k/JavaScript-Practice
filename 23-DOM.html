@@ -6,6 +6,8 @@
     <title>Dom</title>
   </head>
   <body>
+    <!-- Element Selector-->
+
     <h1 id="title">Hello</h1>
     <h1 id="title">Hii</h1>
     <p>
@@ -16,6 +18,39 @@
     <p class="text">Html</p>
     <p class="text">CSS</p>
     <p class="text">JS</p>
+
+    <!-- textContext() -->
+
+    <div id="box">
+      Hello
+      <span style="display: none">Aakash</span>
+    </div>
+
+    <div id="box1">
+      <h2>go</h2>
+    </div>
+
+    <!-- getAttribute -->
+    <a id="link" href="https://google.com">Google</a>
+
+    <!-- setAttribute() -->
+
+    <img
+      id="photo"
+      src="https://images.pexels.com/photos/247478/pexels-photo-247478.jpeg?cs=srgb&dl=clouds-cloudy-conifers-247478.jpg&fm=jpg"
+      alt="old image"
+    />
+
+    <!-- Style and classList -->
+
+    <!-- 1  style-->
+
+    <h1 id="a">sher</h1>
+
+    <!-- 2 classList -->
+
+    <div id="b" class="b">Cheeta</div>
+
     <script>
       // DOM = Document Object Model :-Browser jab HTML page load karta hai, to HTML document ko ek object/tree structure me convert karta hai. JavaScript isi DOM ke through HTML elements ko access aur change kar sakti hai.
 
@@ -23,9 +58,9 @@
       console.log(document.body);
       console.log(document.body.innerText);
 
-      // Element Selectors
+      // 1) Element Selectors
 
-      // 1 getElementById():- single element
+      //  getElementById():- single element
 
       let heading = document.getElementById("title");
       console.log(heading);
@@ -46,13 +81,86 @@
       // querySelectorAll():- all matches
 
       let result = document.querySelectorAll(".text");
-      console.log(result)
+      console.log(result);
 
       // using loop in queryselectorAll();
 
-      result.forEach((item)=>{
+      result.forEach((item) => {
         console.log(item.innerText);
-      })
+      });
+
+      // 2) Content Manipulation
+
+      // innnerText:- Ye element ke visible text ko read ya change karta hai.
+      // visible text
+
+      let t = document.getElementById("title");
+      //console.log(t.innerText);
+      t.innerText = "Hy";
+
+      // textContent :- textContent bhi text ko read/change karta hai, lekin ye element ke saare text content ko consider karta hai, including hidden text.
+      // saara text
+
+      let box = document.getElementById("box");
+      console.log(box.innerText);
+      console.log(box.textContent);
+
+      // innerHTML:- innerHTML element ke andar ka HTML content read ya replace karta hai.
+      // Html + text
+      let box1 = document.getElementById("box1");
+      box1.innerHTML = "<p>dom</>";
+
+      // 3) Attributes :- JavaScript se src, id, class, href etc.
+
+      // getAttribute():- Kisi HTML element ke attribute ki value read karne ke liye getAttribute() use hota hai.
+      // value read
+      let link = document.getElementById("link");
+      console.log(link.getAttribute("href"));
+
+      // setAttribute():- Kisi attribute ki value set/change karne ke liye setAttribute() use hota hai.
+      // value change/set
+
+      let image = document.getElementById("photo");
+      image.setAttribute(
+        "src",
+        "https://tse1.mm.bing.net/th/id/OIP.z_DiWRPIgoWVU22BaltFOwHaE_?r=0&pid=ImgDet&w=474&h=319&rs=1&o=7&rm=3",
+      );
+
+      //removeAttribute() :- attribute remove
+
+      // image.removeAttribute(
+      //   "src",
+      //   "https://tse1.mm.bing.net/th/id/OIP.z_DiWRPIgoWVU22BaltFOwHaE_?r=0&pid=ImgDet&w=474&h=319&rs=1&o=7&rm=3",
+      // );
+
+      // hasAttribute() :-  hasAttribute() check karta hai ki element ke andar wo attribute present hai ya nahi.
+
+      // let image = document.getElementById("photo");
+
+      console.log(image.hasAttribute("src")); // true
+      console.log(image.hasAttribute("href")); // false
+
+      // style And classList
+
+      // 1) element.style
+
+      let a = document.getElementById("a");
+      a.style.color = "red";
+      a.style.background = "grey";
+      a.style.fontSize = "40px";
+      box.style.borderRadius = "10px";
+      box.style.marginTop = "20px";
+
+
+      //2) ClassList
+
+      // classList.add();- class add karta hai.
+
+      let b = document.getElementById("b");
+      b.classList.add("active")
+
+      // classList.remove();- 
+
     </script>
   </body>
 </html>

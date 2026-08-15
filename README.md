@@ -1,24 +1,469 @@
-# JavaScript Practice
+# 🚀 JavaScript Practice & Learning Roadmap
 
-This repository contains my JavaScript learning journey and practice questions.
+My complete JavaScript learning journey — from basic JavaScript to advanced concepts, DOM, asynchronous JavaScript, and OOP.
 
-## Topics Covered
+---
 
-- Variables
-- Data Types
-- Operators
-- Conditions
-- loops
-- Array
-- String
-- Functions
-    ✔ Declaration
-    ✔ Parameters
-    ✔ Arguments
-    ✔ Return
-    ✔ Function Expression
-    ✔ Arrow Function
-- Objects
-- Array Methods
+## 📊 Current Progress
 
+**Current File:** `23-DOM.html`
+**Current Topic:** DOM Manipulation
+**Overall Progress:** 🟢 Good Progress
 
+---
+
+# 📚 JavaScript Roadmap
+
+## 1. JavaScript Basics ✅
+
+- [x] Keywords
+- [x] Identifiers
+- [x] Data Types
+- [x] Variables
+- [x] Constants
+- [x] Tokens
+- [x] Operators
+
+---
+
+## 2. Decision Making Statements ✅
+
+- [x] if
+- [x] if else
+- [x] Nested if else
+- [x] if else ladder
+- [x] switch case
+
+---
+
+## 3. Loops / Iteration Statements ✅
+
+- [x] for loop
+- [x] while loop
+- [x] do while loop
+- [x] for...in
+- [x] for...of
+- [x] break
+- [x] continue
+
+---
+
+## 4. Functions ✅
+
+- [x] Function declaration
+- [x] Function definition
+- [x] Function calling
+- [x] Function parameters
+- [x] Return values
+- [x] Types of functions
+- [x] Anonymous functions
+- [x] Arrow functions
+- [x] IIFE
+- [x] Scope
+- [x] var / let / const
+- [x] Recursion
+
+---
+
+## 5. Strings & Array Methods ✅
+
+- [x] String basics
+- [x] String methods
+- [x] Arrays
+- [x] Array methods
+- [x] map()
+- [x] filter()
+- [x] reduce()
+- [x] forEach()
+- [x] find()
+- [x] Other important array methods
+
+---
+
+## 6. Scope & Execution Context ✅
+
+- [x] Global scope
+- [x] Function scope
+- [x] Block scope
+- [x] Lexical scope
+- [x] Execution context
+- [x] Scope chain
+- [x] Closure
+
+---
+
+## 7. Hoisting & JavaScript Internals ✅
+
+- [x] Hoisting
+- [x] Variable hoisting
+- [x] Function hoisting
+- [x] Temporal Dead Zone
+- [x] Execution context
+- [x] `this` keyword
+
+---
+
+## 8. Objects & Prototypes ✅
+
+- [x] Object literals
+- [x] Object keys
+- [x] Object functions
+- [x] Nested objects
+- [x] Object prototypes
+- [x] Prototype chain
+- [x] `Object.getPrototypeOf()`
+- [x] Constructor functions
+- [x] Getter
+- [x] Setter
+
+---
+
+## 9. Set & Map ✅
+
+### Set
+
+- [x] Set creation
+- [x] add()
+- [x] has()
+- [x] delete()
+- [x] clear()
+- [x] size
+- [x] Duplicate values
+- [x] Set to Array
+
+### Map
+
+- [x] Map creation
+- [x] set()
+- [x] get()
+- [x] has()
+- [x] delete()
+- [x] clear()
+- [x] size
+- [x] keys()
+- [x] values()
+- [x] entries()
+- [x] for...of with Map
+
+---
+
+## 10. WeakMap & WeakSet ✅
+
+- [x] WeakMap
+- [x] WeakMap object keys
+- [x] set()
+- [x] get()
+- [x] has()
+- [x] delete()
+- [x] Weak references
+- [x] WeakSet
+- [x] add()
+- [x] has()
+- [x] delete()
+- [x] Object-only storage
+
+---
+
+## 11. Date & Time 🔄
+
+File: `22-Date-Time.html`
+
+- [x] Date object
+- [x] new Date()
+- [x] getFullYear()
+- [x] getMonth()
+- [x] getDate()
+- [x] getDay()
+- [x] getHours()
+- [x] getMinutes()
+- [x] getSeconds()
+- [x] Date formatting
+- [x] Timestamps
+- [x] set methods
+- [x] Date calculations
+
+---
+
+# 🔥 12. DOM — Currently Learning
+
+File: `23-DOM.html`
+
+### DOM Basics
+
+- [x] DOM definition
+- [x] Document object
+- [x] DOM tree
+- [x] document.body
+- [x] document.head
+
+### DOM Selectors
+
+- [x] getElementById()
+- [x] getElementsByClassName()
+- [x] querySelector()
+- [x] querySelectorAll()
+
+### Content Manipulation
+
+- [x] innerText
+- [x] textContent
+- [x] innerHTML
+
+### Attributes
+
+- [x] getAttribute()
+- [x] setAttribute()
+- [x] removeAttribute()
+- [x] hasAttribute()
+
+### Styling
+
+- [x] element.style
+- [x] CSS property manipulation
+- [x] classList.add()
+- [x] classList.remove()
+- [x] classList.toggle()
+- [x] classList.contains()
+
+### DOM Elements
+
+- [ ] createElement()
+- [ ] append()
+- [ ] appendChild()
+- [ ] prepend()
+- [ ] remove()
+- [ ] replaceWith()
+
+### DOM Traversal
+
+- [ ] parentElement
+- [ ] children
+- [ ] firstElementChild
+- [ ] lastElementChild
+- [ ] nextElementSibling
+- [ ] previousElementSibling
+
+### Forms
+
+- [ ] input.value
+- [ ] checked
+- [ ] form handling
+- [ ] FormData
+- [ ] Form validation
+
+---
+
+# ⚡ 13. Events ⏳
+
+- [ ] onclick
+- [ ] addEventListener()
+- [ ] click
+- [ ] mouse events
+- [ ] keyboard events
+- [ ] input event
+- [ ] change event
+- [ ] submit event
+- [ ] Event object
+- [ ] event.target
+- [ ] event.currentTarget
+- [ ] preventDefault()
+- [ ] stopPropagation()
+
+---
+
+# 🔥 14. Event Propagation ⏳
+
+- [ ] Event bubbling
+- [ ] Event capturing
+- [ ] Event delegation
+
+---
+
+# 🌐 15. Asynchronous JavaScript ⏳
+
+- [x] Promise basics
+- [x] Promise states
+- [x] then()
+- [x] catch()
+- [x] finally()
+- [x] Promise chaining
+- [x] fetch()
+- [x] response.json()
+- [x] async
+- [x] await
+- [x] Error handling with async/await
+- [x] Promise.all()
+- [x] Promise.race()
+- [x] Promise.allSettled()
+- [x] Promise.any()
+
+---
+
+# 🔄 16. AJAX ⏳
+
+- [ ] AJAX concept
+- [ ] XMLHttpRequest
+- [ ] AJAX request
+- [ ] AJAX response
+- [ ] Calling APIs using AJAX
+
+---
+
+# 🔁 17. Event Loop ⏳
+
+- [ ] Call Stack
+- [ ] Web APIs
+- [ ] Callback Queue
+- [ ] Microtask Queue
+- [ ] Event Loop
+- [ ] setTimeout()
+- [ ] Promise vs setTimeout()
+- [ ] Async execution order
+
+---
+
+# 📦 18. JavaScript Modules ⏳
+
+- [ ] export
+- [ ] import
+- [ ] Named export
+- [ ] Default export
+- [ ] Multiple exports
+- [ ] Module structure
+
+---
+
+# 🛡️ 19. Error Handling ⏳
+
+- [ ] try
+- [ ] catch
+- [ ] finally
+- [ ] throw
+- [ ] Custom errors
+
+---
+
+# 🧠 20. Advanced JavaScript ⏳
+
+- [ ] Strict mode
+- [ ] Closures revision
+- [ ] Currying
+- [ ] Higher-order functions
+- [ ] Functional programming
+- [ ] Synchronous vs asynchronous programming
+- [ ] Advanced callbacks
+- [ ] Memory & garbage collection
+
+---
+
+# 🏗️ 21. OOP — Later
+
+OOP ko DOM, Events aur Advanced JavaScript ke baad properly cover karunga.
+
+- [ ] OOP definition
+- [ ] Classes
+- [ ] Constructor
+- [ ] Properties
+- [ ] Methods
+- [ ] this
+- [ ] Inheritance
+- [ ] extends
+- [ ] super
+- [ ] Encapsulation
+- [ ] Polymorphism
+- [ ] Abstraction
+- [ ] Static methods
+- [ ] Getters & Setters revision
+
+---
+
+# 🚀 22. JavaScript Projects
+
+After completing the major concepts:
+
+- [ ] Counter App
+- [ ] Todo App
+- [ ] Calculator
+- [ ] Form Validation
+- [ ] Digital Clock
+- [ ] Weather App
+- [ ] API Search App
+- [ ] Quiz App
+- [ ] Expense Tracker
+- [ ] Final JavaScript Project
+
+---
+
+# 🎯 Final Goal
+
+```text
+JavaScript Basics
+       ↓
+Functions & Arrays
+       ↓
+Objects & Prototypes
+       ↓
+Set / Map / WeakMap / WeakSet
+       ↓
+Date & Time
+       ↓
+DOM
+       ↓
+Events
+       ↓
+Event Propagation
+       ↓
+Async JavaScript
+       ↓
+AJAX / Fetch
+       ↓
+Event Loop
+       ↓
+Modules
+       ↓
+Advanced JavaScript
+       ↓
+OOP
+       ↓
+Projects
+       ↓
+🔥 JavaScript Interview Preparation
+```
+
+## 📈 Progress Log
+
+| File | Topic             | Status |
+| ---- | ----------------- | ------ |
+| 01   | Basic JS          | ✅     |
+| 02   | Conditions        | ✅     |
+| 03   | Loops             | ✅     |
+| 04   | Arrays            | ✅     |
+| 05   | Strings           | ✅     |
+| 06   | Functions         | ✅     |
+| 07   | Objects           | ✅     |
+| 08   | Array Methods     | ✅     |
+| 09   | ES6 Features      | ✅     |
+| 10   | Promise           | ✅     |
+| 11   | Advanced Promise  | ✅     |
+| 12   | Fetch API         | ✅     |
+| 13   | Closure           | ✅     |
+| 14   | Hoisting          | ✅     |
+| 15   | Execution Context | ✅     |
+| 16   | `this`            | ✅     |
+| 17   | OOP Basics        | 🟡     |
+| 18   | Object Prototype  | ✅     |
+| 19   | Getter / Setter   | ✅     |
+| 20   | Set / Map         | ✅     |
+| 21   | WeakMap / WeakSet | ✅     |
+| 22   | Date & Time       | 🔄     |
+| 23   | DOM               | 🔄     |
+
+---
+
+## 💪 Learning Status
+
+**Current Focus:** DOM
+
+**Next:** `classList.contains()` → Creating Elements → DOM Traversal → Forms → Events
+
+> 🚀 _Consistency beats speed. One concept at a time._

@@ -51,6 +51,9 @@
 
     <div id="b" class="b active">Cheeta</div>
 
+    <!-- dom element -->
+
+    <h1>Perpend and Append</h1>
     <script>
       // DOM = Document Object Model :-Browser jab HTML page load karta hai, to HTML document ko ek object/tree structure me convert karta hai. JavaScript isi DOM ke through HTML elements ko access aur change kar sakti hai.
 
@@ -140,7 +143,7 @@
       console.log(image.hasAttribute("src")); // true
       console.log(image.hasAttribute("href")); // false
 
-      // style And classList
+      // 4) style And classList
 
       // 1) element.style
 
@@ -150,7 +153,6 @@
       a.style.fontSize = "40px";
       box.style.borderRadius = "10px";
       box.style.marginTop = "20px";
-
 
       //2) ClassList
 
@@ -172,12 +174,41 @@
       // contains() :-  Ye check karta hai ki class present hai ya nahi:
       // do check
 
-     //  b.classList.contains("active");
-     console.log(b.classList.contains("active"));
+      //  b.classList.contains("active");
+      console.log(b.classList.contains("active"));
 
+      // 5) DOM Elements
 
+      // createElement():- create and use of append text add in last
 
+      let p = document.createElement("p");
+      p.innerText = "Hello create Element";
+      document.body.append(p);
+
+      // prepend():- prepend() element ke start me new content/element add karta hai.
+
+      let p1 = document.createElement("p1");
+      p1.innerText = "JavaScript";
+
+      document.body.prepend(p1);
+
+      // appendChild():- Ye bhi element ko end me add karta hai.
+
+      // let p2 = document.createElement("p2");
+
+      // p.innerText = "Hello";
+
+      // document.body.appendChild(p2); // error
+
+      // remove():- remove() kisi existing DOM element ko page se completely remove kar deta hai.
+
+      let p4 = document.createElement("p4");
+
+      p4.innerText = "Hello JavaScript";
+
+      document.body.append(p4);
+
+      p4.remove();
     </script>
   </body>
 </html>
-

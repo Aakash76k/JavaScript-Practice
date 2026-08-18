@@ -227,21 +227,21 @@ File: `23-DOM.html`
 
 ### DOM Elements
 
-- [ ] createElement()
-- [ ] append()
-- [ ] appendChild()
-- [ ] prepend()
-- [ ] remove()
-- [ ] replaceWith()
+- [x] createElement()
+- [x] append()
+- [x] appendChild()
+- [x] prepend()
+- [x] remove()
+- [x] replaceWith()
 
 ### DOM Traversal
 
-- [ ] parentElement
-- [ ] children
-- [ ] firstElementChild
-- [ ] lastElementChild
-- [ ] nextElementSibling
-- [ ] previousElementSibling
+- [x] parentElement
+- [x] children
+- [x] firstElementChild
+- [x] lastElementChild
+- [x] nextElementSibling
+- [x] previousElementSibling
 
 ### Forms
 

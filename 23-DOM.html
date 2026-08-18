@@ -58,6 +58,22 @@
     <!-- replaceWith() -->
     <h1 id="js">rea</h1>
 
+    <!-- DOM Traversal -->
+
+    <!-- parent -->
+
+    <div id="qw">
+      <p id="text">Jai</p>
+    </div>
+
+    <!-- children -->
+
+    <div id="parent">
+      <p id="first">One</p>
+      <p id="second">Two</p>
+      <span id="third">Three</span>
+    </div>
+
     <script>
       // DOM = Document Object Model :-Browser jab HTML page load karta hai, to HTML document ko ek object/tree structure me convert karta hai. JavaScript isi DOM ke through HTML elements ko access aur change kar sakti hai.
 
@@ -220,10 +236,37 @@
       let p5 = document.createElement("p5");
       p5.innerText = "dell";
       h1.replaceWith(p5);
-      
 
-      //
-      
+      // DOM Traversal
+
+      // ParentElement:- Kisi element ka direct parent HTML element find karna.
+
+      //parentElement → actual parent element
+      // parentElement.id → parent ki ID
+      // parentElement.tagName → parent ka tag
+
+      let text = document.getElementById("text");
+      console.log(text.parentElement);
+
+      // Children
+
+      //parent
+      // firstElementChild → H1
+      // children          → H1, P, BUTTON
+      // lastElementChild  → BUTTON
+
+      let parent = document.getElementById("parent");
+      console.log(parent.children);
+      console.log(parent.firstElementChild.tagName);
+      console.log(parent.lastElementChild.tagName);
+
+      let first = document.getElementById("first");
+      console.log(first.nextElementSibling);
+
+      let third = document.getElementById("third");
+      console.log(third.previousElementSibling);
+
+
     </script>
   </body>
 </html>

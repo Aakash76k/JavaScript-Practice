@@ -74,6 +74,41 @@
       <span id="third">Three</span>
     </div>
 
+    <!-- DOM Forms -->
+
+    <!-- input.value -->
+
+    <input type="text" id="name" placeholder="enter your name" />
+
+    <!-- checkbox -->
+
+    <input type="checkbox" id="agree">
+    <label for="agree">I agree</label>
+
+    <!-- form handling -->
+
+    <!-- <form id="myForm">
+      <input id="username" type="text" placeholder="Enter name">
+      <button type="submit">Submit</button>
+    </form> -->
+
+    <!-- form data -->
+
+    <!-- <form id="myForm">
+      <input type="text" name="username" placeholder="enter your name" ><br></br>
+      <input type="email" name="email" placeholder="enter your email" >
+      <button type="submit">Submit</button>
+    </form> -->
+
+    <!-- form validation -->
+
+    <form id="myForm">
+      <input type="text" id="username" name="username" placeholder="Enter Name">
+      <button type="submit">Submit</button>
+      <p id="error"></p>
+    </form>
+
+
     <script>
       // DOM = Document Object Model :-Browser jab HTML page load karta hai, to HTML document ko ek object/tree structure me convert karta hai. JavaScript isi DOM ke through HTML elements ko access aur change kar sakti hai.
 
@@ -265,6 +300,72 @@
 
       let third = document.getElementById("third");
       console.log(third.previousElementSibling);
+
+      // DOM Forms
+
+      //input.value :- Form ke input box me jo user value type karta hai, usko JavaScript me .value se access karte hain.
+
+      let nameInput = document.getElementById("name");
+      //console.log(nameInput.value);
+      nameInput.value = "aman";
+
+      // checkbox:- true/ false depend on checkbox checked/unchecked
+
+      let agree = document.getElementById("agree");
+      console.log(agree.checked); // false
+     // agree.checked = true;
+
+     // form handling
+
+      // let form = document.getElementById("myForm");
+
+      // form.addEventListener("submit",function(event){
+      //   event.preventDefault();
+
+      //   let username = document.getElementById("username");
+      //   console.log(username.value);
+      // });
+
+      // form data :- FormData ka use form ke saare input values ek saath collect karne ke liye hota hai.
+
+        // let form  = document.getElementById("myForm");
+
+        // form.addEventListener("submit", function(event){
+        //   event.preventDefault();
+
+        //   let data = new FormData(form);
+        //   console.log(data.get("username"));
+        //   console.log(data.get("email"));
+        // });
+
+      // form validation:-
+        //  Input empty to nahi hai
+        // Email valid hai ya nahi
+        // Password ki length
+        // User ko error message dikhana
+        // Submit ko valid/invalid ke according handle karna
+
+        let form = document.getElementById("myForm");
+        let username = document.getElementById("username");
+        let error = document.getElementById("error");
+
+        form.addEventListener("submit", function(event){
+          event.preventDefault();
+
+          if(username.value.trim() === ""){
+            error.innerText = "username is required";
+            return;
+          }
+
+          error.innerText = "";
+          console.log("Form Submit: ", username.value);
+        })
+ 
+
+
+
+
+
 
 
     </script>

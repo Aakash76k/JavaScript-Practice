@@ -271,7 +271,7 @@ File: `23-DOM.html`
 
 ---
 
-# 🔥 14. Event Propagation ⏳
+# 🔥 14. Event Propag1ation ⏳
 
 - [ ] Event bubbling
 - [ ] Event capturing

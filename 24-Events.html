@@ -9,13 +9,24 @@
     <!-- onclick -->
      <button onclick="sayhello()">Clickme</button>
      <h1 id="title">one</h1>
+
+     <!-- addEventlistener -->
+      <button id="btn">Clickme2</button>
     <script>
-        // 1 on click
+        // 1 on click:-  HTML ke andar event
 
         function sayhello(){
             //console.log("hello 1st event");
             document.getElementById("title").innerText = "1st event";
         }
+
+        //2 Add Event Listener:-JavaScript se event listener
+        //  ka fayda ye hai ki ek hi element par multiple listeners laga sakte ho
+        
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click",function(){
+            console.log("2nd button clicked");
+        })
 
     </script>
 </body>

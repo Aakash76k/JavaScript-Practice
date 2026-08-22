@@ -245,11 +245,11 @@ File: `23-DOM.html`
 
 ### Forms
 
-- [ ] input.value
-- [ ] checked
-- [ ] form handling
-- [ ] FormData
-- [ ] Form validation
+- [x] input.value
+- [x] checked
+- [x] form handling
+- [x] FormData
+- [x] Form validation
 
 ---
 
@@ -455,7 +455,7 @@ Projects
 | 19   | Getter / Setter   | ✅     |
 | 20   | Set / Map         | ✅     |
 | 21   | WeakMap / WeakSet | ✅     |
-| 22   | Date & Time       | 🔄     |
+| 22   | Date & Time       | ✅     |
 | 23   | DOM               | 🔄     |
 
 ---

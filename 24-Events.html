@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Event</title>
+</head>
+<body>
+    <!-- onclick -->
+     <button onclick="sayhello()">Clickme</button>
+     <h1 id="title">one</h1>
+    <script>
+        // 1 on click
+
+        function sayhello(){
+            //console.log("hello 1st event");
+            document.getElementById("title").innerText = "1st event";
+        }
+
+    </script>
+</body>
+</html>

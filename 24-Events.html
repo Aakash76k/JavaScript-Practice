@@ -12,6 +12,10 @@
 
      <!-- addEventlistener -->
       <button id="btn">Clickme2</button>
+
+      <!-- click event -->
+       <h1 id="t1">3rd event</h1>
+       <button id="btn1">change text</button>
     <script>
         // 1 on click:-  HTML ke andar event
 
@@ -26,7 +30,17 @@
         let btn = document.getElementById("btn");
         btn.addEventListener("click",function(){
             console.log("2nd button clicked");
+        });
+
+        // 3 click event 
+
+        let btn1 = document.getElementById("btn1");
+        let t1 = document.getElementById("t1");
+
+        btn1.addEventListener("click", function(){
+            t1.innerText = "3rd button";
         })
+
 
     </script>
 </body>

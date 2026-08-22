@@ -16,6 +16,11 @@
       <!-- click event -->
        <h1 id="t1">3rd event</h1>
        <button id="btn1">change text</button>
+
+       <!-- mouse Event  -->
+        <!-- 1st mouseover -->
+
+        <div id="box">Hover Me</div>
     <script>
         // 1 on click:-  HTML ke andar event
 
@@ -32,14 +37,33 @@
             console.log("2nd button clicked");
         });
 
-        // 3 click event 
+        // 3 click event :- Jab user element par click kare.
 
         let btn1 = document.getElementById("btn1");
         let t1 = document.getElementById("t1");
 
         btn1.addEventListener("click", function(){
             t1.innerText = "3rd button";
+        });
+
+        // 4 Mouse Event :- 
+        // a) mouseover:- tab fire hota hai jab mouse element ke upar aata hai.
+
+        let box = document.getElementById("box");
+        // box.addEventListener("mouseover", function(){
+        //     box.style.backgroundColor = "blue";
+        //     box.style.color = "white"
+        //     console.log("mouse is over the box");
+        // });
+
+        // b) mouseout:- Jab mouse element se bahar chala jata hai, mouseout fire hota hai.
+
+        box.addEventListener("mouseout",function(){
+            console.log("mouse left the box")
         })
+        
+
+
 
 
     </script>

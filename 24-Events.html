@@ -50,11 +50,11 @@
         // a) mouseover:- tab fire hota hai jab mouse element ke upar aata hai.
 
         let box = document.getElementById("box");
-        // box.addEventListener("mouseover", function(){
-        //     box.style.backgroundColor = "blue";
-        //     box.style.color = "white"
-        //     console.log("mouse is over the box");
-        // });
+        box.addEventListener("mouseover", function(){
+            box.style.backgroundColor = "blue";
+            box.style.color = "white"
+            console.log("mouse is over the box");
+        });
 
         // b) mouseout:- Jab mouse element se bahar chala jata hai, mouseout fire hota hai.
 
@@ -72,9 +72,17 @@
 
         // d) mouseleave:-Mouse box se bahar jayega → event fire. 
 
-        box.addEventListener("mouseleave",function(){
-            console.log("mouse left the box");
-        });
+        // box.addEventListener("mouseleave",function(){
+        //      box.style.backgroundColor = "white";
+        //     box.style.color = "black";
+        //     console.log("mouse left the box");
+        // });
+
+        // e) mousedown:-Mouse button ko press karte hi.
+
+        box.addEventListener("mousedown",function(){
+            console.log("mouse button pressed");
+        })
 
 
 

@@ -63,11 +63,20 @@
         // })
 
 
-        // c) mouseenter
+        // c) mouseenter:- mouseover aur mouseenter similar lagte hain, lekin important difference hai.
+        // Mouse box ke andar aayega → event fire.
 
-        box.addEventListener("mouseenter", function(){
-            console.log("mouse enter the box");
-        })
+        // box.addEventListener("mouseenter", function(){
+        //     console.log("mouse enter the box");
+        // })
+
+        // d) mouseleave:-Mouse box se bahar jayega → event fire. 
+
+        box.addEventListener("mouseleave",function(){
+            console.log("mouse left the box");
+        });
+
+
 
 
 

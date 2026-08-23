@@ -119,9 +119,23 @@
 
         // b) keyup:-
 
-        input.addEventListener("keyup",function(event){
-            console.log(event.key);
+        // input.addEventListener("keyup",function(event){
+        //     console.log(event.key);
+        // })
+
+        // c) event key:- batata hai kaunsi key press hui.
+
+        // input.addEventListener("keydown",function(event){
+        //     console.log(event.key);
+        // })
+
+        // d) event.code:- keyboard ki physical key batata h 
+
+        input.addEventListener("keydown",function(event){
+            console.log(event.code);
+            console.log(event.key)
         })
+
 
 
 

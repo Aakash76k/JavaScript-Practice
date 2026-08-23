@@ -131,10 +131,18 @@
 
         // d) event.code:- keyboard ki physical key batata h 
 
+        // input.addEventListener("keydown",function(event){
+        //     console.log(event.code);
+        //     console.log(event.key)
+        // })
+
+        //e) ctrl key , shift key and altkey
+
         input.addEventListener("keydown",function(event){
-            console.log(event.code);
-            console.log(event.key)
-        })
+            console.log(event.ctrlKey);
+            console.log(event.shiftKey);
+            console.log(event.altKey);
+        });
 
 
 

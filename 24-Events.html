@@ -18,9 +18,14 @@
        <button id="btn1">change text</button>
 
        <!-- mouse Event  -->
-        <!-- 1st mouseover -->
+        <!--  mouseover, mouseout,  mouseenter, mouseleave, mousedown, mouseup, mousemove -->
 
         <div id="box">Hover Me</div>
+
+        <!-- keyboard Event -->
+
+        <input type="text" id="name">
+
     <script>
         // 1 on click:-  HTML ke andar event
 
@@ -98,6 +103,19 @@
             box.style.backgroundColor = "red";
             console.log("mouse is moving");
         });
+
+        // Keyboard Event
+
+        //a) keydown:- 
+
+        // document.addEventListener("keydown",function(){
+        //     console.log(event.key);
+        // });
+
+        let input = document.getElementById("name");
+        input.addEventListener("keydown",function(event){
+            console.log(event.key);
+        })
 
 
 

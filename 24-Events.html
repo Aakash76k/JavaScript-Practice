@@ -80,9 +80,19 @@
 
         // e) mousedown:-Mouse button ko press karte hi.
 
-        box.addEventListener("mousedown",function(){
-            console.log("mouse button pressed");
+        // box.addEventListener("mousedown",function(){
+            //box.style.backgroundColor = "red";
+        //     console.log("mouse button pressed");
+        // });
+
+        // f) mouseup:-
+
+        box.addEventListener("mouseup",function(){
+            box.style.backgroundColor = "green";
+            console.log("mouse button released");
         })
+
+
 
 
 

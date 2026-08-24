@@ -255,11 +255,11 @@ File: `23-DOM.html`
 
 # ⚡ 13. Events ⏳
 
-- [ ] onclick
-- [ ] addEventListener()
-- [ ] click
-- [ ] mouse events
-- [ ] keyboard events
+- [x] onclick
+- [x] addEventListener()
+- [x] click
+- [x] mouse events
+- [x] keyboard events
 - [ ] input event
 - [ ] change event
 - [ ] submit event

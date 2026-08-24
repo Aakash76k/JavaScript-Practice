@@ -26,6 +26,10 @@
 
         <input type="text" id="name">
 
+        <!-- Input Event -->
+
+        <input type="text"  id="na">
+
     <script>
         // 1 on click:-  HTML ke andar event
 
@@ -143,6 +147,15 @@
             console.log(event.shiftKey);
             console.log(event.altKey);
         });
+
+        // Input Event :- input event tab trigger hota h jab input field ki value change krta h 
+
+        document.getElementById("name");
+        input.addEventListener("input",()=>{
+            console.log(input.value);
+        });
+
+
 
 
 

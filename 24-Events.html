@@ -28,7 +28,14 @@
 
         <!-- Input Event / Change Event-->
 
-        <input type="text"  id="name">
+        <input type="text"  id="name1">
+
+        <!-- submit event -->
+
+        <form id="myForm">
+            <input type="text" id="name">
+            <button type="submit">Submit</button>
+        </form>
 
     <script>
         // 1 on click:-  HTML ke andar event
@@ -161,6 +168,15 @@
         input.addEventListener("change", function(event){
             console.log(event.target.value);
         });
+
+        // Submit Event
+
+        const form = document.getElementById("myForm");
+        form.addEventListener("submit",function(event){
+            // console.log("form submitted");
+            console.log(event.target)
+        });
+
 
 
 

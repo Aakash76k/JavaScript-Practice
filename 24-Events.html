@@ -24,11 +24,11 @@
 
         <!-- keyboard Event -->
 
-        <input type="text" id="name">
+        <!-- <input type="text" id="name"> -->
 
-        <!-- Input Event -->
+        <!-- Input Event / Change Event-->
 
-        <input type="text"  id="na">
+        <input type="text"  id="name">
 
     <script>
         // 1 on click:-  HTML ke andar event
@@ -103,10 +103,10 @@
 
         // g) mousemove:-Isme ek interesting cheez hai: mouse ko thoda sa bhi move karoge to event baar-baar fire hoga
         
-        box.addEventListener("mousemove",function(){
-            box.style.backgroundColor = "red";
-            console.log("mouse is moving");
-        });
+        // box.addEventListener("mousemove",function(){
+        //     box.style.backgroundColor = "red";
+        //     console.log("mouse is moving");
+        // });
 
         // Keyboard Event
 
@@ -116,7 +116,7 @@
         //     console.log(event.key);
         // });
 
-        let input = document.getElementById("name");
+        // let input = document.getElementById("name");
         // input.addEventListener("keydown",function(event){
         //     console.log(event.key);
         // })
@@ -142,17 +142,24 @@
 
         //e) ctrl key , shift key and altkey
 
-        input.addEventListener("keydown",function(event){
-            console.log(event.ctrlKey);
-            console.log(event.shiftKey);
-            console.log(event.altKey);
-        });
+        // input.addEventListener("keydown",function(event){
+        //     console.log(event.ctrlKey);
+        //     console.log(event.shiftKey);
+        //     console.log(event.altKey);
+        // });
 
         // Input Event :- input event tab trigger hota h jab input field ki value change krta h 
 
-        document.getElementById("name");
-        input.addEventListener("input",()=>{
-            console.log(input.value);
+        // document.getElementById("name");
+        // input.addEventListener("input",()=>{
+        //     console.log(input.value);
+        // });
+
+        // Change Event :- value change hone k baad field chhodne par
+
+        const input = document.getElementById("name");
+        input.addEventListener("change", function(event){
+            console.log(event.target.value);
         });
 
 

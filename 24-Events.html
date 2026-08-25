@@ -201,11 +201,22 @@
 
       // Event.currentTarget:- Ye batata hai ki event listener kis element par laga hua hai.
 
+      //   const form = document.getElementById("myForm");
+      //   form.addEventListener("submit", function (event) {
+      //     console.log(event.target);
+      //     console.log(event.currentTarget);
+      //   });
+
+      // event.preventDefault():- Ye browser ke default behavior ko rokta hai.
+
       const form = document.getElementById("myForm");
       form.addEventListener("submit", function (event) {
-        console.log(event.target);
-        console.log(event.currentTarget);
+        event.preventDefault();
+
+        console.log("Form submitted");
       });
+
+      
     </script>
   </body>
 </html>

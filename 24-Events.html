@@ -1,194 +1,200 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM Event</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- onclick -->
-     <button onclick="sayhello()">Clickme</button>
-     <h1 id="title">one</h1>
+    <button onclick="sayhello()">Clickme</button>
+    <h1 id="title">one</h1>
 
-     <!-- addEventlistener -->
-      <button id="btn">Clickme2</button>
+    <!-- addEventlistener -->
+    <button id="btn">Clickme2</button>
 
-      <!-- click event -->
-       <h1 id="t1">3rd event</h1>
-       <button id="btn1">change text</button>
+    <!-- click event -->
+    <h1 id="t1">3rd event</h1>
+    <button id="btn1">change text</button>
 
-       <!-- mouse Event  -->
-        <!--  mouseover, mouseout,  mouseenter, mouseleave, mousedown, mouseup, mousemove -->
+    <!-- mouse Event  -->
+    <!--  mouseover, mouseout,  mouseenter, mouseleave, mousedown, mouseup, mousemove -->
 
-        <div id="box">Hover Me</div>
+    <div id="box">Hover Me</div>
 
-        <!-- keyboard Event -->
+    <!-- keyboard Event -->
 
-        <!-- <input type="text" id="name"> -->
+    <!-- <input type="text" id="name"> -->
 
-        <!-- Input Event / Change Event-->
+    <!-- Input Event / Change Event-->
 
-        <input type="text"  id="name1">
+    <!-- <input type="text" id="name1" /> -->
 
-        <!-- submit event -->
+    <!-- submit event -->
 
-        <form id="myForm">
-            <input type="text" id="name">
-            <button type="submit">Submit</button>
-        </form>
+    <!-- <form id="myForm">
+      <input type="text" id="name" />
+      <button type="submit">Submit</button>
+    </form> -->
+
+    <!-- Event Object -->
+
+    <form id="myForm">
+      <input type="text" id="name" />
+      <button type="submit">Submit</button>
+    </form>
 
     <script>
-        // 1 on click:-  HTML ke andar event
+      // 1 on click:-  HTML ke andar event
 
-        function sayhello(){
-            //console.log("hello 1st event");
-            document.getElementById("title").innerText = "1st event";
-        }
+      function sayhello() {
+        //console.log("hello 1st event");
+        document.getElementById("title").innerText = "1st event";
+      }
 
-        //2 Add Event Listener:-JavaScript se event listener
-        //  ka fayda ye hai ki ek hi element par multiple listeners laga sakte ho
-        
-        let btn = document.getElementById("btn");
-        btn.addEventListener("click",function(){
-            console.log("2nd button clicked");
-        });
+      //2 Add Event Listener:-JavaScript se event listener
+      //  ka fayda ye hai ki ek hi element par multiple listeners laga sakte ho
 
-        // 3 click event :- Jab user element par click kare.
+      let btn = document.getElementById("btn");
+      btn.addEventListener("click", function () {
+        console.log("2nd button clicked");
+      });
 
-        let btn1 = document.getElementById("btn1");
-        let t1 = document.getElementById("t1");
+      // 3 click event :- Jab user element par click kare.
 
-        btn1.addEventListener("click", function(){
-            t1.innerText = "3rd button";
-        });
+      let btn1 = document.getElementById("btn1");
+      let t1 = document.getElementById("t1");
 
-        // 4 Mouse Event :- 
-        // a) mouseover:- tab fire hota hai jab mouse element ke upar aata hai.
+      btn1.addEventListener("click", function () {
+        t1.innerText = "3rd button";
+      });
 
-        let box = document.getElementById("box");
-        box.addEventListener("mouseover", function(){
-            box.style.backgroundColor = "blue";
-            box.style.color = "white"
-            console.log("mouse is over the box");
-        });
+      // 4 Mouse Event :-
+      // a) mouseover:- tab fire hota hai jab mouse element ke upar aata hai.
 
-        // b) mouseout:- Jab mouse element se bahar chala jata hai, mouseout fire hota hai.
+      let box = document.getElementById("box");
+      box.addEventListener("mouseover", function () {
+        box.style.backgroundColor = "blue";
+        box.style.color = "white";
+        console.log("mouse is over the box");
+      });
 
-        // box.addEventListener("mouseout",function(){
-        //     console.log("mouse left the box")
-        // })
+      // b) mouseout:- Jab mouse element se bahar chala jata hai, mouseout fire hota hai.
 
+      // box.addEventListener("mouseout",function(){
+      //     console.log("mouse left the box")
+      // })
 
-        // c) mouseenter:- mouseover aur mouseenter similar lagte hain, lekin important difference hai.
-        // Mouse box ke andar aayega → event fire.
+      // c) mouseenter:- mouseover aur mouseenter similar lagte hain, lekin important difference hai.
+      // Mouse box ke andar aayega → event fire.
 
-        // box.addEventListener("mouseenter", function(){
-        //     console.log("mouse enter the box");
-        // })
+      // box.addEventListener("mouseenter", function(){
+      //     console.log("mouse enter the box");
+      // })
 
-        // d) mouseleave:-Mouse box se bahar jayega → event fire. 
+      // d) mouseleave:-Mouse box se bahar jayega → event fire.
 
-        // box.addEventListener("mouseleave",function(){
-        //      box.style.backgroundColor = "white";
-        //     box.style.color = "black";
-        //     console.log("mouse left the box");
-        // });
+      // box.addEventListener("mouseleave",function(){
+      //      box.style.backgroundColor = "white";
+      //     box.style.color = "black";
+      //     console.log("mouse left the box");
+      // });
 
-        // e) mousedown:-Mouse button ko press karte hi.
+      // e) mousedown:-Mouse button ko press karte hi.
 
-        // box.addEventListener("mousedown",function(){
-            //box.style.backgroundColor = "red";
-        //     console.log("mouse button pressed");
-        // });
+      // box.addEventListener("mousedown",function(){
+      //box.style.backgroundColor = "red";
+      //     console.log("mouse button pressed");
+      // });
 
-        // f) mouseup:-
+      // f) mouseup:-
 
-        // box.addEventListener("mouseup",function(){
-        //     box.style.backgroundColor = "green";
-        //     console.log("mouse button released");
-        // });
+      // box.addEventListener("mouseup",function(){
+      //     box.style.backgroundColor = "green";
+      //     console.log("mouse button released");
+      // });
 
-        // g) mousemove:-Isme ek interesting cheez hai: mouse ko thoda sa bhi move karoge to event baar-baar fire hoga
-        
-        // box.addEventListener("mousemove",function(){
-        //     box.style.backgroundColor = "red";
-        //     console.log("mouse is moving");
-        // });
+      // g) mousemove:-Isme ek interesting cheez hai: mouse ko thoda sa bhi move karoge to event baar-baar fire hoga
 
-        // Keyboard Event
+      // box.addEventListener("mousemove",function(){
+      //     box.style.backgroundColor = "red";
+      //     console.log("mouse is moving");
+      // });
 
-        //a) keydown:- 
+      // Keyboard Event
 
-        // document.addEventListener("keydown",function(){
-        //     console.log(event.key);
-        // });
+      //a) keydown:-
 
-        // let input = document.getElementById("name");
-        // input.addEventListener("keydown",function(event){
-        //     console.log(event.key);
-        // })
+      // document.addEventListener("keydown",function(){
+      //     console.log(event.key);
+      // });
 
-        // b) keyup:-
+      // let input = document.getElementById("name");
+      // input.addEventListener("keydown",function(event){
+      //     console.log(event.key);
+      // })
 
-        // input.addEventListener("keyup",function(event){
-        //     console.log(event.key);
-        // })
+      // b) keyup:-
 
-        // c) event key:- batata hai kaunsi key press hui.
+      // input.addEventListener("keyup",function(event){
+      //     console.log(event.key);
+      // })
 
-        // input.addEventListener("keydown",function(event){
-        //     console.log(event.key);
-        // })
+      // c) event key:- batata hai kaunsi key press hui.
 
-        // d) event.code:- keyboard ki physical key batata h 
+      // input.addEventListener("keydown",function(event){
+      //     console.log(event.key);
+      // })
 
-        // input.addEventListener("keydown",function(event){
-        //     console.log(event.code);
-        //     console.log(event.key)
-        // })
+      // d) event.code:- keyboard ki physical key batata h
 
-        //e) ctrl key , shift key and altkey
+      // input.addEventListener("keydown",function(event){
+      //     console.log(event.code);
+      //     console.log(event.key)
+      // })
 
-        // input.addEventListener("keydown",function(event){
-        //     console.log(event.ctrlKey);
-        //     console.log(event.shiftKey);
-        //     console.log(event.altKey);
-        // });
+      //e) ctrl key , shift key and altkey
 
-        // Input Event :- input event tab trigger hota h jab input field ki value change krta h 
+      // input.addEventListener("keydown",function(event){
+      //     console.log(event.ctrlKey);
+      //     console.log(event.shiftKey);
+      //     console.log(event.altKey);
+      // });
 
-        // document.getElementById("name");
-        // input.addEventListener("input",()=>{
-        //     console.log(input.value);
-        // });
+      // Input Event :- input event tab trigger hota h jab input field ki value change krta h
 
-        // Change Event :- value change hone k baad field chhodne par
+      // document.getElementById("name");
+      // input.addEventListener("input",()=>{
+      //     console.log(input.value);
+      // });
 
-        const input = document.getElementById("name");
-        input.addEventListener("change", function(event){
-            console.log(event.target.value);
-        });
+      // Change Event :- value change hone k baad field chhodne par
 
-        // Submit Event
+      //   const input = document.getElementById("name");
+      //   input.addEventListener("change", function (event) {
+      //     console.log(event.target.value);
+      //   });
 
-        const form = document.getElementById("myForm");
-        form.addEventListener("submit",function(event){
-            // console.log("form submitted");
-            console.log(event.target)
-        });
+      // Submit Event
 
+      //   const form = document.getElementById("myForm");
+      // form.addEventListener("submit",function(event){
+      //     // console.log("form submitted");
+      //     console.log(event.target)
+      // });
 
+      // Event Object :-
 
+      // event :- object ke andar event se related information hoti hai.
 
+      //const form = document.getElementById("myForm");
+      // form.addEventListener("submit",function(event){
+      //     console.log(event);
+      // })
 
-
-
-
-
-
-
+      
 
 
     </script>
-</body>
+  </body>
 </html>

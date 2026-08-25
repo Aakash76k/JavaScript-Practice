@@ -260,10 +260,10 @@ File: `23-DOM.html`
 - [x] click
 - [x] mouse events
 - [x] keyboard events
-- [ ] input event
-- [ ] change event
-- [ ] submit event
-- [ ] Event object
+- [x] input event
+- [x] change event
+- [x] submit event
+- [] Event object
 - [ ] event.target
 - [ ] event.currentTarget
 - [ ] preventDefault()

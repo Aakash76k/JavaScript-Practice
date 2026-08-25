@@ -263,11 +263,11 @@ File: `23-DOM.html`
 - [x] input event
 - [x] change event
 - [x] submit event
-- [] Event object
-- [ ] event.target
-- [ ] event.currentTarget
-- [ ] preventDefault()
-- [ ] stopPropagation()
+- [x] Event object
+- [x] event.target
+- [x] event.currentTarget
+- [x] preventDefault()
+- [x] stopPropagation()
 
 ---
 

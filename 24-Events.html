@@ -38,11 +38,19 @@
     </form> -->
 
     <!-- Event Object -->
+     <!-- event.taget, event.currentTarget, preventDefault -->
 
-    <form id="myForm">
+    <!-- <form id="myForm">
       <input type="text" id="name" />
       <button type="submit">Submit</button>
-    </form>
+    </form> -->
+
+    <!-- stoppreventDefault -->
+
+    <div id="parent">Parent
+        <button id="child">Child</button>
+    </div>
+
 
     <script>
       // 1 on click:-  HTML ke andar event
@@ -209,14 +217,29 @@
 
       // event.preventDefault():- Ye browser ke default behavior ko rokta hai.
 
-      const form = document.getElementById("myForm");
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
+    //   const form = document.getElementById("myForm");
+    //   form.addEventListener("submit", function (event) {
+    //     event.preventDefault();
 
-        console.log("Form submitted");
+    //     console.log("Form submitted");
+    //   });
+
+      // stopPropagation():- Ye event ko aage propagate hone se rokta hai.
+
+
+      const parent = document.getElementById("parent");
+      const child = document.getElementById ("child");
+      parent.addEventListener("click",function(){
+        console.log("parent clicked");
       });
 
-      
+      child.addEventListener("click",function(){
+        // stop propagation hata dene pr parent or child dono output ek saath ayga \
+        
+        event.stopPropagation();
+        console.log("child clicked");
+      });
+
     </script>
   </body>
 </html>

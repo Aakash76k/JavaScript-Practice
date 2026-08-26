@@ -34,22 +34,57 @@
 
     <!-- XMLHttpRequest -->
 
-    <button id="btn">Get Data</button>
+    <!-- <button id="btn">Get Data</button> -->
+
+    <!-- Calling Api -->
+
+    <button id="btn">Load Users</button>
+
+    <div id="users"></div>
 
     <script>
+      // 1.  XMLHttpRequest , AJAX Request , AJAX Response
 
-        // 1.  XMLHttpRequest
+      //   const btn = document.getElementById("btn");
+      //   btn.addEventListener("click", function () {
+      //     const xhr = new XMLHttpRequest();
+      //     xhr.open("GET", "https://jsonplaceholder.typicode.com/users");
+      //     // xhr.onload = function(){
+      //     //     console.log(xhr.responseText);
+      //     // }
 
-        const btn = document.getElementById("btn");
-        btn.addEventListener("click",function(){
-            const xhr = new XMLHttpRequest();
-            xhr.open("GET", "https://jsonplaceholder.typicode.com/users");
-            xhr.onload = function(){
-                console.log(xhr.responseText);
-            }
-            xhr.send();
-        });
+      //     xhr.onload = function () {
+      //       //   const data = JSON.parse(xhr.responseText); //JSON.parse() ne JSON string ko JavaScript object/array mein convert kiya hai.
+      //       const data = JSON.stringify(xhr.responseText); // JSON.stringify() exactly JSON.parse() ka opposite hai.
+      //       console.log(data);
+      //     };
+      //     xhr.send();
+      //   });
+
+      // calling Api
+
+      const btn = document.getElementById("btn");
+      const users = document.getElementById("users");
+
+      btn.addEventListener("click", function () {
+        const xhr = new XMLHttpRequest();
+
+        xhr.open("GET", "https://jsonplaceholder.typicode.com/users");
+
+        xhr.onload = function () {
+          const data = JSON.parse(xhr.responseText);
+
+          data.forEach(function (user) {
+            const p = document.createElement("p");
+
+            p.innerText = user.name;
+
+            users.append(p);
+          });
+        };
+
+        xhr.send();
+      });
     </script>
-
   </body>
 </html>

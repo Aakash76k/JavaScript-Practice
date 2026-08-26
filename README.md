@@ -299,13 +299,13 @@ File: `23-DOM.html`
 
 ---
 
-# 🔄 16. AJAX ⏳
+# 🔄 16. AJAX 
 
 - [x] AJAX concept
 - [x] XMLHttpRequest
 - [x] AJAX request
 - [x] AJAX response
-- [ ] Calling APIs using AJAX
+- [x] Calling APIs using AJAX
 
 ---
 

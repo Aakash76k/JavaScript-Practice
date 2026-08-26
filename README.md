@@ -253,7 +253,7 @@ File: `23-DOM.html`
 
 ---
 
-# ⚡ 13. Events ⏳
+# ⚡ 13. Events 
 
 - [x] onclick
 - [x] addEventListener()
@@ -271,15 +271,15 @@ File: `23-DOM.html`
 
 ---
 
-# 🔥 14. Event Propag1ation ⏳
+# 🔥 14. Event Propag1ation 
 
-- [ ] Event bubbling
-- [ ] Event capturing
-- [ ] Event delegation
+- [x] Event bubbling
+- [x] Event capturing
+- [x] Event delegation
 
 ---
 
-# 🌐 15. Asynchronous JavaScript ⏳
+# 🌐 15. Asynchronous JavaScript 
 
 - [x] Promise basics
 - [x] Promise states
@@ -301,10 +301,10 @@ File: `23-DOM.html`
 
 # 🔄 16. AJAX ⏳
 
-- [ ] AJAX concept
-- [ ] XMLHttpRequest
-- [ ] AJAX request
-- [ ] AJAX response
+- [x] AJAX concept
+- [x] XMLHttpRequest
+- [x] AJAX request
+- [x] AJAX response
 - [ ] Calling APIs using AJAX
 
 ---

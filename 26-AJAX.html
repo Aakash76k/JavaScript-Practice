@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX</title>
+  </head>
+  <body>
+    <!-- AJAX = Asynchronous JavaScript And XML Naam mein XML hai, lekin aajkal AJAX
+    mein mostly JSON use hota hai. AJAX ka main purpose kya hai? Server se data
+    bina poora webpage reload kiye lena ya bhejna. 
+    normal request :- 
+    User 
+    ↓
+    Page request
+     ↓ 
+    Server
+     ↓ 
+    New page
+     ↓ 
+    Page reload
+
+    AJAX :- 
+
+    User
+    ↓
+    JavaScript
+    ↓
+    Server
+    ↓
+    Data
+    ↓
+    JavaScript page update karta hai -->
+
+    <!-- XMLHttpRequest -->
+
+    <button id="btn">Get Data</button>
+
+    <script>
+
+        // 1.  XMLHttpRequest
+
+        const btn = document.getElementById("btn");
+        btn.addEventListener("click",function(){
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "https://jsonplaceholder.typicode.com/users");
+            xhr.onload = function(){
+                console.log(xhr.responseText);
+            }
+            xhr.send();
+        });
+    </script>
+
+  </body>
+</html>

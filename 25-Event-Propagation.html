@@ -26,40 +26,42 @@
 
         // 1. Event Bubbling :- Jab ek child element par event hota hai, event parent elements ki taraf upar move karta
 
-        const parent = document.getElementById("parent");
-        const child = document.getElementById("child");
-
-        parent.addEventListener("click",function(){
-            console.log("Parent Clicked");
-        });
-
-        child.addEventListener("click", function(){
-            console.log("Child Clicked")
-        });
-
-        //2. Event Capturing:- Capturing mein event upar se neeche aata hai:
-
         // const parent = document.getElementById("parent");
         // const child = document.getElementById("child");
 
-        // parent.addEventListener("click", function(){
-        //     console.log("Parent Clicked")
-        // },true);
-
-        // child.addEventListener("click", function(){
-        //     console.log("Child Clicked");
+        // parent.addEventListener("click",function(){
+        //     console.log("Parent Clicked");
         // });
+
+        // child.addEventListener("click", function(event){
+        //     // event.stopPropagation(); // only child clicked
+        //     console.log("Child Clicked")
+        //     event.stopPropagation();
+        // });
+
+        //2. Event Capturing:- Capturing mein event upar se neeche aata hai:
+
+        const parent = document.getElementById("parent");
+        const child = document.getElementById("child");
+
+        parent.addEventListener("click", function(){
+            console.log("Parent Clicked")
+        },true);
+
+        child.addEventListener("click", function(){
+            console.log("Child Clicked");
+        });
 
         //3. Event Delegation:- Har child par alag event listener lagane ke bajay parent par ek listener lagana.
 
 
-        const items = document.querySelectorAll("li");
+        // const items = document.querySelectorAll("li");
 
-        items.forEach(function(item){
-            item.addEventListener("click",function(){
-                console.log(item.innerText);
-            });
-        });
+        // items.forEach(function(item){
+        //     item.addEventListener("click",function(){
+        //         console.log(item.innerText);
+        //     });
+        // });
 
         const list = document.getElementById("list");
 

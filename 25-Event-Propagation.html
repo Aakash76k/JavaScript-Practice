@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Propagation</title>
+</head>
+<body>
+
+    <!-- Event Bubbling -->
+
+    <div id="parent">
+        <button id="child">Click-Me</button>
+    </div>
+    <script>
+        // Event Propagation
+
+        // 1. Event Bubbling :- Jab ek child element par event hota hai, event parent elements ki taraf upar move karta
+
+        const parent = document.getElementById("parent");
+        const child = document.getElementById("child");
+
+        parent.addEventListener("click",function(){
+            console.log("Parent Clicked");
+        });
+
+        child.addEventListener("click", function(){
+            console.log("Child Clicked")
+        });
+
+
+    </script>
+</body>
+</html>

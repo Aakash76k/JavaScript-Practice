@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event-Loop</title>
+  </head>
+  <body>
+    <script>
+      //Event loop :- JavaScript single-threaded hai — matlab ek time par JavaScript ka main code ek hi kaam execute karta hai.
+
+      // Lekin phir question:
+
+      // setTimeout(), API calls, promises jaise asynchronous kaam kaise handle hote hain?  Yahin Event Loop ka role aata hai
+
+      //1. call Stack:- JavaScript mein jo functions execute hote hain, woh Call Stack mein aate hain.
+
+      function one() {
+        console.log("one");
+      }
+
+      function two() {
+        console.log("two");
+      }
+
+      one();
+      two();
+
+      //Q2
+
+      console.log("start");
+
+      function test(){
+        console.log("Inside");
+      }
+
+      test();
+
+      console.log("End");
+    </script>
+  </body>
+</html>

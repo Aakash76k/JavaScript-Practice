@@ -30,7 +30,7 @@
 
       console.log("start");
 
-      function test(){
+      function test() {
         console.log("Inside");
       }
 
@@ -41,12 +41,27 @@
       //2. Web Api :- Browser JavaScript ko kuch extra features deta hai, jinhe hum Web APIs kehte hain.
 
       console.log("start");
-      setTimeout(function(){
+      setTimeout(function () {
         console.log("Timer");
-      },2000);
+      }, 2000);
 
       console.log("End");
 
+      //3. Callback Queue :- Jab asynchronous kaam complete ho jata hai, uska callback Callback Queue mein wait karta hai.
+
+      console.log("1");
+
+      setTimeout(() => {
+        console.log("2");
+      }, 0);
+
+      console.log("3");
+
+      setTimeout(() => {
+        console.log("4");
+      }, 0);
+
+      console.log("5");
 
     </script>
   </body>

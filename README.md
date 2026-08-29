@@ -311,8 +311,8 @@ File: `23-DOM.html`
 
 # 🔁 17. Event Loop ⏳
 
-- [ ] Call Stack
-- [ ] Web APIs
+- [x] Call Stack
+- [x] Web APIs
 - [ ] Callback Queue
 - [ ] Microtask Queue
 - [ ] Event Loop

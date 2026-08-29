@@ -76,6 +76,20 @@
       });
 
       console.log("D");
+
+      //Event Loop:- Event Loop ka kaam hai Call Stack aur queues ke beech coordination karna.
+
+      console.log("Start");
+
+      setTimeout(() => {
+        console.log("Timer");
+      }, 0);
+
+      Promise.resolve().then(() => {
+        console.log("Promise");
+      });
+
+      console.log("End");
     </script>
   </body>
 </html>

@@ -309,16 +309,16 @@ File: `23-DOM.html`
 
 ---
 
-# 🔁 17. Event Loop ⏳
+# 🔁 17. Event Loop 
 
 - [x] Call Stack
 - [x] Web APIs
-- [ ] Callback Queue
-- [ ] Microtask Queue
-- [ ] Event Loop
-- [ ] setTimeout()
-- [ ] Promise vs setTimeout()
-- [ ] Async execution order
+- [x] Callback Queue
+- [x] Microtask Queue
+- [x] Event Loop
+- [x] setTimeout()
+- [x] Promise vs setTimeout()
+- [x] Async execution order
 
 ---
 

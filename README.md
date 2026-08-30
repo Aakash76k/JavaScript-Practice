@@ -322,7 +322,7 @@ File: `23-DOM.html`
 
 ---
 
-# 📦 18. JavaScript Modules ⏳
+# 📦 18. JavaScript Modules 
 
 - [x] export
 - [x] import

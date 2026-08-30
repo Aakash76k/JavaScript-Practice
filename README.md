@@ -324,12 +324,12 @@ File: `23-DOM.html`
 
 # 📦 18. JavaScript Modules ⏳
 
-- [ ] export
-- [ ] import
-- [ ] Named export
-- [ ] Default export
-- [ ] Multiple exports
-- [ ] Module structure
+- [x] export
+- [x] import
+- [x] Named export
+- [x] Default export
+- [x] Multiple exports
+- [x] Module structure
 
 ---
 
@@ -456,7 +456,7 @@ Projects
 | 20   | Set / Map         | ✅     |
 | 21   | WeakMap / WeakSet | ✅     |
 | 22   | Date & Time       | ✅     |
-| 23   | DOM               | 🔄     |
+| 23   | DOM               |  ✅    |
 
 ---
 

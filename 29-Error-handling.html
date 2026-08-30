@@ -13,6 +13,28 @@
         //console.log(x); // reference error: x is not defined
         console.log("End");
 
+        // 1. Try :- try ke andar hum woh code likhte hain jahan error aa sakta hai.
+                    // Lekin sirf try enough nahi hai. Error ko handle karne ke liye catch chahiye.
+
+                try {
+                    console.log(x);
+                }
+        //2. catch :- 
+
+                catch(error){
+                    console.log("Find Error");
+                }
+
+        // cobine try and catch 
+
+        console.log("start");
+        try{
+            console.log(x);
+        }catch(error){
+            console.log("Error Handled");
+        }
+        console.log("End");
+
     </script>
 </body>
 </html>

@@ -351,7 +351,7 @@ File: `23-DOM.html`
 
 * [x] Strict mode
 * [x] Closures revision
-* [ ] Currying
+* [x] Currying
 * [ ] Higher-order functions
 * [ ] Functional programming
 * [ ] Synchronous vs asynchronous programming

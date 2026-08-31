@@ -46,26 +46,48 @@
 
       //3. currying:- Ek function ke multiple parameters ko ek-ek karke functions ke through lena.
 
-      // normal function:- 
+      // normal function:-
       function add(a, b, c) {
         return a + b + c;
       }
 
       console.log(add(10, 20, 30));
 
-      // currying function:- 
+      // currying function:-
 
-      function add(a){
-        return function(b){
-            return function(c){
-                return a + b + c;
-            };
+      function add(a) {
+        return function (b) {
+          return function (c) {
+            return a + b + c;
+          };
         };
       }
 
       console.log(add(10)(20)(30));
 
-      
+      //4. Higher-Order Functions:-  Jo function kisi doosre function ko argument ke roop mein leta hai ya function return karta hai, usse Higher-Order Function kehte hain.
+
+      function greet(name) {
+        console.log("Hello " + name);
+      }
+
+      function processUser(callback) {
+        callback("Aakash");
+      }
+
+      processUser(greet);
+
+      //q2 return function
+
+      function multiplyBy(num) {
+        return function (value) {
+          return value * num;
+        };
+      }
+
+      const double = multiplyBy(2);
+
+      console.log(double(5));
     </script>
   </body>
 </html>

@@ -1,19 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Advanced-Javascript</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        // strict mode:- Strict mode JavaScript ko more strict/safer rules ke saath run karata hai.
+      // strict mode:- Strict mode JavaScript ko more strict/safer rules ke saath run karata hai.
 
-        "use strict";
-        x=10;
-        console.log(x); // ReferenceError: x is not defined
+      //   "use strict";
+      //   x = 10;
+      //   console.log(x); // ReferenceError: x is not defined
 
-        
+      // Q1
+
+      ("use strict");
+
+      function test() {
+        let y = 20;
+        console.log(y);
+      }
+
+      test();
+
+      //2. Clousre Revision :- Inner function apne outer function ke variables ko yaad rakhta hai, even outer function execute hone ke baad bhi.
+
+      function outer() {
+        let count = 0;
+
+        function inner() {
+          count++;
+          console.log(count);
+        }
+
+        return inner;
+      }
+
+      const counter = outer();
+
+      counter();
+      counter();
+      counter();
     </script>
-</body>
+  </body>
 </html>

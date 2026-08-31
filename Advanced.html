@@ -25,6 +25,7 @@
       test();
 
       //2. Clousre Revision :- Inner function apne outer function ke variables ko yaad rakhta hai, even outer function execute hone ke baad bhi.
+      // Closure = Function + uska outer lexical environment
 
       function outer() {
         let count = 0;
@@ -42,6 +43,29 @@
       counter();
       counter();
       counter();
+
+      //3. currying:- Ek function ke multiple parameters ko ek-ek karke functions ke through lena.
+
+      // normal function:- 
+      function add(a, b, c) {
+        return a + b + c;
+      }
+
+      console.log(add(10, 20, 30));
+
+      // currying function:- 
+
+      function add(a){
+        return function(b){
+            return function(c){
+                return a + b + c;
+            };
+        };
+      }
+
+      console.log(add(10)(20)(30));
+
+      
     </script>
   </body>
 </html>

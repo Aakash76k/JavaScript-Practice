@@ -350,7 +350,7 @@ File: `23-DOM.html`
 # 🧠 20. Advanced JavaScript ⏳
 
 * [x] Strict mode
-* [ ] Closures revision
+* [x] Closures revision
 * [ ] Currying
 * [ ] Higher-order functions
 * [ ] Functional programming

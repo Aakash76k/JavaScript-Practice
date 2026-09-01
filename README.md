@@ -353,7 +353,7 @@ File: `23-DOM.html`
 * [x] Closures revision
 * [x] Currying
 * [x] Higher-order functions
-* [ ] Functional programming
+* [x] Functional programming
 * [ ] Synchronous vs asynchronous programming
 * [ ] Advanced callbacks
 * [ ] Memory & garbage collection

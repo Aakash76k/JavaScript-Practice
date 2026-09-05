@@ -137,18 +137,26 @@
 
       // normal callback
 
-      function greet(name, callback) {
-        console.log("Hello " + name);
-        callback();
+      // function greet(name, callback) {
+      //   console.log("Hello " + name);
+      //   callback();
+      // }
+
+      // function bye() {
+      //   console.log("Bye!");
+      // }
+
+      // greet("Aakash", bye); // Yahan bye function ko greet() ke andar argument ke roop me pass kiya gaya hai.Isliye bye ek callback function hai.
+
+      // Advance callback :- Callback ko dynamically control karna, multiple callbacks handle karna, callbacks ke through asynchronous operations manage karna, aur callback execution ka flow samajhna.
+
+      function calculate(a,b, operation){
+        return operation(a,b);
       }
 
-      function bye() {
-        console.log("Bye!");
-      }
-
-      greet("Aakash", bye); // Yahan bye function ko greet() ke andar argument ke roop me pass kiya gaya hai.Isliye bye ek callback function hai.
-
-      // Advance callback
+      const add1 = (a,b) => a + b;
+      const reslt = calculate(10,5, add1);
+      console.log(reslt);
     </script>
   </body>
 </html>

@@ -158,7 +158,15 @@
       const reslt = calculate(10, 5, add1);
       console.log(reslt);
 
-      //1. Asnchronous callback:-
+      //1. Asynchronous callback:-
+      //Yahin se callbacks ka connection aata hai:
+
+      // Callback Queue
+      // Microtask Queue
+      // Event Loop
+      // setTimeout()
+      // Promises
+      // Async execution order
 
       console.log("Start");
 
@@ -167,6 +175,46 @@
       }, 2000);
 
       console.log("End");
+
+      //2. callback hell:- Multiple asynchronous callbacks nested ho jaayein:
+
+      function getUser(callback) {
+        setTimeout(() => {
+          console.log("User mil gaya");
+          callback("Aakash");
+        }, 1000);
+      }
+
+      function getPosts(user, callback) {
+        setTimeout(() => {
+          console.log(user + " ke posts mil gaye");
+          callback(["Post 1", "Post 2"]);
+        }, 1000);
+      }
+
+      function getComments(posts, callback) {
+        setTimeout(() => {
+          console.log("Comments mil gaye");
+          callback(["Comment 1", "Comment 2"]);
+        }, 1000);
+      }
+
+      function getLikes(comments, callback) {
+        setTimeout(() => {
+          console.log("Likes mil gaye");
+          callback(100);
+        }, 1000);
+      }
+
+      getUser(function (user) {
+        getPosts(user, function (posts) {
+          getComments(posts, function (comments) {
+            getLikes(comments, function (likes) {
+              console.log("Total Likes:", likes);
+            });
+          });
+        });
+      });
     </script>
   </body>
 </html>

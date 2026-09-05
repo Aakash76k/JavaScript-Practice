@@ -355,7 +355,7 @@ File: `23-DOM.html`
 * [x] Higher-order functions
 * [x] Functional programming
 * [x] Synchronous vs asynchronous programming
-* [ ] Advanced callbacks
+* [x] Advanced callbacks
 * [ ] Memory & garbage collection
 
 ---

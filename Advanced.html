@@ -215,6 +215,26 @@
           });
         });
       });
+
+      // Memory and Garbage Collection
+
+      // memory:- Jab JavaScript program run hota hai, variables, objects, functions etc. ko memory me space milti hai.
+
+      let name = "Aakash";
+      let age = 24;
+
+      const user = {
+        name: "Aakash",
+        age: 24,
+      };
+
+      // Garbage collection:- JavaScript automatically unused memory ko clean karta hai.Is process ko Garbage Collection (GC) kehte hain.
+
+      let user1 = {
+        name: "Aakash",
+      };
+
+      user1 = null;
     </script>
   </body>
 </html>

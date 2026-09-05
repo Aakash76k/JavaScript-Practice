@@ -354,7 +354,7 @@ File: `23-DOM.html`
 * [x] Currying
 * [x] Higher-order functions
 * [x] Functional programming
-* [ ] Synchronous vs asynchronous programming
+* [x] Synchronous vs asynchronous programming
 * [ ] Advanced callbacks
 * [ ] Memory & garbage collection
 

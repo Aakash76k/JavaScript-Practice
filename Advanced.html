@@ -134,6 +134,21 @@
       }, 2000);
 
       console.log("3");
+
+      // normal callback
+
+      function greet(name, callback) {
+        console.log("Hello " + name);
+        callback();
+      }
+
+      function bye() {
+        console.log("Bye!");
+      }
+
+      greet("Aakash", bye); // Yahan bye function ko greet() ke andar argument ke roop me pass kiya gaya hai.Isliye bye ek callback function hai.
+
+      // Advance callback
     </script>
   </body>
 </html>

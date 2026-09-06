@@ -356,7 +356,7 @@ File: `23-DOM.html`
 * [x] Functional programming
 * [x] Synchronous vs asynchronous programming
 * [x] Advanced callbacks
-* [ ] Memory & garbage collection
+* [x] Memory & garbage collection
 
 ---
 
@@ -369,7 +369,7 @@ OOP ko Advanced JavaScript ke baad properly cover karunga.
 * [ ] Constructor
 * [ ] Properties
 * [ ] Methods
-* [ ] this
+* [x] this
 * [ ] Inheritance
 * [ ] extends
 * [ ] super

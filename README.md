@@ -385,7 +385,7 @@ File: `23-DOM.html`
 After completing the major concepts:
 
 * [x] Counter App
-* [ ] Todo App
+* [x] Todo App
 * [ ] Calculator
 * [ ] Form Validation
 * [ ] Digital Clock
@@ -466,7 +466,7 @@ Projects
 | 25   | Event Loop          | ✅      |
 | 26   | JavaScript Modules  | ✅      |
 | 27   | Error Handling      | ✅      |
-| 28   | Advanced JavaScript | 🔄     |
+| 28   | Advanced JavaScript | ✅     |
 
 ---
 

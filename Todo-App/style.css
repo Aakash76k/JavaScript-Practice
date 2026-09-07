@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background:
+        radial-gradient(circle at top left, #1e3a8a, transparent 35%),
+        radial-gradient(circle at bottom right, #581c87, transparent 35%),
+        linear-gradient(135deg, #020617, #0f172a);
+
+    color: #fff;
+}
+
+
+/* Main Container */
+
+.todo-container {
+    width: 100%;
+    max-width: 600px;
+
+    padding: 35px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45);
+
+}
+
+
+/* Heading */
+
+h1 {
+    text-align: center;
+
+    margin-bottom: 30px;
+
+    font-size: 36px;
+
+    color: #38bdf8;
+
+    text-shadow:
+        0 0 20px rgba(56, 189, 248, 0.4);
+}
+
+
+/* Input Area */
+
+.todo-input {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+#taskInput {
+    flex: 1;
+
+    padding: 14px 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: white;
+
+    font-size: 16px;
+}
+
+#taskInput::placeholder {
+    color: #94a3b8;
+}
+
+#taskInput:focus {
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 0 12px rgba(56, 189, 248, 0.25);
+}
+
+
+/* Add Button */
+
+#addBtn {
+    padding: 0 22px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #38bdf8;
+
+    color: #020617;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#addBtn:hover {
+    background: #0ea5e9;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(14, 165, 233, 0.3);
+}
+
+
+/* Task List */
+
+#taskList {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* Individual Task */
+
+#taskList li {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 15px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+#taskList li:hover {
+    background: rgba(255, 255, 255, 0.12);
+
+    transform: translateY(-2px);
+}
+
+
+/* Task Text */
+
+#taskList li span {
+    flex: 1;
+
+    font-size: 16px;
+
+    color: #f8fafc;
+
+    word-break: break-word;
+}
+
+
+/* Buttons */
+
+#taskList button {
+    padding: 8px 12px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+/* Edit Button */
+
+#taskList button:first-of-type {
+    background: #facc15;
+
+    color: #422006;
+}
+
+#taskList button:first-of-type:hover {
+    background: #eab308;
+
+    transform: translateY(-2px);
+}
+
+
+/* Delete Button */
+
+#taskList button:last-of-type {
+    background: #ef4444;
+
+    color: white;
+}
+
+#taskList button:last-of-type:hover {
+    background: #dc2626;
+
+    transform: translateY(-2px);
+}
+
+
+/* Completed Task */
+
+.completed span {
+    text-decoration: line-through;
+
+    color: #94a3b8 !important;
+
+    opacity: 0.7;
+}
+
+
+/* 📱 Mobile */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .todo-container {
+        padding: 25px 18px;
+
+        border-radius: 16px;
+    }
+
+    h1 {
+        font-size: 30px;
+
+        margin-bottom: 25px;
+    }
+
+    .todo-input {
+        flex-direction: column;
+    }
+
+    #taskInput {
+        width: 100%;
+
+        padding: 14px;
+    }
+
+    #addBtn {
+        width: 100%;
+
+        padding: 14px;
+    }
+
+    #taskList li {
+        flex-wrap: wrap;
+
+        padding: 13px;
+    }
+
+    #taskList li span {
+        width: 100%;
+
+        flex-basis: 100%;
+
+        margin-bottom: 5px;
+    }
+
+    #taskList button {
+        flex: 1;
+
+        padding: 10px;
+    }
+}
+
+
+/* 📱 Small Mobile */
+
+@media (max-width: 380px) {
+
+    .todo-container {
+        padding: 22px 14px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    #taskList li {
+        gap: 8px;
+    }
+
+    #taskList button {
+        font-size: 13px;
+    }
+}

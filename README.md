@@ -360,11 +360,10 @@ File: `23-DOM.html`
 
 ---
 
-# 🏗️ 21. OOP — Later
+# 🏗️ 21. OOP — start
 
-OOP ko Advanced JavaScript ke baad properly cover karunga.
 
-* [ ] OOP definition
+* [x] OOP definition
 * [ ] Classes
 * [ ] Constructor
 * [ ] Properties
@@ -385,7 +384,7 @@ OOP ko Advanced JavaScript ke baad properly cover karunga.
 
 After completing the major concepts:
 
-* [ ] Counter App
+* [x] Counter App
 * [ ] Todo App
 * [ ] Calculator
 * [ ] Form Validation

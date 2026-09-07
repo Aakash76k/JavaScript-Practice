@@ -1,83 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OOPS</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        // oops:- object oriented programming
-        // oop ek programming approach h jisme hum code ko objects k around organize krte h.
+      // oops:- object oriented programming
+      // oop ek programming approach h jisme hum code ko objects k around organize krte h.
 
-        // example :- car => properties :- color,brand,speed & Method:- start,stop,accelerate
+      // example :- car => properties :- color,brand,speed & Method:- start,stop,accelerate
 
-        const car = {
-            brand : "bmw",
-            color : "black",
-            speed: 200,
+      const car = {
+        brand: "bmw",
+        color: "black",
+        speed: 200,
 
-            start(){
-                console.log("car started");
-            },
+        start() {
+          console.log("car started");
+        },
 
-            stop(){
-                console.log("car stopped");
-            }
-        };
+        stop() {
+          console.log("car stopped");
+        },
+      };
 
-        console.log(car.brand);
-        console.log(car.color);
+      console.log(car.brand);
+      console.log(car.color);
 
-        car.start();
-        car.stop();
+      car.start();
+      car.stop();
 
-        // classes :- js m class ek blueprint/template hoti h jiske basis pr hum multiple object bana sakte h.
+      // classes :- js m class ek blueprint/template hoti h jiske basis pr hum multiple object bana sakte h.
 
-        class Student {
-            name = "Aakash";
-            age = 23;
+      class Student {
+        name = "Aakash";
+        age = 23;
+      }
+
+      const student1 = new Student();
+      console.log(student1.name);
+      console.log(student1.age);
+
+      // constructor:- constructor ek special method hota h jo object create hote hi automatically execute hota h.
+      // main use of constructor:- constructor k trough hum object ki initial properties set kr sakte h
+
+      class A {
+        constructor(n, a) {
+          this.n = n;
+          this.a = a;
+        }
+      }
+
+      const a1 = new A("Rahul", 25);
+      const a2 = new A("Aman", 24);
+
+      console.log(a1.n);
+      console.log(a1.a);
+
+      console.log(a2.n);
+      console.log(a2.a);
+
+      // Properties:- property object k under stored data/ value hoti h
+
+      class B {
+        constructor(a, b, c) {
+          this.a = a;
+          this.b = b;
+          this.c = c;
+        }
+      }
+
+      const d = new B("Kunal", 32, "Mern");
+      console.log(d.a);
+      console.log(d.b);
+      console.log(d.c);
+
+      // method:- object k ander defined function , object ka koi action/ behaviour represent karta h.
+
+      class Student1 {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
         }
 
-        const student1 = new Student();
-        console.log(student1.name);
-        console.log(student1.age);
-        
-
-        // constructor:- constructor ek special method hota h jo object create hote hi automatically execute hota h.
-        // main use of constructor:- constructor k trough hum object ki initial properties set kr sakte h 
-
-        class A{
-            constructor(n,a){
-                this.n = n;
-                this.a = a;
-                
-            }
+        greet() {
+          console.log("Hello " + this.name);
         }
 
-        const a1 = new A("Rahul",25);
-        const a2 = new A("Aman",24);
-
-        console.log(a1.n);
-        console.log(a1.a);
-
-        console.log(a2.n);
-        console.log(a2.a);
-
-        // Properties:- property object k under stored data/ value hoti h 
-
-        class B{
-            constructor(a,b,c){
-                this.a = a;
-                this.b = b;
-                this.c = c;
-            }
+        study() {
+          console.log(this.name + " is studying");
         }
+      }
 
-        const d = new B("Kunal",32,"Mern");
-        console.log(d.a);
-        console.log(d.b);
-        console.log(d.c);
+      const student2 = new Student1("Aakash", 24);
+
+      student2.greet();
+      student2.study();
     </script>
-</body>
+  </body>
 </html>

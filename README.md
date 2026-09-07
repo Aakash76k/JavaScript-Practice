@@ -367,7 +367,7 @@ File: `23-DOM.html`
 * [x] Classes
 * [x] Constructor
 * [x] Properties
-* [ ] Methods
+* [x] Methods
 * [x] this
 * [ ] Inheritance
 * [ ] extends

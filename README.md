@@ -366,7 +366,7 @@ File: `23-DOM.html`
 * [x] OOP definition
 * [x] Classes
 * [x] Constructor
-* [ ] Properties
+* [x] Properties
 * [ ] Methods
 * [x] this
 * [ ] Inheritance

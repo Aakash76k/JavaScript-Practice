@@ -360,7 +360,7 @@ File: `23-DOM.html`
 
 ---
 
-# 🏗️ 21. OOP — start
+# 🏗️ 21. OOP 
 
 
 * [x] OOP definition
@@ -375,8 +375,8 @@ File: `23-DOM.html`
 * [x] Encapsulation
 * [x] Polymorphism
 * [x] Abstraction
-* [ ] Static methods
-* [ ] Getters & Setters revision
+* [x] Static methods
+
 
 ---
 

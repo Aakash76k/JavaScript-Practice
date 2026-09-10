@@ -215,6 +215,20 @@
       const car = new Car();
       car.start();
 
+      // Static method:- it is a method that belongs to the class rather than its instances and can be called directly using the class name.
+
+      class MathUtil{
+        static square(num){
+          return num * num;
+        }
+        static cube(num){
+          return num * num * num;
+        }
+      }
+
+      console.log(MathUtil.square(5));
+      console.log(MathUtil.cube(3));
+
 
     </script>
   </body>

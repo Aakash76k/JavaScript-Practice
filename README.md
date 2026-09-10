@@ -371,10 +371,10 @@ File: `23-DOM.html`
 * [x] this
 * [x] Inheritance
 * [x] extends
-* [ ] super
-* [ ] Encapsulation
-* [ ] Polymorphism
-* [ ] Abstraction
+* [x] super
+* [x] Encapsulation
+* [x] Polymorphism
+* [x] Abstraction
 * [ ] Static methods
 * [ ] Getters & Setters revision
 

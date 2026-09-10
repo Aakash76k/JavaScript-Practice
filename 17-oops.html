@@ -12,25 +12,25 @@
 
       // example :- car => properties :- color,brand,speed & Method:- start,stop,accelerate
 
-      const car = {
-        brand: "bmw",
-        color: "black",
-        speed: 200,
+      // const car = {
+      //   brand: "bmw",
+      //   color: "black",
+      //   speed: 200,
 
-        start() {
-          console.log("car started");
-        },
+      //   start() {
+      //     console.log("car started");
+      //   },
 
-        stop() {
-          console.log("car stopped");
-        },
-      };
+      //   stop() {
+      //     console.log("car stopped");
+      //   },
+      // };
 
-      console.log(car.brand);
-      console.log(car.color);
+      // console.log(car.brand);
+      // console.log(car.color);
 
-      car.start();
-      car.stop();
+      // car.start();
+      // car.stop();
 
       // classes :- js m class ek blueprint/template hoti h jiske basis pr hum multiple object bana sakte h.
 
@@ -175,7 +175,7 @@
 
 
       // Polymorphism :- it is the concept where the same method can have different implementations or behaviour in different classes.
-
+      // method overriding
       class Animal {
         sound(){
           console.log("Animal makes a sound");
@@ -200,7 +200,20 @@
       dog.sound();
       cat.sound();
 
+      // Abstraction:- it is the process of hiding implementation details and showing only essential functionality to the user.
 
+      class Car {
+        start(){
+          this.#startEngine();
+          console.log("car started");
+        }
+        #startEngine(){
+          console.log("Engine started internally");
+        }
+      }
+
+      const car = new Car();
+      car.start();
 
 
     </script>

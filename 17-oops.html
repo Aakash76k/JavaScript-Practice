@@ -127,6 +127,8 @@
       // d1.bark();
 
       // super keyword :- child class m parent ka constructor method use krne k liye super use hota h 
+      // super() = parent constructor call
+
       
       class Animal{
         constructor(name){
@@ -151,6 +153,25 @@
 
       d1.eat();
       d1.bark();
+
+      // Encapsulation :- it is the process of bundling data and methods into a single unit and restriction direct access to the internal data .
+      // data hiding + data binding = Encapsulation
+
+      class BankAccount {
+        #balance = 0; // # property ko private banata h class ke bahar directly access nhi kr sakte.
+        
+        diposit(amount){
+          this.#balance += amount;
+        }
+
+        getBalance(){
+          return this.#balance;
+        }
+      }
+
+      const account = new BankAccount();
+      account.diposit(5000);
+      console.log(account.getBalance());
 
 
 

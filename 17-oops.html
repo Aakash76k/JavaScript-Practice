@@ -98,6 +98,36 @@
 
       student2.greet();
       student2.study();
+
+      // Inheritance :- inheritance k matlb hai ek class , doosri class ke properties aur methods ko use/reuse kr sakti h.
+      // parent class = Superclass
+      // child class = Subclass 
+
+      class Animal{
+        eat(){
+          console.log("Animal is eating");
+        }
+
+        sleep(){
+          console.log("Animal is sleeping");
+        }
+      }
+
+      // extends keyword k use krke dog class n animal class se inheritance liya.
+      
+      class Dog extends Animal{
+        bark(){
+          console.log("Dog is barking");
+        }
+      }
+
+      const d1 =  new Dog();
+      d1.eat();
+      d1.sleep();
+      d1.bark();
+
+
+
     </script>
   </body>
 </html>

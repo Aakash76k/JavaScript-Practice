@@ -369,8 +369,8 @@ File: `23-DOM.html`
 * [x] Properties
 * [x] Methods
 * [x] this
-* [ ] Inheritance
-* [ ] extends
+* [x] Inheritance
+* [x] extends
 * [ ] super
 * [ ] Encapsulation
 * [ ] Polymorphism

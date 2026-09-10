@@ -130,36 +130,36 @@
       // super() = parent constructor call
 
       
-      class Animal{
-        constructor(name){
-          this.name = name;
-        }
-        eat(){
-          console.log(this.name + "is eating");
-        }
-      }
+      // class Animal{
+      //   constructor(name){
+      //     this.name = name;
+      //   }
+      //   eat(){
+      //     console.log(this.name + "is eating");
+      //   }
+      // }
 
-      class Dog extends Animal{
-        constructor(name , breed){
-          super(name);
-          this.breed = breed;
-        }
-        bark(){
-          console.log(this.name + "is barking");
-        }
-      }
+      // class Dog extends Animal{
+      //   constructor(name , breed){
+      //     super(name);
+      //     this.breed = breed;
+      //   }
+      //   bark(){
+      //     console.log(this.name + "is barking");
+      //   }
+      // }
 
-      const d1 = new Dog("tommy", "Labrador");
+      // const d1 = new Dog("tommy", "Labrador");
 
-      d1.eat();
-      d1.bark();
+      // d1.eat();
+      // d1.bark();
 
       // Encapsulation :- it is the process of bundling data and methods into a single unit and restriction direct access to the internal data .
       // data hiding + data binding = Encapsulation
 
       class BankAccount {
         #balance = 0; // # property ko private banata h class ke bahar directly access nhi kr sakte.
-        
+
         diposit(amount){
           this.#balance += amount;
         }
@@ -172,6 +172,34 @@
       const account = new BankAccount();
       account.diposit(5000);
       console.log(account.getBalance());
+
+
+      // Polymorphism :- it is the concept where the same method can have different implementations or behaviour in different classes.
+
+      class Animal {
+        sound(){
+          console.log("Animal makes a sound");
+        }
+      }
+
+      class Dog extends Animal {
+        sound(){
+          console.log("Dog barks");
+        }
+      }
+
+      class Cat extends Animal{
+        sound(){
+          console.log("cat meows");
+        }
+      }
+
+      const dog = new Dog();
+      const cat = new Cat();
+
+      dog.sound();
+      cat.sound();
+
 
 
 

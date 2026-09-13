@@ -17,9 +17,9 @@
 
         <div class="buttons">
             <button class="btn clear" onclick="clearDisplay()">AC</button>
-            <button class="btn delete" onclick="deleteLast()">⬅️</button>
+            <button class="btn delete" onclick="deleteLast()">DEL</button>
             <button class="btn operator" onclick="appendValue('%')">%</button>
-            <button class="btn operator" onclick="appendValue('/')">/</button>
+            <button class="btn operator" onclick="appendValue('/')">÷</button>
 
             <button class="btn" onclick="appendValue('7')">7</button>
             <button class="btn" onclick="appendValue('8')">8</button>
@@ -38,7 +38,7 @@
 
              <button class="btn" onclick="appendValue('0')">0</button>
             <button class="btn" onclick="appendValue('.')">.</button>
-            <button class="btn equal" onclick="appendValue()">=</button>
+            <button class="btn equal" onclick="calculate()">=</button>
             
         </div>
     </div>

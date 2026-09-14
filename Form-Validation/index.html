@@ -7,8 +7,71 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <div class="form-box">
+            <h1>Create Account</h1>
+            <p class="subtitle">Please fill in the details below</p>
 
-    
+            <form id="registrationForm">
+
+                <!-- Name -->
+
+                 <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name"/>
+                    <small id="nameError"></small>
+                 </div>
+
+                <!-- Email -->
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email"/>
+                    <small id="emailError"></small>
+                </div>
+
+                <!-- Phone -->
+
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" placeholder="Enter 10 digit phone number"/>
+                    <small id="phoneError"></small>
+                </div>
+
+                <!-- Password -->
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password"/>
+                    <small id="passwordError"></small>
+                </div>  
+                
+                <!-- Confirm Password -->
+
+                <div class="input-group">
+                    <label for="confirmPassword">confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Enter your password"/>
+                    <small id="confirmPasswordError"></small>
+                </div> 
+                
+                <!-- Terms -->
+
+                <div class="terms">
+                    <input type="checkbox" id="terms" />
+                    <label for="terms">I agree to the Terms & condition</label>
+                </div>
+
+                <!-- Submit -->
+
+                <button type="submit">Create Account</button>
+
+                <!-- Success -->
+
+                <p id="successMessage"></p>
+            </form>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -388,7 +388,7 @@ My complete JavaScript learning journey — from basic JavaScript to advanced co
 * [x] Counter App
 * [x] Todo App
 * [x] Calculator
-* [ ] Form Validation
+* [x] Form Validation
 * [ ] Digital Clock
 * [ ] Weather App
 * [ ] API Search App

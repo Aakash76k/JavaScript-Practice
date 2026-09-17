@@ -58,5 +58,53 @@ body {
 
     text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
     margin-bottom: 20px;
-    
+
+}
+
+.date {
+    color: #cbd5e1;
+    font-size: 20px;
+}
+
+/* Tablet */
+
+@media (max-width: 768px){
+    .clock-card{
+        padding: 40px 25px;
+    }
+
+    .clock-card h1{
+        font-size: 28px;
+    }
+
+    .date{
+        font-size: 18px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 480px){
+    body {
+    padding: 15px;
+  }
+
+  .clock-card {
+    padding: 35px 15px;
+    border-radius: 20px;
+  }
+
+  .clock-card h1 {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .clock {
+    font-size: 42px;
+    letter-spacing: 2px;
+  }
+
+  .date {
+    font-size: 15px;
+  }
 }

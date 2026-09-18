@@ -389,7 +389,7 @@ My complete JavaScript learning journey — from basic JavaScript to advanced co
 * [x] Todo App
 * [x] Calculator
 * [x] Form Validation
-* [ ] Digital Clock
+* [x] Digital Clock
 * [ ] Weather App
 * [ ] API Search App
 * [ ] Quiz App

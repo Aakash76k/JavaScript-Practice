@@ -391,7 +391,7 @@ My complete JavaScript learning journey — from basic JavaScript to advanced co
 * [x] Form Validation
 * [x] Digital Clock
 * [x] Weather App
-* [ ] API Search App
+* [x] API Search App
 * [ ] Quiz App
 * [ ] Expense Tracker
 * [ ] Final JavaScript Project

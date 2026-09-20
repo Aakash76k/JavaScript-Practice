@@ -1,0 +1,81 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Quiz App</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="quiz-card">
+
+      <h1>Quiz App</h1>
+      <p class="subtitle">Test Your HTML, CSS & JavaScript Knowledge</p>
+
+      <form id="studentForm">
+
+        <div class="input-group">
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            required
+          >
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email ID</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          >
+        </div>
+
+        <div class="input-group">
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            placeholder="Enter your phone number"
+            required
+          >
+        </div>
+
+        <div class="input-group">
+          <label for="course">Course</label>
+
+          <select id="course" required>
+            <option value="">Select Course</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="MERN Stack">MERN Stack</option>
+            <option value="Full Stack Development">
+              Full Stack Development
+            </option>
+          </select>
+        </div>
+
+        <button type="submit" id="startBtn">
+          Start Quiz
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+```

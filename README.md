@@ -392,7 +392,7 @@ My complete JavaScript learning journey — from basic JavaScript to advanced co
 * [x] Digital Clock
 * [x] Weather App
 * [x] API Search App
-* [ ] Quiz App
+* [x] Quiz App
 * [ ] Expense Tracker
 * [ ] Final JavaScript Project
 
